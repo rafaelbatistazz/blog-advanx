@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Como Criar um Sistema de Captação de Clientes Previsível para Seu Escritório | Blog Advanx</title>
-  <meta name="description" content="Aprenda a construir um sistema de captação de clientes previsível para seu escritório de advocacia. Chega de depender de indicações e sorte."/>
-  <meta name="keywords" content="sistema captação clientes advogado, funil de clientes advocacia, captação previsível escritório advocacia"/>
-  <link rel="canonical" href="https://blog.advanx.com.br/posts/sistema-captacao-clientes-previsivel.html"/>
-  <meta property="og:title" content="Como Criar um Sistema de Captação de Clientes Previsível para Seu Escritório"/>
-  <meta property="og:image" content="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&auto=format&fit=crop&q=80"/>
-  <meta property="og:type" content="article"/>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Como Criar um Sistema de Captação de Clientes Previsível para Seu Escritório","datePublished":"2026-02-22","author":{"@type":"Organization","name":"Advanx Tecnologia"},"image":"https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&auto=format&fit=crop&q=80"}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Quanto preciso investir para ter um sistema de captação previsível?","acceptedAnswer":{"@type":"Answer","text":"O investimento varia, mas escritórios que obtêm resultados consistentes investem entre R$1.500 e R$5.000/mês entre verba de anúncios e ferramentas. O SIC da Advanx parte de R$2.000 de setup mais a verba de tráfego definida por você."}},{"@type":"Question","name":"Quanto tempo leva para o sistema começar a gerar leads?","acceptedAnswer":{"@type":"Answer","text":"Os primeiros leads aparecem entre 7 e 14 dias após o início das campanhas. O sistema atinge maturidade e consistência entre 45 e 90 dias, quando os dados de otimização acumulam volume suficiente."}},{"@type":"Question","name":"Um advogado solo consegue implementar e manter um sistema de captação?","acceptedAnswer":{"@type":"Answer","text":"Sim, com apoio de uma ferramenta ou parceiro especializado. A parte técnica (configuração de anúncios, chatbot, CRM) precisa de conhecimento específico, mas a operação dia a dia após a implementação é totalmente manejável por um advogado solo."}},{"@type":"Question","name":"Qual a diferença entre captação previsível e captação por indicação?","acceptedAnswer":{"@type":"Answer","text":"Captação por indicação é passiva: você depende de outros para te indicar. Captação previsível é ativa e mensurável: você sabe exatamente quantos leads vai receber por mês para cada real investido, podendo escalar ou reduzir conforme necessário."}},{"@type":"Question","name":"O sistema funciona para todas as áreas do Direito?","acceptedAnswer":{"@type":"Answer","text":"Funciona melhor para áreas com alta demanda online: Trabalhista, Consumidor, Família, Previdenciário e Imobiliário. Áreas como Empresarial e Tributário também funcionam, mas com estratégias diferentes (LinkedIn B2B ao invés de Meta Ads)."}}]}</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Como Criar um Sistema de Captação Previsível para Advogados | Blog Advanx</title>
+  <meta name="description" content="Chega de depender de indicações. Aprenda a construir um funil de captação de clientes previsível para seu escritório de advocacia com IA e automação." />
+  <link rel="canonical" href="https://blog.advanx.com.br/posts/sistema-captacao-clientes-previsivel.html" />
+  <meta property="og:title" content="Como Criar um Sistema de Captação Previsível" />
+  <meta property="og:url" content="https://blog.advanx.com.br/posts/sistema-captacao-clientes-previsivel.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1400&auto=format&fit=crop&q=80" />
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','502759528362336');fbq('track','PageView');</script>
@@ -23,298 +20,266 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-98EL5GXG5F"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-98EL5GXG5F');</script>
   <style>
-    :root{--bg:#F9F7F4;--surface:#fff;--ink:#1C1917;--ink-mid:#78716C;--ink-soft:#A8A29E;--border:#E8E5E2;--accent:#FF7A01;--accent-light:#FFF7ED;}
-    *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+    :root{--bg:#FAFAF8;--bg2:#F4F2EE;--surface:#FFFFFF;--ink:#1A1814;--ink-2:#4A4540;--ink-3:#9E9890;--border:#E6E3DE;--accent:#FF7A01;--accent-soft:#FFF4E8;}
+    *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
     body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6;}
-    ::selection{background:var(--accent);color:#fff;}
-    ::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px;}
-    .navbar{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(249,247,244,0.92);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s;}
-    .navbar.scrolled{border-color:var(--border);box-shadow:0 1px 16px rgba(0,0,0,0.05);}
-    .navbar-inner{max-width:1152px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;}
-    .nav-logo{height:28px;width:auto;}
-    .nav-links{display:flex;align-items:center;gap:28px;}
-    .nav-link{font-size:14px;color:var(--ink-mid);text-decoration:none;transition:color .2s;}
-    .nav-link:hover{color:var(--ink);}
-    .nav-cta{background:var(--accent);color:#fff;font-size:13px;font-weight:600;padding:10px 20px;border-radius:100px;text-decoration:none;transition:background .2s,transform .15s;}
-    .nav-cta:hover{background:#e86d00;transform:translateY(-1px);}
-    .cat-badge{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;background:var(--accent-light);color:var(--accent);border-radius:4px;padding:3px 9px;display:inline-block;font-weight:500;}
-    .post-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:transform .22s ease,box-shadow .22s ease;text-decoration:none;display:block;}
-    .post-card:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(0,0,0,0.08);}
-    .post-card img{transition:transform .4s ease;display:block;width:100%;height:100%;object-fit:cover;}
-    .post-card:hover img{transform:scale(1.04);}
-    .nl-input{background:#fff;border:1.5px solid var(--border);border-radius:8px;color:var(--ink);padding:12px 16px;width:100%;font-family:'Inter',sans-serif;font-size:14px;transition:border-color .2s,box-shadow .2s;}
-    .nl-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(255,122,1,.1);}
-    .nl-input::placeholder{color:var(--ink-soft);}
-    .mobile-menu{display:none;border-top:1px solid var(--border);}
-    .mobile-menu.open{display:block;}
-    .hamburger{display:none;background:none;border:none;cursor:pointer;color:var(--ink-mid);padding:4px;}
-    @media(max-width:768px){.nav-links{display:none;}.hamburger{display:block;}}
-    .reading-progress{position:fixed;top:0;left:0;height:2px;background:var(--accent);z-index:200;transition:width .1s;}
-    .article-body h2{font-family:'Lora',serif;font-size:1.55rem;font-weight:700;color:var(--ink);margin:2.5rem 0 1rem;line-height:1.3;}
-    .article-body h3{font-size:1.15rem;font-weight:600;color:var(--ink);margin:2rem 0 .75rem;}
-    .article-body p{color:var(--ink-mid);line-height:1.9;margin-bottom:1.3rem;font-size:1.05rem;}
-    .article-body ul,.article-body ol{color:var(--ink-mid);line-height:1.9;margin:1rem 0 1.5rem 1.5rem;font-size:1.05rem;}
-    .article-body li{margin-bottom:.5rem;}
-    .article-body blockquote{border-left:3px solid var(--accent);padding:1rem 1.5rem;background:var(--accent-light);border-radius:0 10px 10px 0;margin:2rem 0;}
-    .article-body blockquote p{color:var(--ink);font-style:italic;margin:0;}
-    .article-body strong{color:var(--ink);font-weight:600;}
-    .toc-item{font-size:.875rem;color:var(--ink-soft);transition:all .2s;text-decoration:none;border-left:2px solid transparent;padding-left:12px;display:block;padding-top:4px;padding-bottom:4px;line-height:1.5;}
-    .toc-item:hover,.toc-item.active{color:var(--accent);border-left-color:var(--accent);}
-    .cta-box{background:var(--accent-light);border:1px solid rgba(255,122,1,.2);border-radius:14px;padding:1.75rem;}
-    .nl-section{background:var(--accent-light);border-top:1px solid rgba(255,122,1,.15);border-bottom:1px solid rgba(255,122,1,.15);}
-    .site-footer{background:#fff;border-top:1px solid var(--border);}
-    details.faq-item{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:box-shadow .2s;}
-    details.faq-item[open]{box-shadow:0 4px 20px rgba(0,0,0,.06);}
-    details.faq-item summary{padding:18px 20px;font-weight:600;color:var(--ink);font-size:.95rem;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;}
-    details.faq-item summary::-webkit-details-marker{display:none;}
-    .faq-chevron{width:18px;height:18px;color:var(--accent);flex-shrink:0;transition:transform .25s;}
-    details.faq-item[open] .faq-chevron{transform:rotate(180deg);}
-    .faq-body{padding:0 20px 18px;color:var(--ink-mid);font-size:.9rem;line-height:1.75;}
-    .anim-hero{opacity:0;transform:translateY(20px);}
-    .funnel-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px 24px;position:relative;}
-    .funnel-arrow{display:flex;justify-content:center;align-items:center;height:32px;color:var(--accent);font-size:1.4rem;line-height:1;}
+    ::selection{background:var(--accent);color:#fff;}::-webkit-scrollbar{width:3px;}::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px;}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,0.95);backdrop-filter:blur(20px);border-bottom:1px solid transparent;transition:border-color .3s;}.nav.scrolled{border-color:var(--border);}
+    .nav-inner{max-width:1200px;margin:0 auto;padding:0 32px;height:60px;display:flex;align-items:center;justify-content:space-between;}
+    .nav-logo{height:26px;}.nav-links{display:flex;align-items:center;gap:32px;}
+    .nav-links a{font-size:13.5px;color:var(--ink-2);text-decoration:none;transition:color .2s;letter-spacing:-.01em;}.nav-links a:hover{color:var(--ink);}
+    .nav-btn{background:var(--accent);color:#fff;font-size:13px;font-weight:600;padding:9px 20px;border-radius:100px;text-decoration:none;transition:opacity .2s,transform .15s;}.nav-btn:hover{opacity:.88;transform:translateY(-1px);}
+    .ham{display:none;background:none;border:none;cursor:pointer;padding:4px;color:var(--ink-2);}
+    .mob-nav{display:none;border-top:1px solid var(--border);}.mob-nav.open{display:block;}
+    @media(max-width:768px){.nav-links{display:none;}.ham{display:flex;}}
+    .rp{position:fixed;top:0;left:0;height:2px;background:var(--accent);z-index:200;transition:width .1s linear;}
+    .art-hero{padding:100px 32px 40px;max-width:860px;margin:0 auto;}
+    .breadcrumb{display:flex;align-items:center;gap:8px;font-size:12px;font-family:'JetBrains Mono',monospace;color:var(--ink-3);margin-bottom:24px;flex-wrap:wrap;}
+    .breadcrumb a{color:var(--ink-3);text-decoration:none;transition:color .2s;}.breadcrumb a:hover{color:var(--accent);}
+    .cat-tag{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);background:var(--accent-soft);padding:4px 10px;border-radius:4px;display:inline-block;}
+    .art-title{font-family:'Lora',serif;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700;color:var(--ink);line-height:1.18;letter-spacing:-.02em;margin:16px 0;}
+    .art-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px;color:var(--ink-3);font-size:13px;font-family:'JetBrains Mono',monospace;margin-bottom:32px;}.art-meta .dot{color:var(--border);}
+    .art-hero-img{max-width:1000px;margin:0 auto 56px;padding:0 32px;}.art-hero-img img{width:100%;border-radius:20px;display:block;height:420px;object-fit:cover;}
+    .art-layout{max-width:1200px;margin:0 auto;padding:0 32px 80px;display:grid;grid-template-columns:1fr 280px;gap:56px;align-items:start;}
+    @media(max-width:1024px){.art-layout{grid-template-columns:1fr;}.art-sidebar{display:none;}}
+    @media(max-width:640px){.art-hero{padding:90px 24px 32px;}.art-hero-img{padding:0 24px;}.art-layout{padding:0 24px 64px;}.art-hero-img img{height:260px;}.nav-inner{padding:0 20px;}}
+    .art-body h2{font-family:'Lora',serif;font-size:1.6rem;font-weight:700;color:var(--ink);margin:3rem 0 1rem;line-height:1.28;letter-spacing:-.015em;}
+    .art-body h3{font-size:1.1rem;font-weight:600;color:var(--ink);margin:2.2rem 0 .75rem;letter-spacing:-.01em;}
+    .art-body p{color:var(--ink-2);line-height:1.9;margin-bottom:1.4rem;font-size:1.05rem;}
+    .art-body ul,.art-body ol{color:var(--ink-2);line-height:1.85;margin:1rem 0 1.6rem 1.4rem;font-size:1.05rem;}.art-body li{margin-bottom:.55rem;}
+    .art-body blockquote{border-left:3px solid var(--accent);padding:1.1rem 1.6rem;background:var(--accent-soft);border-radius:0 12px 12px 0;margin:2.2rem 0;}
+    .art-body blockquote p{color:var(--ink);font-style:italic;margin:0;font-size:1.05rem;}
+    .art-body strong{color:var(--ink);font-weight:600;}.art-body a{color:var(--accent);text-decoration:underline;text-underline-offset:3px;}
+    .cta-inline{background:var(--accent-soft);border:1px solid rgba(255,122,1,.18);border-radius:16px;padding:1.75rem;display:flex;flex-wrap:wrap;align-items:center;gap:20px;margin:2.5rem 0;}
+    .btn-accent{background:var(--accent);color:#fff;font-weight:600;font-size:.875rem;padding:12px 20px;border-radius:10px;text-decoration:none;white-space:nowrap;transition:opacity .2s;}.btn-accent:hover{opacity:.88;}
+    .art-sidebar{position:sticky;top:80px;display:flex;flex-direction:column;gap:16px;}
+    .sidebar-box{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:22px;}
+    .sidebar-label{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:14px;display:block;}
+    .toc-link{font-size:.875rem;color:var(--ink-3);text-decoration:none;border-left:2px solid transparent;padding:4px 0 4px 12px;display:block;transition:all .2s;line-height:1.5;}
+    .toc-link:hover,.toc-link.active{color:var(--accent);border-left-color:var(--accent);}
+    .sidebar-cta{background:var(--accent-soft);border:1px solid rgba(255,122,1,.18);border-radius:16px;padding:22px;}
+    .faq-list{display:flex;flex-direction:column;gap:10px;margin-top:2rem;}
+    .faq-item{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;}
+    .faq-item[open]{box-shadow:0 4px 20px rgba(0,0,0,.05);}
+    .faq-item summary{padding:18px 22px;font-weight:600;color:var(--ink);font-size:.95rem;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+    .faq-item summary::-webkit-details-marker{display:none;}
+    .faq-chevron{width:18px;height:18px;color:var(--accent);flex-shrink:0;transition:transform .25s;}.faq-item[open] .faq-chevron{transform:rotate(180deg);}
+    .faq-body{padding:0 22px 18px;color:var(--ink-2);font-size:.9rem;line-height:1.8;}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:20px;}
+    .related-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;text-decoration:none;transition:box-shadow .2s;}.related-card:hover{box-shadow:0 4px 20px rgba(0,0,0,.06);}
+    .related-card img{width:100%;height:120px;object-fit:cover;display:block;}.related-body{padding:14px;}.related-title{font-size:.875rem;font-weight:600;color:var(--ink);line-height:1.4;}
+    .nl-section{background:var(--bg2);border-top:1px solid var(--border);}.nl-wrap{max-width:540px;margin:0 auto;padding:80px 32px;text-align:center;}
+    .nl-headline{font-family:'Lora',serif;font-size:2rem;font-weight:700;color:var(--ink);margin-bottom:12px;letter-spacing:-.02em;line-height:1.25;}
+    .nl-sub{color:var(--ink-2);font-size:.95rem;line-height:1.7;margin-bottom:40px;}
+    .nl-card{background:#fff;border:1px solid var(--border);border-radius:18px;padding:32px;}
+    .nl-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+    .nl-label{display:block;font-size:11px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-3);margin-bottom:6px;}
+    .nl-input{background:#fff;border:1.5px solid var(--border);border-radius:10px;color:var(--ink);padding:12px 16px;width:100%;font-family:'Inter',sans-serif;font-size:14px;transition:border-color .2s,box-shadow .2s;}
+    .nl-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(255,122,1,.08);}.nl-input::placeholder{color:var(--ink-3);}
+    .nl-submit{width:100%;background:var(--accent);color:#fff;font-weight:600;padding:14px;border-radius:10px;border:none;cursor:pointer;font-size:14px;font-family:'Inter',sans-serif;transition:opacity .2s;margin-top:6px;}.nl-submit:hover{opacity:.88;}
+    .nl-note{font-size:12px;color:var(--ink-3);text-align:center;margin-top:10px;}
+    @media(max-width:640px){.nl-row{grid-template-columns:1fr;}.nl-wrap{padding:64px 24px;}}
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:44px 32px;}
+    .footer-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;}
+    .footer-links{display:flex;gap:24px;}.footer-links a{font-size:13px;color:var(--ink-3);text-decoration:none;font-family:'JetBrains Mono',monospace;transition:color .2s;}.footer-links a:hover{color:var(--accent);}
+    .footer-copy{font-size:12px;color:var(--ink-3);font-family:'JetBrains Mono',monospace;}
+    .reveal-up{opacity:0;transform:translateY(20px);}
   </style>
 </head>
 <body>
-  <div class="reading-progress" id="rp" style="width:0%"></div>
-
-  <nav class="navbar" id="navbar">
-    <div class="navbar-inner">
+  <div class="rp" id="rp"></div>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
       <a href="/"><img src="https://advanx.com.br/wp-content/uploads/2025/06/v3-png-e1750448442622.png" alt="Advanx" class="nav-logo"/></a>
-      <div class="nav-links">
-        <a href="/" class="nav-link">Blog</a>
-        <a href="/#posts" class="nav-link">Artigos</a>
-        <a href="/#newsletter" class="nav-link">Newsletter</a>
-        <a href="https://advanx.com.br" target="_blank" class="nav-link">Advanx.com.br</a>
-      </div>
+      <div class="nav-links"><a href="/">Blog</a><a href="/#posts">Artigos</a><a href="/#newsletter">Newsletter</a><a href="https://advanx.com.br" target="_blank">Advanx.com.br</a></div>
       <div style="display:flex;align-items:center;gap:10px;">
-        <a href="https://wa.me/5571982470873" target="_blank" class="nav-cta hidden md:block">Falar com Especialista</a>
-        <button class="hamburger" onclick="toggleMenu()"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        <a href="https://wa.me/5571982470873" target="_blank" class="nav-btn">Falar com Especialista</a>
+        <button class="ham" onclick="toggleMob()" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
       </div>
     </div>
-    <div id="mob-menu" class="mobile-menu">
-      <div style="max-width:1152px;margin:0 auto;padding:12px 24px;display:flex;flex-direction:column;gap:4px;background:var(--bg);">
-        <a href="/" class="nav-link" style="padding:10px 0;">Blog</a>
-        <a href="/#posts" class="nav-link" style="padding:10px 0;">Artigos</a>
-        <a href="/#newsletter" class="nav-link" style="padding:10px 0;">Newsletter</a>
-        <a href="https://advanx.com.br" target="_blank" class="nav-link" style="padding:10px 0;">Advanx.com.br</a>
-        <a href="https://wa.me/5571982470873" target="_blank" class="nav-cta" style="margin-top:8px;text-align:center;">Falar com Especialista</a>
+    <div id="mob-nav" class="mob-nav">
+      <div style="max-width:1200px;margin:0 auto;padding:14px 24px;display:flex;flex-direction:column;gap:2px;background:var(--bg);">
+        <a href="/" style="color:var(--ink-2);text-decoration:none;padding:10px 0;font-size:15px;">Blog</a>
+        <a href="/#posts" style="color:var(--ink-2);text-decoration:none;padding:10px 0;font-size:15px;">Artigos</a>
+        <a href="/#newsletter" style="color:var(--ink-2);text-decoration:none;padding:10px 0;font-size:15px;">Newsletter</a>
+        <a href="https://advanx.com.br" target="_blank" style="color:var(--ink-2);text-decoration:none;padding:10px 0;font-size:15px;">Advanx.com.br</a>
+        <a href="https://wa.me/5571982470873" target="_blank" class="nav-btn" style="margin-top:10px;text-align:center;">Falar com Especialista</a>
       </div>
     </div>
   </nav>
 
-  <section style="padding-top:80px;background:var(--bg);">
-    <div style="max-width:896px;margin:0 auto;padding:32px 24px 0;">
-      <nav style="display:flex;align-items:center;gap:8px;font-size:12px;font-family:'JetBrains Mono',monospace;color:var(--ink-soft);margin-bottom:20px;">
-        <a href="/" style="color:var(--ink-soft);text-decoration:none;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--ink-soft)'">Início</a>
-        <span>/</span><span style="color:var(--accent);">Captação de Clientes</span>
-        <span>/</span><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:220px;">Sistema de Captação Previsível</span>
-      </nav>
-      <span class="cat-badge anim-hero" style="margin-bottom:16px;">Captação de Clientes</span>
-      <h1 class="anim-hero" style="font-family:'Lora',serif;font-size:clamp(1.75rem,4vw,2.75rem);font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:16px;">Como Criar um Sistema de Captação de Clientes <em style="color:var(--accent);">Previsível</em> para Seu Escritório</h1>
-      <div class="anim-hero" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;color:var(--ink-soft);font-size:13px;margin-bottom:28px;">
-        <span style="font-family:'JetBrains Mono',monospace;">22 fev 2026</span>
-        <span>·</span><span>11 min de leitura</span>
-        <span>·</span><span>Por Advanx Tecnologia</span>
-      </div>
-    </div>
-    <div style="max-width:896px;margin:0 auto;padding:0 24px;">
-      <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&auto=format&fit=crop&q=80" alt="Sistema de Captação de Clientes para Advogados" class="anim-hero" style="width:100%;height:420px;object-fit:cover;border-radius:16px;display:block;"/>
-    </div>
-  </section>
-
-  <div style="max-width:1100px;margin:0 auto;padding:48px 24px;">
-    <div style="display:grid;grid-template-columns:1fr;gap:40px;" id="art-grid">
-      <article class="article-body" style="max-width:680px;">
-
-        <p>Imagine saber exatamente quantos clientes novos você vai ter no próximo mês. Não uma estimativa vaga — um número real, baseado em dados históricos do seu próprio escritório. Para a maioria dos advogados, isso parece utopia. Para os que têm um sistema de captação previsível, é a realidade do dia a dia.</p>
-
-        <p>A diferença entre um escritório que cresce de forma consistente e um que oscila entre meses ótimos e meses difíceis não é talento, não é localização, não é sorte. É <strong>sistema</strong>. Um conjunto integrado de estratégias, ferramentas e processos que funcionam de forma coordenada para gerar, qualificar e converter clientes regularmente.</p>
-
-        <p>Neste artigo, você vai entender como estruturar esse sistema do zero — ou como melhorar o que já existe no seu escritório.</p>
-
-        <h2 id="problema">Por que Escritórios de Advocacia Não Têm Captação Previsível</h2>
-
-        <p>Vamos começar pelo diagnóstico. Se você ainda não tem captação previsível, muito provavelmente está em uma (ou mais) dessas situações:</p>
-
-        <ul>
-          <li><strong>Depende quase exclusivamente de indicações:</strong> Indicações são passivas. Você não controla volume, qualidade nem timing</li>
-          <li><strong>Já tentou anúncios e "não funcionou":</strong> Na maioria dos casos, funcionou mal porque foi uma campanha avulsa sem funil estruturado</li>
-          <li><strong>Não tem clareza sobre seu cliente ideal:</strong> Sem ICP definido, a mensagem é genérica e a conversão é baixa</li>
-          <li><strong>Não mede nada:</strong> Sem dados, você não sabe o que está funcionando e o que está desperdiçando dinheiro</li>
-        </ul>
-
-        <p>O problema não é falta de esforço. É falta de sistema.</p>
-
-        <h2 id="fundamentos">Os 4 Fundamentos de um Sistema de Captação Previsível</h2>
-
-        <h3>Fundamento 1: ICP Definido com Precisão Cirúrgica</h3>
-
-        <p>ICP (Ideal Client Profile) é a descrição do seu cliente ideal. Não "advogado trabalhista em qualquer cidade atendendo qualquer caso". Mas sim: "Advogado trabalhista em Salvador, 35-55 anos, atendendo casos de rescisão indireta e assédio moral, com honorários entre R$2.000 e R$8.000 por caso".</p>
-
-        <p>Quanto mais específico, mais eficiente o sistema. Um anúncio genérico para "pessoas com problemas trabalhistas" vai custar 5x mais por lead qualificado do que um anúncio específico para "pessoas que foram demitidas sem justa causa nos últimos 30 dias".</p>
-
-        <h3>Fundamento 2: Funil com Etapas Claras</h3>
-
-        <p>Um funil de captação jurídico tem pelo menos 4 etapas:</p>
-
-        <div style="margin:2rem 0;display:flex;flex-direction:column;gap:0;">
-          <div class="funnel-card">
-            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;">Etapa 1 — Atração</div>
-            <div style="font-weight:700;color:var(--ink);margin-bottom:4px;">Anúncios + Conteúdo orgânico</div>
-            <div style="font-size:.875rem;color:var(--ink-soft);">1.000 pessoas veem seu conteúdo</div>
-          </div>
-          <div class="funnel-arrow">↓</div>
-          <div class="funnel-card">
-            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;">Etapa 2 — Captação</div>
-            <div style="font-weight:700;color:var(--ink);margin-bottom:4px;">Landing page + Formulário de pré-qualificação</div>
-            <div style="font-size:.875rem;color:var(--ink-soft);">50 pessoas deixam seus dados</div>
-          </div>
-          <div class="funnel-arrow">↓</div>
-          <div class="funnel-card">
-            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;">Etapa 3 — Qualificação</div>
-            <div style="font-weight:700;color:var(--ink);margin-bottom:4px;">Chatbot + CRM</div>
-            <div style="font-size:.875rem;color:var(--ink-soft);">15 leads qualificados chegam ao advogado</div>
-          </div>
-          <div class="funnel-arrow">↓</div>
-          <div class="funnel-card">
-            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;">Etapa 4 — Conversão</div>
-            <div style="font-weight:700;color:var(--ink);margin-bottom:4px;">Consulta + Proposta</div>
-            <div style="font-size:.875rem;color:var(--ink-soft);">4 novos clientes assinam contrato</div>
-          </div>
-        </div>
-
-        <p>Esses são os números do funil de referência da Advanx para escritórios trabalhistas e de consumidor. A taxa de conversão varia por nicho, cidade e experiência do advogado — mas a estrutura é sempre essa.</p>
-
-        <h3>Fundamento 3: Métricas de Acompanhamento</h3>
-
-        <p>Um sistema previsível exige que você meça, no mínimo, estas métricas:</p>
-
-        <ul>
-          <li><strong>CPL (Custo por Lead):</strong> Quanto você paga por cada pessoa que preenche o formulário</li>
-          <li><strong>Taxa de qualificação:</strong> % de leads que passam na triagem inicial</li>
-          <li><strong>Taxa de agendamento:</strong> % de leads qualificados que agendam consulta</li>
-          <li><strong>Taxa de fechamento:</strong> % de consultas que se tornam contrato assinado</li>
-          <li><strong>CAC (Custo de Aquisição de Cliente):</strong> Quanto você gasta para fechar cada cliente</li>
-          <li><strong>LTV (Lifetime Value):</strong> Quanto um cliente gera em receita ao longo do relacionamento</li>
-        </ul>
-
-        <p>Com esses números, você sabe exatamente: "Se eu investir R$1.000 em anúncios este mês, quantos clientes vou fechar?" — e pode planejar a capacidade do escritório de acordo.</p>
-
-        <div class="cta-box" style="margin:2.5rem 0;display:flex;flex-wrap:wrap;align-items:flex-start;gap:20px;">
-          <div style="flex:1;min-width:200px;">
-            <h3 style="font-weight:700;color:var(--ink);font-size:1rem;margin-bottom:6px;">Quer um sistema de captação previsível?</h3>
-            <p style="color:var(--ink-mid);font-size:.875rem;line-height:1.65;">A Advanx implementa o SIC — sistema completo com funil, qualificação e CRM — em até 41 dias.</p>
-          </div>
-          <a href="https://wa.me/5571982470873" target="_blank" style="background:var(--accent);color:#fff;font-weight:700;padding:12px 20px;border-radius:10px;text-decoration:none;font-size:.875rem;white-space:nowrap;flex-shrink:0;transition:background .2s;" onmouseover="this.style.background='#e86d00'" onmouseout="this.style.background='var(--accent)'">Falar com Especialista →</a>
-        </div>
-
-        <h3>Fundamento 4: Otimização Contínua</h3>
-
-        <p>Um sistema de captação nunca está "pronto". O que funciona em fevereiro pode funcionar menos em agosto. As plataformas mudam, o comportamento do consumidor muda, a concorrência muda.</p>
-
-        <p>Por isso, o ciclo de otimização é contínuo: analise os dados toda semana, teste novos criativos a cada 2-4 semanas, ajuste a segmentação quando o CPL sobe acima da meta, revise o script do chatbot quando a taxa de qualificação cai.</p>
-
-        <h2 id="canais">Quais Canais Usar</h2>
-
-        <p>A escolha dos canais depende do seu nicho e do perfil do seu cliente ideal. Aqui está o que funciona melhor para cada área:</p>
-
-        <ul>
-          <li><strong>Trabalhista, Consumidor, Família:</strong> Meta Ads (Instagram + Facebook) são os canais mais eficientes. O público é amplo, o custo por lead é acessível e o WhatsApp fecha o loop de conversão</li>
-          <li><strong>Previdenciário:</strong> Público mais velho — Facebook tem mais alcance que Instagram. YouTube para conteúdo educativo</li>
-          <li><strong>Empresarial e Tributário:</strong> LinkedIn B2B + Google Ads para buscas específicas ("assessoria jurídica empresarial")</li>
-          <li><strong>Imobiliário:</strong> Google Ads para buscas de alta intenção + Instagram para conteúdo de autoridade</li>
-        </ul>
-
-        <h2 id="implementacao">Implementação Passo a Passo</h2>
-
-        <p>Para implementar um sistema de captação previsível do zero, siga esta sequência:</p>
-
-        <ol>
-          <li><strong>Semana 1:</strong> Definir ICP, mapear dores e objeções, criar proposta de valor específica</li>
-          <li><strong>Semana 2:</strong> Criar landing page de captação + configurar formulário de pré-qualificação</li>
-          <li><strong>Semana 3:</strong> Configurar chatbot de qualificação no WhatsApp + CRM</li>
-          <li><strong>Semana 4:</strong> Criar e lançar primeiras campanhas de anúncios</li>
-          <li><strong>Semana 5-8:</strong> Analisar dados, otimizar campanhas e ajustar funil com base em resultados reais</li>
-        </ol>
-
-        <p>Esse é o cronograma básico. Com suporte especializado (como o SIC da Advanx), o processo é acelerado porque você não precisa descobrir o que funciona por tentativa e erro — parte de um modelo já validado em centenas de escritórios.</p>
-
-        <blockquote><p>"1,3 milhão de advogados no Brasil. Só os que têm sistema vencem. Não porque são mais inteligentes — mas porque não dependem de sorte para crescer."</p></blockquote>
-
-        <section style="margin-top:48px;">
-          <h2 style="font-family:'Lora',serif;font-size:1.4rem;font-weight:700;color:var(--ink);margin-bottom:20px;">Perguntas Frequentes</h2>
-          <div style="display:flex;flex-direction:column;gap:10px;">
-            <details class="faq-item"><summary>Quanto preciso investir para ter captação previsível?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq-body">Escritórios que obtêm resultados consistentes investem entre R$1.500 e R$5.000/mês entre verba de anúncios e ferramentas. O SIC da Advanx parte de R$2.000 de setup mais a verba de tráfego definida por você.</div></details>
-            <details class="faq-item"><summary>Quanto tempo leva para gerar os primeiros leads?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq-body">Os primeiros leads aparecem entre 7 e 14 dias após o início das campanhas. O sistema atinge maturidade entre 45 e 90 dias.</div></details>
-            <details class="faq-item"><summary>Advogado solo consegue manter um sistema de captação?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq-body">Sim, com apoio de ferramentas ou parceiro especializado. A parte técnica precisa de conhecimento específico, mas a operação diária após implementação é manejável por um advogado solo.</div></details>
-            <details class="faq-item"><summary>Qual a diferença entre captação previsível e captação por indicação?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq-body">Captação por indicação é passiva. Captação previsível é ativa e mensurável: você sabe quantos leads vai receber por mês para cada real investido.</div></details>
-            <details class="faq-item"><summary>O sistema funciona para todas as áreas do Direito?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq-body">Funciona melhor para Trabalhista, Consumidor, Família, Previdenciário e Imobiliário. Áreas como Empresarial e Tributário também funcionam, mas com estratégias diferentes (LinkedIn B2B).</div></details>
-          </div>
-        </section>
-
-        <section style="margin-top:48px;padding-top:32px;border-top:1px solid var(--border);">
-          <h2 style="font-family:'Lora',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:20px;">Artigos Relacionados</h2>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;">
-            <a href="como-advogados-captam-clientes-ia-2026.html" class="post-card"><div style="overflow:hidden;height:120px;"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&auto=format&fit=crop&q=80" alt="" loading="lazy"/></div><div style="padding:14px;"><span class="cat-badge" style="margin-bottom:8px;">IA para Advogados</span><h4 style="font-size:.875rem;font-weight:600;color:var(--ink);line-height:1.4;">Captar Clientes com IA em 2026</h4></div></a>
-            <a href="chatbot-para-advogados-qualificar-leads-24h.html" class="post-card"><div style="overflow:hidden;height:120px;"><img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&auto=format&fit=crop&q=80" alt="" loading="lazy"/></div><div style="padding:14px;"><span class="cat-badge" style="margin-bottom:8px;">IA para Advogados</span><h4 style="font-size:.875rem;font-weight:600;color:var(--ink);line-height:1.4;">Chatbot para Advogados: Leads 24h</h4></div></a>
-            <a href="automacao-escritorio-advocacia-7-processos.html" class="post-card"><div style="overflow:hidden;height:120px;"><img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&auto=format&fit=crop&q=80" alt="" loading="lazy"/></div><div style="padding:14px;"><span class="cat-badge" style="margin-bottom:8px;">Automação</span><h4 style="font-size:.875rem;font-weight:600;color:var(--ink);line-height:1.4;">7 Processos para Automatizar</h4></div></a>
-          </div>
-        </section>
-      </article>
-
-      <aside class="hidden lg:block" style="width:260px;">
-        <div style="position:sticky;top:80px;display:flex;flex-direction:column;gap:16px;">
-          <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;">
-            <h3 style="font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:14px;">Neste Artigo</h3>
-            <nav style="display:flex;flex-direction:column;gap:2px;">
-              <a href="#problema" class="toc-item">Por que Não Há Previsibilidade</a>
-              <a href="#fundamentos" class="toc-item">Os 4 Fundamentos</a>
-              <a href="#canais" class="toc-item">Quais Canais Usar</a>
-              <a href="#implementacao" class="toc-item">Implementação Passo a Passo</a>
-            </nav>
-          </div>
-          <div style="background:var(--accent-light);border:1px solid rgba(255,122,1,.2);border-radius:12px;padding:20px;">
-            <h3 style="font-weight:700;color:var(--ink);font-size:.9rem;margin-bottom:8px;">Captação previsível começa aqui</h3>
-            <p style="color:var(--ink-mid);font-size:.8rem;line-height:1.65;margin-bottom:14px;">O SIC da Advanx é um sistema completo de captação validado em 400+ escritórios.</p>
-            <a href="https://wa.me/5571982470873" target="_blank" style="display:block;background:var(--accent);color:#fff;font-size:.8rem;font-weight:700;padding:11px 16px;border-radius:8px;text-align:center;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='#e86d00'" onmouseout="this.style.background='var(--accent)'">Falar pelo WhatsApp</a>
-          </div>
-        </div>
-      </aside>
-    </div>
+  <div class="art-hero">
+    <nav class="breadcrumb reveal-up"><a href="/">Início</a><span>/</span><span style="color:var(--accent);">Captação de Clientes</span><span>/</span><span>Sistema de Captação Previsível</span></nav>
+    <span class="cat-tag reveal-up">Captação de Clientes</span>
+    <h1 class="art-title reveal-up">Como Criar um Sistema de Captação Previsível para Advogados</h1>
+    <div class="art-meta reveal-up"><span>22 fev 2026</span><span class="dot">·</span><span>11 min de leitura</span><span class="dot">·</span><span>Advanx Tecnologia</span></div>
   </div>
-  <script>if(window.innerWidth>=1024){document.getElementById('art-grid').style.gridTemplateColumns='1fr 260px';}window.addEventListener('resize',()=>{document.getElementById('art-grid').style.gridTemplateColumns=window.innerWidth>=1024?'1fr 260px':'1fr';});</script>
+  <div class="art-hero-img reveal-up">
+    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1400&auto=format&fit=crop&q=80" alt="Sistema de Captação Previsível para Advogados"/>
+  </div>
 
-  <section id="newsletter" class="nl-section" style="padding:80px 0;">
-    <div style="max-width:560px;margin:0 auto;padding:0 24px;">
-      <div style="text-align:center;margin-bottom:36px;"><span class="cat-badge" style="margin-bottom:16px;display:inline-block;">Newsletter</span><h2 style="font-family:'Lora',serif;font-size:2rem;font-weight:700;color:var(--ink);margin-bottom:12px;line-height:1.25;">Estratégias toda semana, no seu e-mail</h2><p style="color:var(--ink-mid);font-size:15px;line-height:1.7;">Uma tática de captação, um case real, uma ferramenta de IA para advogados. Zero spam.</p></div>
-      <div style="background:#fff;border:1px solid rgba(255,122,1,.15);border-radius:16px;padding:28px 32px;box-shadow:0 4px 24px rgba(0,0,0,.06);">
+  <div class="art-layout">
+    <article class="art-body">
+      <p>Existe uma diferença fundamental entre escritórios que crescem de forma consistente e os que flutuam mês a mês: os primeiros têm um sistema de captação. Os segundos dependem de indicações.</p>
+      <p>Indicações são ótimas quando chegam. O problema é que <strong>você não controla quando — ou se — chegam</strong>. Um mês você fecha 5 novos clientes. No mês seguinte, nenhum.</p>
+
+      <h2 id="problema">O Problema Real das Indicações</h2>
+      <ul>
+        <li><strong>Volume imprevisível:</strong> você nunca sabe quantos clientes virão no mês seguinte</li>
+        <li><strong>Sem controle de qualidade:</strong> quem indica não sabe exatamente seu perfil de cliente ideal</li>
+        <li><strong>Teto de crescimento:</strong> indicações crescem linearmente — você não pode multiplicar seu network infinitamente</li>
+      </ul>
+      <blockquote><p>"O escritório de advocacia que depende só de indicações está construindo em areia. Funciona enquanto a rede está aquecida. Mas qualquer crise derruba o volume."</p></blockquote>
+
+      <h2 id="funil">Entendendo o Funil Jurídico</h2>
+      <p>O funil jurídico típico da Advanx com clientes:</p>
+      <ul>
+        <li>1.000 impressões de anúncio → 50 cliques → 20 leads → 8 consultas → 3 contratos</li>
+        <li>Com qualificação por IA: mesmas 1.000 impressões → 3-4 clientes (melhora de 1x na conversão)</li>
+      </ul>
+
+      <h2 id="atração">Fase 1: Atração — Trazer as Pessoas Certas</h2>
+      <h3>Meta Ads (Instagram + Facebook)</h3>
+      <p>Para a maioria dos nichos jurídicos, Meta Ads é o canal com melhor custo-benefício. A segmentação por interesses e comportamentos permite atingir precisamente pessoas que estão passando por divórcio, demissão, problemas com seguradoras ou dívidas.</p>
+      <h3>Google Ads</h3>
+      <p>Quem pesquisa "advogado trabalhista em Fortaleza" está com problema urgente e pronto para contratar. É mais caro por clique, mas converte melhor.</p>
+      <h3>SEO e Conteúdo Orgânico</h3>
+      <p>Artigos bem escritos sobre problemas jurídicos comuns aparecem no Google e atraem leads qualificados gratuitamente. Leva 3-6 meses para consolidar, mas tem custo marginal zero.</p>
+
+      <h2 id="qualificacao">Fase 2: Qualificação — Filtrar Quem Vale o Seu Tempo</h2>
+      <ol>
+        <li>Lead clica no anúncio e cai na landing page</li>
+        <li>Preenche formulário básico (tipo de problema, urgência, estado)</li>
+        <li>Se qualificado: chatbot inicia conversa no WhatsApp</li>
+        <li>Chatbot coleta detalhes do caso em linguagem natural</li>
+        <li>Qualificados recebem link para agendar consulta</li>
+        <li>Não qualificados recebem resposta educativa</li>
+      </ol>
+
+      <h2 id="conversao">Fase 3: Conversão — Transformar Lead em Cliente</h2>
+      <p>Com o sistema bem estruturado, o advogado chega na consulta com todas as informações coletadas pelo chatbot. O lead já foi educado sobre o processo jurídico.</p>
+      <ul>
+        <li>Proposta clara com etapas e valor definido</li>
+        <li>Contrato de honorários enviado para assinatura digital no mesmo dia</li>
+        <li>Follow-up automatizado para quem não assinar na hora</li>
+      </ul>
+
+      <div class="cta-inline">
+        <div>
+          <h3 style="font-weight:700;color:var(--ink);font-size:1rem;margin-bottom:6px;">Quer montar esse sistema no seu escritório?</h3>
+          <p style="color:var(--ink-2);font-size:.875rem;line-height:1.65;">A Advanx implementa o sistema completo em 41 dias, com estratégia, tecnologia e execução.</p>
+        </div>
+        <a href="https://wa.me/5571982470873" target="_blank" class="btn-accent">Falar com Especialista →</a>
+      </div>
+
+      <h2 id="fidelizacao">Fase 4: Fidelização — Transformar Clientes em Promotores</h2>
+      <ul>
+        <li>Updates automáticos sobre o andamento do processo</li>
+        <li>Pesquisa de satisfação ao final de cada case</li>
+        <li>Newsletter educativa que mantém o escritório na memória do cliente</li>
+        <li>Pedido estruturado de depoimento (com autorização OAB)</li>
+      </ul>
+
+      <h2 id="metricas">Métricas que Importam</h2>
+      <ul>
+        <li><strong>CPL (Custo por Lead):</strong> quanto custa cada lead gerado</li>
+        <li><strong>Taxa de qualificação:</strong> % de leads que passam pelo filtro</li>
+        <li><strong>Taxa de conversão:</strong> % de qualificados que viram clientes</li>
+        <li><strong>LTV (Lifetime Value):</strong> receita média gerada por cliente ao longo do tempo</li>
+        <li><strong>CAC (Custo de Aquisição de Cliente):</strong> CPL ÷ taxa de conversão</li>
+      </ul>
+      <p>Com essas métricas, você toma decisões baseadas em dados — não em feeling.</p>
+
+      <section style="margin-top:3rem;">
+        <h2 style="font-family:'Lora',serif;font-size:1.45rem;font-weight:700;color:var(--ink);margin-bottom:0;letter-spacing:-.01em;">Perguntas Frequentes</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>Quanto preciso investir para ter um sistema de captação funcionando?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq-body">Para um sistema básico funcional: R$1.500-3.000 de setup e R$800-2.000/mês em manutenção + verba de anúncios. Para um sistema completo com IA: a partir de R$3.000. O ROI tipicamente aparece no 2º ou 3º mês.</div></details>
+          <details class="faq-item"><summary>Em quanto tempo o sistema começa a gerar resultados?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq-body">Os primeiros leads chegam em 7-14 dias após ativar anúncios. Leads qualificados e conversões em clientes geralmente aparecem entre 30 e 60 dias.</div></details>
+          <details class="faq-item"><summary>Esse sistema funciona para qualquer área do Direito?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq-body">Sim, com adaptações. Direito Trabalhista, Consumidor, Família e Previdenciário têm maior volume de busca online. Direito Empresarial e Tributário têm ciclos mais longos mas ticket mais alto.</div></details>
+          <details class="faq-item"><summary>Preciso de equipe para gerir o sistema?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq-body">Não necessariamente. Com automação, um advogado solo consegue gerir o funil. Sistemas bem configurados funcionam de forma quase autônoma.</div></details>
+        </div>
+      </section>
+
+      <section style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);">
+        <h2 style="font-family:'Lora',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:0;letter-spacing:-.01em;">Artigos Relacionados</h2>
+        <div class="related-grid">
+          <a href="como-advogados-captam-clientes-ia-2026.html" class="related-card"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&auto=format&fit=crop&q=80" alt="IA para Advogados" loading="lazy"/><div class="related-body"><span class="cat-tag" style="margin-bottom:8px;">IA para Advogados</span><h4 class="related-title">Como Advogados Captam Clientes com IA em 2026</h4></div></a>
+          <a href="marketing-juridico-oab-guia-completo.html" class="related-card"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400&auto=format&fit=crop&q=80" alt="Marketing Jurídico" loading="lazy"/><div class="related-body"><span class="cat-tag" style="margin-bottom:8px;">Marketing Jurídico</span><h4 class="related-title">Marketing Jurídico: O que a OAB Permite</h4></div></a>
+          <a href="chatbot-para-advogados-qualificar-leads-24h.html" class="related-card"><img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&auto=format&fit=crop&q=80" alt="Chatbot para Advogados" loading="lazy"/><div class="related-body"><span class="cat-tag" style="margin-bottom:8px;">IA para Advogados</span><h4 class="related-title">Chatbot para Advogados: Leads 24h com IA</h4></div></a>
+        </div>
+      </section>
+    </article>
+
+    <aside class="art-sidebar">
+      <div class="sidebar-box">
+        <span class="sidebar-label">Neste Artigo</span>
+        <nav style="display:flex;flex-direction:column;gap:2px;">
+          <a href="#problema" class="toc-link">O Problema das Indicações</a>
+          <a href="#funil" class="toc-link">O Funil Jurídico</a>
+          <a href="#atração" class="toc-link">Fase 1: Atração</a>
+          <a href="#qualificacao" class="toc-link">Fase 2: Qualificação</a>
+          <a href="#conversao" class="toc-link">Fase 3: Conversão</a>
+          <a href="#fidelizacao" class="toc-link">Fase 4: Fidelização</a>
+          <a href="#metricas" class="toc-link">Métricas que Importam</a>
+        </nav>
+      </div>
+      <div class="sidebar-cta">
+        <h3 style="font-weight:700;color:var(--ink);font-size:.9rem;margin-bottom:8px;line-height:1.4;">Pronto para crescer com IA?</h3>
+        <p style="color:var(--ink-2);font-size:.8rem;line-height:1.65;margin-bottom:14px;">Fale com um especialista da Advanx e descubra o sistema certo para seu escritório.</p>
+        <a href="https://wa.me/5571982470873" target="_blank" class="btn-accent" style="display:block;text-align:center;">Falar pelo WhatsApp</a>
+      </div>
+    </aside>
+  </div>
+
+  <section id="newsletter" class="nl-section">
+    <div class="nl-wrap">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:16px;display:block;">Newsletter</span>
+      <h2 class="nl-headline">Estratégias toda semana, no seu e-mail</h2>
+      <p class="nl-sub">Uma tática de captação, um case real, uma ferramenta de IA para advogados. Zero spam.</p>
+      <div class="nl-card">
         <form id="nl-form" onsubmit="submitNewsletter(event)">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;"><div><label style="display:block;font-size:11px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);margin-bottom:6px;">Nome</label><input type="text" id="nl-nome" placeholder="Seu nome" class="nl-input" required/></div><div><label style="display:block;font-size:11px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);margin-bottom:6px;">WhatsApp</label><input type="tel" id="nl-telefone" placeholder="(71) 99999-9999" class="nl-input" maxlength="15" required/></div></div>
-          <div style="margin-bottom:20px;"><label style="display:block;font-size:11px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);margin-bottom:6px;">E-mail</label><input type="email" id="nl-email" placeholder="seu@email.com" class="nl-input" required/></div>
-          <button type="submit" id="nl-btn" style="width:100%;background:var(--accent);color:#fff;font-weight:700;padding:14px;border-radius:10px;border:none;cursor:pointer;font-size:14px;font-family:'Inter',sans-serif;transition:background .2s;" onmouseover="this.style.background='#e86d00'" onmouseout="this.style.background='var(--accent)'">Quero Receber Estratégias Gratuitas</button>
-          <p style="text-align:center;font-size:12px;color:var(--ink-soft);margin-top:12px;">Sem spam. Cancele quando quiser.</p>
+          <div class="nl-row">
+            <div><label class="nl-label">Nome</label><input type="text" id="nl-nome" placeholder="Seu nome" class="nl-input" required/></div>
+            <div><label class="nl-label">WhatsApp</label><input type="tel" id="nl-telefone" placeholder="(71) 99999-9999" class="nl-input" maxlength="15" required/></div>
+          </div>
+          <div style="margin-bottom:14px;"><label class="nl-label">E-mail</label><input type="email" id="nl-email" placeholder="seu@email.com" class="nl-input" required/></div>
+          <button type="submit" id="nl-btn" class="nl-submit">Quero Receber Estratégias Gratuitas</button>
+          <p class="nl-note">Sem spam. Cancele quando quiser.</p>
         </form>
-        <div id="nl-success" class="hidden" style="text-align:center;padding:28px 0;"><div style="font-size:2.5rem;margin-bottom:12px;">🎯</div><h3 style="font-family:'Lora',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:8px;">Você está dentro!</h3><p style="color:var(--ink-mid);font-size:14px;">Verifique seu e-mail. Boas estratégias a caminho.</p></div>
+        <div id="nl-success" style="display:none;text-align:center;padding:32px 0;">
+          <div style="font-size:2.5rem;margin-bottom:12px;">🎯</div>
+          <h3 style="font-family:'Lora',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:8px;">Você está dentro!</h3>
+          <p style="color:var(--ink-2);font-size:14px;">Verifique seu e-mail. Boas estratégias a caminho.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer class="site-footer" style="padding:48px 0;"><div style="max-width:1152px;margin:0 auto;padding:0 24px;"><div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;"><a href="/"><img src="https://advanx.com.br/wp-content/uploads/2025/06/v3-png-e1750448442622.png" alt="Advanx" style="height:28px;"/></a><div style="display:flex;gap:24px;flex-wrap:wrap;"><a href="https://instagram.com/advanxtecnologia" target="_blank" style="font-size:13px;color:var(--ink-soft);text-decoration:none;font-family:'JetBrains Mono',monospace;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--ink-soft)'">Instagram</a><a href="https://linkedin.com/company/advanx-tecnologia" target="_blank" style="font-size:13px;color:var(--ink-soft);text-decoration:none;font-family:'JetBrains Mono',monospace;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--ink-soft)'">LinkedIn</a><a href="https://wa.me/5571982470873" target="_blank" style="font-size:13px;color:var(--ink-soft);text-decoration:none;font-family:'JetBrains Mono',monospace;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--ink-soft)'">WhatsApp</a></div><p style="font-size:12px;color:var(--ink-soft);font-family:'JetBrains Mono',monospace;">© 2026 Advanx Tecnologia</p></div></div></footer>
-
+  <footer>
+    <div class="footer-inner">
+      <a href="/"><img src="https://advanx.com.br/wp-content/uploads/2025/06/v3-png-e1750448442622.png" alt="Advanx" style="height:26px;"/></a>
+      <div class="footer-links">
+        <a href="https://instagram.com/advanxtecnologia" target="_blank">Instagram</a>
+        <a href="https://linkedin.com/company/advanx-tecnologia" target="_blank">LinkedIn</a>
+        <a href="https://youtube.com/@advanxtecnologia" target="_blank">YouTube</a>
+        <a href="https://wa.me/5571982470873" target="_blank">WhatsApp</a>
+      </div>
+      <p class="footer-copy">© 2026 Advanx Tecnologia</p>
+    </div>
+  </footer>
   <script>
     gsap.registerPlugin(ScrollTrigger);
-    window.addEventListener('scroll',()=>{document.querySelector('.navbar').classList.toggle('scrolled',window.scrollY>20);const h=document.documentElement.scrollHeight-document.documentElement.clientHeight;document.getElementById('rp').style.width=(document.documentElement.scrollTop/h*100)+'%';});
-    function toggleMenu(){document.getElementById('mob-menu').classList.toggle('open');}
-    gsap.to('.anim-hero',{opacity:1,y:0,duration:.7,stagger:.12,ease:'power2.out',delay:.1});
-    gsap.utils.toArray('.article-body h2').forEach(el=>{ScrollTrigger.create({trigger:el,start:'top 88%',once:true,onEnter:()=>gsap.to(el,{opacity:1,y:0,duration:.6,ease:'power2.out'})});});
-    const tocLinks=document.querySelectorAll('.toc-item');
-    window.addEventListener('scroll',()=>{let current='';document.querySelectorAll('.article-body h2[id]').forEach(h=>{if(h.offsetTop-120<=window.scrollY)current=h.id;});tocLinks.forEach(l=>{l.classList.toggle('active',l.getAttribute('href')==='#'+current);});});
-    function phoneMask(el){el.addEventListener('input',function(e){let v=e.target.value.replace(/\D/g,'').substring(0,11);if(v.length>=7)v=`(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`;else if(v.length>=3)v=`(${v.slice(0,2)}) ${v.slice(2)}`;else if(v.length>=1)v=`(${v}`;e.target.value=v;});}
-    phoneMask(document.getElementById('nl-telefone'));
+    window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>20);const h=document.documentElement.scrollHeight-document.documentElement.clientHeight;document.getElementById('rp').style.width=(document.documentElement.scrollTop/h*100)+'%';});
+    function toggleMob(){document.getElementById('mob-nav').classList.toggle('open');}
+    gsap.to('.reveal-up',{opacity:1,y:0,duration:.7,stagger:.1,ease:'power2.out',delay:.05});
+    gsap.utils.toArray('.art-body h2').forEach(el=>{ScrollTrigger.create({trigger:el,start:'top 88%',once:true,onEnter:()=>gsap.fromTo(el,{opacity:0,y:16},{opacity:1,y:0,duration:.6,ease:'power2.out'})});});
+    const tocLinks=document.querySelectorAll('.toc-link');
+    window.addEventListener('scroll',()=>{let cur='';document.querySelectorAll('.art-body h2[id]').forEach(h=>{if(h.offsetTop-140<=window.scrollY)cur=h.id;});tocLinks.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+cur));});
+    const ph=document.getElementById('nl-telefone');
+    if(ph)ph.addEventListener('input',function(e){let v=e.target.value.replace(/\D/g,'').substring(0,11);if(v.length>=7)v=`(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`;else if(v.length>=3)v=`(${v.slice(0,2)}) ${v.slice(2)}`;else if(v.length)v=`(${v}`;e.target.value=v;});
     function getUTMs(){const p=new URLSearchParams(window.location.search);return{origem:p.get('utm_source')||'blog',campanha:p.get('utm_campaign')||'',conjunto:p.get('utm_medium')||'',anuncio:p.get('utm_content')||'',posicionamento:p.get('utm_term')||''};}
     const SU='https://lhbwfbquxkutcyqazpnw.supabase.co';const SK='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxoYndmYnF1eGt1dGN5cWF6cG53Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA1Mjc5MTksImV4cCI6MjA2NjEwMzkxOX0.Tk6O2kpzTWcce9laIancu-lMFATLYkaTvgLBiRMsa10';
-    async function submitNewsletter(e){e.preventDefault();const btn=document.getElementById('nl-btn');btn.textContent='Enviando...';btn.disabled=true;try{await fetch(`${SU}/rest/v1/dados_cliente`,{method:'POST',headers:{'Content-Type':'application/json','apikey':SK,'Authorization':`Bearer ${SK}`,'Prefer':'return=minimal'},body:JSON.stringify({nome:document.getElementById('nl-nome').value.trim(),telefone:document.getElementById('nl-telefone').value.replace(/\D/g,''),email:document.getElementById('nl-email').value.trim(),kanban_stage:'Novo Lead',pipeline_type:'inbound',funil_lead:'Advanx',empresa_fonte:'Advanx',...getUTMs()})});if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'Newsletter Blog'});if(typeof gtag!=='undefined')gtag('event','generate_lead',{event_category:'newsletter'});document.getElementById('nl-form').classList.add('hidden');document.getElementById('nl-success').classList.remove('hidden');}catch{btn.textContent='Quero Receber Estratégias Gratuitas';btn.disabled=false;}}
+    async function submitNewsletter(e){e.preventDefault();const btn=document.getElementById('nl-btn');btn.textContent='Enviando...';btn.disabled=true;try{await fetch(`${SU}/rest/v1/dados_cliente`,{method:'POST',headers:{'Content-Type':'application/json','apikey':SK,'Authorization':`Bearer ${SK}`,'Prefer':'return=minimal'},body:JSON.stringify({nome:document.getElementById('nl-nome').value.trim(),telefone:document.getElementById('nl-telefone').value.replace(/\D/g,''),email:document.getElementById('nl-email').value.trim(),kanban_stage:'Novo Lead',pipeline_type:'inbound',funil_lead:'Advanx',empresa_fonte:'Advanx',...getUTMs()})});if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'Newsletter Blog'});if(typeof gtag!=='undefined')gtag('event','generate_lead',{event_category:'newsletter'});document.getElementById('nl-form').style.display='none';document.getElementById('nl-success').style.display='block';}catch{btn.textContent='Quero Receber Estratégias Gratuitas';btn.disabled=false;}}
     let vcFired=false;window.addEventListener('scroll',()=>{if(!vcFired&&window.scrollY/(document.body.scrollHeight-window.innerHeight)>=0.5){vcFired=true;if(typeof fbq!=='undefined')fbq('track','ViewContent');}});
   </script>
 </body>
