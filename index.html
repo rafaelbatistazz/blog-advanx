@@ -7,650 +7,382 @@
   <meta name="description" content="Estratégias, ferramentas e cases reais de IA, captação de clientes e automação jurídica para advogados e escritórios de advocacia." />
   <meta name="keywords" content="IA para advogados, captação de clientes advocacia, marketing jurídico, automação escritório advocacia" />
   <link rel="canonical" href="https://blog.advanx.com.br/" />
-  <!-- Open Graph -->
   <meta property="og:title" content="Blog Advanx — IA e Captação para Advogados" />
   <meta property="og:description" content="Estratégias, ferramentas e cases reais de IA, captação de clientes e automação jurídica." />
   <meta property="og:url" content="https://blog.advanx.com.br/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://advanx.com.br/wp-content/uploads/2025/06/v3-png-e1750448442622.png" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Blog Advanx","url":"https://blog.advanx.com.br","description":"Estratégias de IA, captação de clientes e automação jurídica para advogados.","publisher":{"@type":"Organization","name":"Advanx Tecnologia","url":"https://advanx.com.br","logo":{"@type":"ImageObject","url":"https://advanx.com.br/wp-content/uploads/2025/06/v3-png-e1750448442622.png"}}}</script>
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,700;1,800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- GSAP CDN -->
+  <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <!-- Meta Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '502759528362336');
-    fbq('track', 'PageView');
-  </script>
+  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','502759528362336');fbq('track','PageView');</script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=502759528362336&ev=PageView&noscript=1"/></noscript>
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-98EL5GXG5F"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-98EL5GXG5F');
-  </script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            obsidian: '#0D0D12',
-            surface: '#111118',
-            accent: '#FF7A01',
-            ivory: '#FAF8F5',
-          },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            serif: ['Playfair Display', 'serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          }
-        }
-      }
-    }
-  </script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-98EL5GXG5F');</script>
   <style>
-    :root {
-      --obsidian: #0D0D12;
-      --surface: #111118;
-      --border: rgba(255,255,255,0.06);
-      --accent: #FF7A01;
-      --ivory: #FAF8F5;
-      --muted: rgba(250,248,245,0.55);
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { background: var(--obsidian); color: var(--ivory); font-family: 'Inter', sans-serif; overflow-x: hidden; }
-    ::selection { background: var(--accent); color: #000; }
-    ::-webkit-scrollbar { width: 4px; }
-    ::-webkit-scrollbar-track { background: var(--obsidian); }
-    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
-
-    /* Mesh grid background */
-    .mesh-bg {
-      background-image:
-        linear-gradient(rgba(255,122,1,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,122,1,0.03) 1px, transparent 1px);
-      background-size: 60px 60px;
-    }
-
-    /* Orb */
-    .orb {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(120px);
-      pointer-events: none;
-    }
-
-    /* Navbar pill */
-    .navbar-pill {
-      background: rgba(13,13,18,0.7);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid var(--border);
-      border-radius: 100px;
-    }
-
-    /* Ticker */
-    .ticker-wrap { overflow: hidden; white-space: nowrap; }
-    .ticker-content {
-      display: inline-block;
-      animation: ticker 28s linear infinite;
-    }
-    @keyframes ticker {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    /* Card hover */
-    .post-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-    .post-card:hover {
-      border-color: rgba(255,122,1,0.3);
-      transform: translateY(-4px);
-      box-shadow: 0 24px 60px rgba(255,122,1,0.08);
-    }
-    .post-card img { transition: transform 0.5s ease; }
-    .post-card:hover img { transform: scale(1.05); }
-
-    /* Category badge */
-    .cat-badge {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 10px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      background: rgba(255,122,1,0.15);
-      color: var(--accent);
-      border: 1px solid rgba(255,122,1,0.3);
-      border-radius: 6px;
-      padding: 3px 8px;
-    }
-
-    /* Filter pill active */
-    .filter-pill { cursor: pointer; transition: all 0.2s ease; }
-    .filter-pill.active {
-      background: var(--accent);
-      color: #000;
-      border-color: var(--accent);
-    }
-
-    /* Newsletter form */
-    .nl-input {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      color: var(--ivory);
-      padding: 14px 18px;
-      width: 100%;
-      font-family: 'Inter', sans-serif;
-      font-size: 14px;
-      transition: border-color 0.2s;
-    }
-    .nl-input:focus { outline: none; border-color: var(--accent); }
-    .nl-input::placeholder { color: var(--muted); }
-
-    /* Phone mask */
-    .phone-display { display: block; }
-
-    /* Mobile menu */
-    .mobile-menu { display: none; }
-    .mobile-menu.open { display: block; }
-
-    /* Dropdown */
-    .dropdown-menu {
-      position: absolute;
-      top: calc(100% + 12px);
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(17,17,24,0.95);
-      backdrop-filter: blur(20px);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 8px;
-      min-width: 220px;
-      opacity: 0;
-      pointer-events: none;
-      transition: all 0.2s ease;
-      z-index: 100;
-    }
-    .dropdown-trigger:hover .dropdown-menu { opacity: 1; pointer-events: all; }
-
-    /* Featured overlay */
-    .featured-overlay {
-      background: linear-gradient(to top, rgba(13,13,18,0.95) 0%, rgba(13,13,18,0.4) 50%, transparent 100%);
-    }
-
-    /* Invisible on load for GSAP */
-    .gsap-fade { opacity: 0; transform: translateY(30px); }
+    :root{--bg:#F9F7F4;--surface:#fff;--ink:#1C1917;--ink-mid:#78716C;--ink-soft:#A8A29E;--border:#E8E5E2;--accent:#FF7A01;--accent-light:#FFF7ED;}
+    *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6;}
+    ::selection{background:var(--accent);color:#fff;}
+    ::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px;}
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(249,247,244,0.92);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s;}
+    .navbar.scrolled{border-color:var(--border);box-shadow:0 1px 16px rgba(0,0,0,0.05);}
+    .navbar-inner{max-width:1152px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;}
+    .nav-logo{height:28px;width:auto;}
+    .nav-links{display:flex;align-items:center;gap:28px;}
+    .nav-link{font-size:14px;color:var(--ink-mid);text-decoration:none;transition:color .2s;}
+    .nav-link:hover{color:var(--ink);}
+    .nav-cta{background:var(--accent);color:#fff;font-size:13px;font-weight:600;padding:10px 20px;border-radius:100px;text-decoration:none;transition:background .2s,transform .15s;}
+    .nav-cta:hover{background:#e86d00;transform:translateY(-1px);}
+    .nav-cta-ghost{border:1.5px solid var(--border);color:var(--ink-mid);font-size:13px;font-weight:500;padding:9px 18px;border-radius:100px;text-decoration:none;transition:all .2s;}
+    .nav-cta-ghost:hover{border-color:var(--accent);color:var(--accent);}
+    .cat-badge{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;background:var(--accent-light);color:var(--accent);border-radius:4px;padding:3px 9px;display:inline-block;font-weight:500;}
+    .post-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:transform .22s ease,box-shadow .22s ease;text-decoration:none;display:block;}
+    .post-card:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(0,0,0,0.08);}
+    .post-card img{transition:transform .4s ease;display:block;width:100%;height:100%;object-fit:cover;}
+    .post-card:hover img{transform:scale(1.04);}
+    .filter-pill{cursor:pointer;border-radius:100px;font-size:13px;font-family:'Inter',sans-serif;padding:8px 18px;border:1.5px solid var(--border);color:var(--ink-mid);background:transparent;transition:all .2s;}
+    .filter-pill:hover{border-color:var(--accent);color:var(--accent);}
+    .filter-pill.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+    .nl-input{background:#fff;border:1.5px solid var(--border);border-radius:8px;color:var(--ink);padding:12px 16px;width:100%;font-family:'Inter',sans-serif;font-size:14px;transition:border-color .2s,box-shadow .2s;}
+    .nl-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(255,122,1,.1);}
+    .nl-input::placeholder{color:var(--ink-soft);}
+    .mobile-menu{display:none;border-top:1px solid var(--border);}
+    .mobile-menu.open{display:block;}
+    .feat-overlay{background:linear-gradient(to top,rgba(28,25,23,.9) 0%,rgba(28,25,23,.3) 55%,transparent 100%);}
+    .nl-section{background:var(--accent-light);border-top:1px solid rgba(255,122,1,.15);border-bottom:1px solid rgba(255,122,1,.15);}
+    .site-footer{background:#fff;border-top:1px solid var(--border);}
+    .ticker-wrap{overflow:hidden;white-space:nowrap;background:var(--accent);}
+    .ticker-content{display:inline-block;animation:ticker 28s linear infinite;}
+    @keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+    .hamburger{display:none;background:none;border:none;cursor:pointer;color:var(--ink-mid);padding:4px;}
+    @media(max-width:768px){.nav-links{display:none;}.hamburger{display:block;}.nav-cta-ghost{display:none;}}
+    .anim-hero{opacity:0;transform:translateY(20px);}
+    .anim-section{opacity:0;transform:translateY(14px);}
+    .stat-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:16px 20px;text-align:center;}
   </style>
 </head>
-<body class="bg-obsidian">
-
+<body>
   <!-- NAVBAR -->
-  <header class="fixed top-0 left-0 right-0 z-50 px-4 py-4">
-    <nav class="navbar-pill max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
-      <!-- Logo -->
-      <a href="/" class="flex items-center gap-3">
-        <img src="https://advanx.com.br/wp-content/uploads/2025/06/v3-png-e1750448442622.png" alt="Advanx" class="h-7 w-auto" />
-      </a>
-      <!-- Desktop Nav -->
-      <div class="hidden md:flex items-center gap-6">
-        <div class="dropdown-trigger relative">
-          <button class="text-sm text-ivory/70 hover:text-ivory transition-colors flex items-center gap-1.5">
-            Categorias
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="dropdown-menu">
-            <a href="#posts" onclick="filterPosts('ia-para-advogados')" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 transition-colors text-sm text-ivory/80 hover:text-ivory">IA para Advogados</a>
-            <a href="#posts" onclick="filterPosts('captacao-clientes')" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 transition-colors text-sm text-ivory/80 hover:text-ivory">Captação de Clientes</a>
-            <a href="#posts" onclick="filterPosts('automacao-juridica')" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 transition-colors text-sm text-ivory/80 hover:text-ivory">Automação Jurídica</a>
-            <a href="#posts" onclick="filterPosts('marketing-juridico')" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 transition-colors text-sm text-ivory/80 hover:text-ivory">Marketing Jurídico</a>
-          </div>
-        </div>
-        <a href="https://advanx.com.br" target="_blank" class="text-sm text-ivory/70 hover:text-ivory transition-colors">Advanx.com.br</a>
-        <a href="#newsletter" class="bg-accent text-black text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-orange-400 transition-colors">Newsletter</a>
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="/"><img src="https://advanx.com.br/wp-content/uploads/2025/06/v3-png-e1750448442622.png" alt="Advanx" class="nav-logo"/></a>
+      <div class="nav-links">
+        <a href="/" class="nav-link">Blog</a>
+        <a href="/#posts" class="nav-link">Artigos</a>
+        <a href="/#newsletter" class="nav-link">Newsletter</a>
+        <a href="https://advanx.com.br" target="_blank" class="nav-link">Advanx.com.br</a>
       </div>
-      <!-- Mobile hamburger -->
-      <button onclick="toggleMobileMenu()" class="md:hidden text-ivory/70 hover:text-ivory" id="hamburger-btn">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
-    </nav>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="mobile-menu md:hidden max-w-5xl mx-auto mt-2">
-      <div class="navbar-pill p-4 flex flex-col gap-2">
-        <a href="#posts" onclick="filterPosts('ia-para-advogados'); toggleMobileMenu()" class="px-4 py-3 rounded-xl hover:bg-white/5 text-sm text-ivory/80">IA para Advogados</a>
-        <a href="#posts" onclick="filterPosts('captacao-clientes'); toggleMobileMenu()" class="px-4 py-3 rounded-xl hover:bg-white/5 text-sm text-ivory/80">Captação de Clientes</a>
-        <a href="#posts" onclick="filterPosts('automacao-juridica'); toggleMobileMenu()" class="px-4 py-3 rounded-xl hover:bg-white/5 text-sm text-ivory/80">Automação Jurídica</a>
-        <a href="#posts" onclick="filterPosts('marketing-juridico'); toggleMobileMenu()" class="px-4 py-3 rounded-xl hover:bg-white/5 text-sm text-ivory/80">Marketing Jurídico</a>
-        <div class="border-t border-white/5 my-1"></div>
-        <a href="https://advanx.com.br" target="_blank" class="px-4 py-3 rounded-xl hover:bg-white/5 text-sm text-ivory/80">Advanx.com.br</a>
-        <a href="#newsletter" onclick="toggleMobileMenu()" class="bg-accent text-black text-sm font-semibold px-4 py-3 rounded-xl text-center">Newsletter</a>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <a href="https://wa.me/5571982470873" target="_blank" class="nav-cta hidden md:block">Falar com Especialista</a>
+        <button class="hamburger" onclick="toggleMenu()"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
       </div>
     </div>
-  </header>
+    <div id="mob-menu" class="mobile-menu">
+      <div style="max-width:1152px;margin:0 auto;padding:12px 24px;display:flex;flex-direction:column;gap:4px;background:var(--bg);">
+        <a href="/" class="nav-link" style="padding:10px 0;">Blog</a>
+        <a href="/#posts" class="nav-link" style="padding:10px 0;">Artigos</a>
+        <a href="/#newsletter" class="nav-link" style="padding:10px 0;">Newsletter</a>
+        <a href="https://advanx.com.br" target="_blank" class="nav-link" style="padding:10px 0;">Advanx.com.br</a>
+        <a href="https://wa.me/5571982470873" target="_blank" class="nav-cta" style="margin-top:8px;text-align:center;">Falar com Especialista</a>
+      </div>
+    </div>
+  </nav>
 
   <!-- HERO -->
-  <section class="relative min-h-screen flex flex-col justify-center mesh-bg overflow-hidden pt-24">
-    <!-- Orbs -->
-    <div class="orb w-96 h-96 bg-accent/20 -top-20 -right-20"></div>
-    <div class="orb w-64 h-64 bg-accent/10 bottom-20 -left-10"></div>
-    <div class="orb w-48 h-48 bg-purple-500/10 top-1/3 left-1/3"></div>
-
-    <div class="max-w-6xl mx-auto px-6 py-20">
-      <div class="max-w-3xl">
-        <div id="hero-badge" class="gsap-fade inline-flex items-center gap-2 mb-8">
-          <span class="font-mono text-xs text-accent tracking-widest uppercase border border-accent/30 bg-accent/10 rounded-full px-4 py-1.5">Blog Advanx</span>
+  <section style="padding-top:80px;background:var(--bg);">
+    <div style="max-width:1152px;margin:0 auto;padding:48px 24px 32px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;" id="hero-grid">
+        <!-- Left -->
+        <div>
+          <span class="cat-badge anim-hero" style="margin-bottom:20px;">Blog Advanx</span>
+          <h1 class="anim-hero" style="font-family:'Lora',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:20px;">Estratégias que transformam escritórios em <em style="color:var(--accent);">máquinas de captação</em></h1>
+          <p class="anim-hero" style="color:var(--ink-mid);font-size:1.05rem;line-height:1.75;margin-bottom:32px;">IA, automação e captação ética de clientes para advogados que querem crescer sem depender de indicações — e sem violar o Código de Ética da OAB.</p>
+          <div class="anim-hero" style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px;">
+            <a href="#posts" style="background:var(--accent);color:#fff;font-weight:700;padding:13px 28px;border-radius:100px;text-decoration:none;font-size:14px;transition:background .2s;" onmouseover="this.style.background='#e86d00'" onmouseout="this.style.background='var(--accent)'">Ver Artigos</a>
+            <a href="https://wa.me/5571982470873" target="_blank" style="border:1.5px solid var(--border);color:var(--ink-mid);font-weight:500;padding:12px 24px;border-radius:100px;text-decoration:none;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--ink-mid)'">Falar com Especialista</a>
+          </div>
+          <!-- Stats row -->
+          <div class="anim-hero" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+            <div class="stat-card">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:1.6rem;font-weight:700;color:var(--accent);">400+</div>
+              <div style="font-size:11px;color:var(--ink-soft);margin-top:4px;">Advogados atendidos</div>
+            </div>
+            <div class="stat-card">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:1.6rem;font-weight:700;color:var(--accent);">R$5M+</div>
+              <div style="font-size:11px;color:var(--ink-soft);margin-top:4px;">Em resultados gerados</div>
+            </div>
+            <div class="stat-card">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:1.6rem;font-weight:700;color:var(--accent);">41 dias</div>
+              <div style="font-size:11px;color:var(--ink-soft);margin-top:4px;">Prazo para resultados</div>
+            </div>
+          </div>
         </div>
-        <h1 id="hero-title" class="gsap-fade text-5xl md:text-7xl font-black leading-tight tracking-tight text-ivory mb-6">
-          Estratégias que
-          <span class="font-serif italic text-accent block">transformam</span>
-          escritórios em<br/>máquinas de captação
-        </h1>
-        <p id="hero-sub" class="gsap-fade text-lg md:text-xl text-ivory/60 mb-10 max-w-2xl leading-relaxed">
-          IA, automação e captação ética de clientes para advogados que querem crescer sem depender de indicações — e sem violar o Código de Ética da OAB.
-        </p>
-        <div id="hero-ctas" class="gsap-fade flex flex-wrap gap-4 mb-16">
-          <a href="#posts" class="bg-accent text-black font-bold px-8 py-4 rounded-full hover:bg-orange-400 transition-all hover:scale-105 text-sm">
-            Ver Artigos
+        <!-- Right: featured post card -->
+        <div class="anim-hero">
+          <a href="posts/como-advogados-captam-clientes-ia-2026.html" class="post-card" style="display:block;border-radius:16px;overflow:hidden;text-decoration:none;">
+            <div style="position:relative;height:280px;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&auto=format&fit=crop&q=80" alt="IA para Advogados" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;"/>
+              <div class="feat-overlay" style="position:absolute;inset:0;"></div>
+              <div style="position:absolute;bottom:0;left:0;right:0;padding:20px 24px;">
+                <span class="cat-badge" style="margin-bottom:10px;background:rgba(255,122,1,0.9);">IA para Advogados</span>
+                <h3 style="font-family:'Lora',serif;font-size:1.15rem;font-weight:700;color:#fff;line-height:1.35;margin-bottom:8px;">Como Advogados Podem Captar Clientes com IA em 2026</h3>
+                <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,0.7);">
+                  <span style="font-family:'JetBrains Mono',monospace;">28 fev 2026</span>
+                  <span>·</span>
+                  <span>8 min</span>
+                </div>
+              </div>
+            </div>
           </a>
-          <a href="https://wa.me/5571982470873" target="_blank" class="border border-white/20 text-ivory px-8 py-4 rounded-full hover:border-accent/50 transition-all text-sm hover:bg-white/5">
-            Falar com Especialista
-          </a>
-        </div>
-        <!-- Stats -->
-        <div id="hero-stats" class="gsap-fade flex flex-wrap gap-8">
-          <div>
-            <div class="font-mono text-3xl font-bold text-accent">400+</div>
-            <div class="text-xs text-ivory/40 mt-1 tracking-wide">Advogados atendidos</div>
-          </div>
-          <div class="border-l border-white/10 pl-8">
-            <div class="font-mono text-3xl font-bold text-accent">R$5M+</div>
-            <div class="text-xs text-ivory/40 mt-1 tracking-wide">Em resultados gerados</div>
-          </div>
-          <div class="border-l border-white/10 pl-8">
-            <div class="font-mono text-3xl font-bold text-accent">41 dias</div>
-            <div class="text-xs text-ivory/40 mt-1 tracking-wide">Prazo para resultados</div>
-          </div>
         </div>
       </div>
-    </div>
-    <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-ivory/30">
-      <span class="font-mono text-xs tracking-widest">SCROLL</span>
-      <div class="w-px h-12 bg-gradient-to-b from-ivory/30 to-transparent"></div>
     </div>
   </section>
 
   <!-- TICKER -->
-  <section class="py-5 border-y border-white/5 overflow-hidden bg-surface/50">
-    <div class="ticker-wrap">
-      <div class="ticker-content">
-        <span class="text-xs font-mono text-ivory/40 tracking-widest uppercase">
-          IA para Advogados &nbsp;◆&nbsp; Captação de Clientes &nbsp;◆&nbsp; Automação Jurídica &nbsp;◆&nbsp; Marketing OAB &nbsp;◆&nbsp; Chatbot Jurídico &nbsp;◆&nbsp; CRM para Advogados &nbsp;◆&nbsp; IA para Advogados &nbsp;◆&nbsp; Captação de Clientes &nbsp;◆&nbsp; Automação Jurídica &nbsp;◆&nbsp; Marketing OAB &nbsp;◆&nbsp; Chatbot Jurídico &nbsp;◆&nbsp; CRM para Advogados &nbsp;◆&nbsp;
-        </span>
-        <span class="text-xs font-mono text-ivory/40 tracking-widest uppercase">
-          IA para Advogados &nbsp;◆&nbsp; Captação de Clientes &nbsp;◆&nbsp; Automação Jurídica &nbsp;◆&nbsp; Marketing OAB &nbsp;◆&nbsp; Chatbot Jurídico &nbsp;◆&nbsp; CRM para Advogados &nbsp;◆&nbsp; IA para Advogados &nbsp;◆&nbsp; Captação de Clientes &nbsp;◆&nbsp; Automação Jurídica &nbsp;◆&nbsp; Marketing OAB &nbsp;◆&nbsp; Chatbot Jurídico &nbsp;◆&nbsp; CRM para Advogados &nbsp;◆&nbsp;
-        </span>
-      </div>
+  <section style="padding:12px 0;" class="ticker-wrap">
+    <div class="ticker-content">
+      <span style="font-size:12px;font-family:'JetBrains Mono',monospace;color:#fff;letter-spacing:.06em;padding:0 12px;">IA para Advogados &nbsp;·&nbsp; Captação de Clientes &nbsp;·&nbsp; Automação Jurídica &nbsp;·&nbsp; Marketing OAB &nbsp;·&nbsp; Chatbot Jurídico &nbsp;·&nbsp; CRM para Advogados &nbsp;·&nbsp; IA para Advogados &nbsp;·&nbsp; Captação de Clientes &nbsp;·&nbsp; Automação Jurídica &nbsp;·&nbsp; Marketing OAB &nbsp;·&nbsp; Chatbot Jurídico &nbsp;·&nbsp; CRM para Advogados &nbsp;·&nbsp; IA para Advogados &nbsp;·&nbsp; Captação de Clientes &nbsp;·&nbsp; Automação Jurídica &nbsp;·&nbsp; Marketing OAB &nbsp;·&nbsp; Chatbot Jurídico &nbsp;·&nbsp; CRM para Advogados &nbsp;·&nbsp; IA para Advogados &nbsp;·&nbsp; Captação de Clientes &nbsp;·&nbsp; Automação Jurídica &nbsp;·&nbsp; Marketing OAB &nbsp;·&nbsp; Chatbot Jurídico &nbsp;·&nbsp; CRM para Advogados &nbsp;·&nbsp;</span>
+      <span style="font-size:12px;font-family:'JetBrains Mono',monospace;color:#fff;letter-spacing:.06em;padding:0 12px;">IA para Advogados &nbsp;·&nbsp; Captação de Clientes &nbsp;·&nbsp; Automação Jurídica &nbsp;·&nbsp; Marketing OAB &nbsp;·&nbsp; Chatbot Jurídico &nbsp;·&nbsp; CRM para Advogados &nbsp;·&nbsp; IA para Advogados &nbsp;·&nbsp; Captação de Clientes &nbsp;·&nbsp; Automação Jurídica &nbsp;·&nbsp; Marketing OAB &nbsp;·&nbsp; Chatbot Jurídico &nbsp;·&nbsp; CRM para Advogados &nbsp;·&nbsp; IA para Advogados &nbsp;·&nbsp; Captação de Clientes &nbsp;·&nbsp; Automação Jurídica &nbsp;·&nbsp; Marketing OAB &nbsp;·&nbsp; Chatbot Jurídico &nbsp;·&nbsp; CRM para Advogados &nbsp;·&nbsp; IA para Advogados &nbsp;·&nbsp; Captação de Clientes &nbsp;·&nbsp; Automação Jurídica &nbsp;·&nbsp; Marketing OAB &nbsp;·&nbsp; Chatbot Jurídico &nbsp;·&nbsp; CRM para Advogados &nbsp;·&nbsp;</span>
     </div>
   </section>
 
-  <!-- FEATURED POSTS -->
-  <section class="max-w-6xl mx-auto px-6 py-20">
-    <div class="flex items-center justify-between mb-10 gsap-fade">
-      <div>
-        <span class="font-mono text-xs text-accent tracking-widest uppercase">Destaque</span>
-        <h2 class="text-2xl md:text-3xl font-black text-ivory mt-2">Artigos em Evidência</h2>
-      </div>
-      <a href="#posts" class="text-sm text-accent hover:text-orange-400 transition-colors hidden md:block">Ver todos →</a>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-6">
-      <!-- Featured main -->
-      <a href="posts/como-advogados-captam-clientes-ia-2026.html" class="featured-main gsap-fade post-card relative h-80 md:h-96 block overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&auto=format&fit=crop&q=80" alt="Como Advogados Captam Clientes com IA" class="w-full h-full object-cover" />
-        <div class="featured-overlay absolute inset-0"></div>
-        <div class="absolute inset-0 p-6 flex flex-col justify-end">
-          <span class="cat-badge mb-3 w-fit">IA para Advogados</span>
-          <h3 class="text-xl md:text-2xl font-black text-ivory leading-tight mb-2">Como Advogados Podem Captar Clientes com IA em 2026</h3>
-          <div class="flex items-center gap-3 text-ivory/50">
-            <span class="font-mono text-xs">28 fev 2026</span>
-            <span class="text-xs">•</span>
-            <span class="text-xs">8 min de leitura</span>
+  <!-- RECENT ARTICLES -->
+  <section style="max-width:1152px;margin:0 auto;padding:64px 24px 0;">
+    <h2 class="anim-section" style="font-family:'Lora',serif;font-size:1.75rem;font-weight:700;color:var(--ink);margin-bottom:32px;">Artigos Recentes</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;" id="recent-grid">
+      <a href="posts/marketing-juridico-oab-guia-completo.html" class="post-card">
+        <div style="overflow:hidden;height:196px;"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80" alt="Marketing Jurídico OAB" loading="lazy"/></div>
+        <div style="padding:20px;">
+          <span class="cat-badge" style="margin-bottom:12px;">Marketing Jurídico</span>
+          <h3 style="font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:var(--ink);line-height:1.45;margin-bottom:10px;">Marketing Jurídico: O que a OAB Permite (Guia 2026)</h3>
+          <p style="font-size:.875rem;color:var(--ink-soft);line-height:1.65;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">Entenda o que o Código de Ética da OAB permite em marketing jurídico e como usar essas estratégias para atrair clientes sem risco de sanções.</p>
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-size:12px;color:var(--ink-soft);font-family:'JetBrains Mono',monospace;">26 fev 2026</span>
+            <span style="font-size:12px;color:var(--accent);font-family:'JetBrains Mono',monospace;">10 min</span>
           </div>
         </div>
       </a>
-
-      <!-- Right column: 2 smaller -->
-      <div class="flex flex-col gap-6">
-        <a href="posts/marketing-juridico-oab-guia-completo.html" class="featured-side gsap-fade post-card relative h-44 block overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80" alt="Marketing Jurídico OAB" class="w-full h-full object-cover" />
-          <div class="featured-overlay absolute inset-0"></div>
-          <div class="absolute inset-0 p-5 flex flex-col justify-end">
-            <span class="cat-badge mb-2 w-fit">Marketing Jurídico</span>
-            <h3 class="text-base font-bold text-ivory leading-snug">Marketing Jurídico: O que a OAB Permite (Guia 2026)</h3>
+      <a href="posts/automacao-escritorio-advocacia-7-processos.html" class="post-card">
+        <div style="overflow:hidden;height:196px;"><img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&auto=format&fit=crop&q=80" alt="Automação Escritório" loading="lazy"/></div>
+        <div style="padding:20px;">
+          <span class="cat-badge" style="margin-bottom:12px;">Automação Jurídica</span>
+          <h3 style="font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:var(--ink);line-height:1.45;margin-bottom:10px;">7 Processos para Automatizar no Seu Escritório Hoje</h3>
+          <p style="font-size:.875rem;color:var(--ink-soft);line-height:1.65;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">Recupere horas de trabalho automatizando tarefas repetitivas. Veja os 7 processos que escritórios de advocacia já automatizaram com resultados imediatos.</p>
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-size:12px;color:var(--ink-soft);font-family:'JetBrains Mono',monospace;">24 fev 2026</span>
+            <span style="font-size:12px;color:var(--accent);font-family:'JetBrains Mono',monospace;">9 min</span>
           </div>
-        </a>
-        <a href="posts/automacao-escritorio-advocacia-7-processos.html" class="featured-side gsap-fade post-card relative h-44 block overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&auto=format&fit=crop&q=80" alt="Automação para Escritório" class="w-full h-full object-cover" />
-          <div class="featured-overlay absolute inset-0"></div>
-          <div class="absolute inset-0 p-5 flex flex-col justify-end">
-            <span class="cat-badge mb-2 w-fit">Automação Jurídica</span>
-            <h3 class="text-base font-bold text-ivory leading-snug">7 Processos para Automatizar no Seu Escritório Hoje</h3>
+        </div>
+      </a>
+      <a href="posts/sistema-captacao-clientes-previsivel.html" class="post-card">
+        <div style="overflow:hidden;height:196px;"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&auto=format&fit=crop&q=80" alt="Sistema de Captação" loading="lazy"/></div>
+        <div style="padding:20px;">
+          <span class="cat-badge" style="margin-bottom:12px;">Captação de Clientes</span>
+          <h3 style="font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:var(--ink);line-height:1.45;margin-bottom:10px;">Como Criar um Sistema de Captação Previsível</h3>
+          <p style="font-size:.875rem;color:var(--ink-soft);line-height:1.65;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">Chega de depender de indicações. Aprenda a construir um funil de captação de clientes previsível para seu escritório de advocacia.</p>
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-size:12px;color:var(--ink-soft);font-family:'JetBrains Mono',monospace;">22 fev 2026</span>
+            <span style="font-size:12px;color:var(--accent);font-family:'JetBrains Mono',monospace;">11 min</span>
           </div>
-        </a>
-      </div>
+        </div>
+      </a>
     </div>
   </section>
 
-  <!-- POSTS GRID -->
-  <section id="posts" class="max-w-6xl mx-auto px-6 pb-20">
-    <div class="flex items-center justify-between mb-8">
-      <h2 class="text-2xl md:text-3xl font-black text-ivory gsap-fade">Todos os Artigos</h2>
+  <!-- ALL POSTS -->
+  <section id="posts" style="max-width:1152px;margin:0 auto;padding:64px 24px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;">
+      <h2 class="anim-section" style="font-family:'Lora',serif;font-size:1.75rem;font-weight:700;color:var(--ink);">Todos os Artigos</h2>
     </div>
-
-    <!-- Filter pills -->
-    <div class="flex flex-wrap gap-3 mb-10 gsap-fade" id="filter-pills">
-      <button onclick="filterPosts('all')" class="filter-pill active font-mono text-xs px-5 py-2.5 rounded-full border border-white/20 text-ivory/70">Todos</button>
-      <button onclick="filterPosts('ia-para-advogados')" class="filter-pill font-mono text-xs px-5 py-2.5 rounded-full border border-white/20 text-ivory/70 hover:border-accent/50">IA para Advogados</button>
-      <button onclick="filterPosts('captacao-clientes')" class="filter-pill font-mono text-xs px-5 py-2.5 rounded-full border border-white/20 text-ivory/70 hover:border-accent/50">Captação de Clientes</button>
-      <button onclick="filterPosts('automacao-juridica')" class="filter-pill font-mono text-xs px-5 py-2.5 rounded-full border border-white/20 text-ivory/70 hover:border-accent/50">Automação Jurídica</button>
-      <button onclick="filterPosts('marketing-juridico')" class="filter-pill font-mono text-xs px-5 py-2.5 rounded-full border border-white/20 text-ivory/70 hover:border-accent/50">Marketing Jurídico</button>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px;" id="filter-pills">
+      <button onclick="filterPosts('all')" class="filter-pill active">Todos</button>
+      <button onclick="filterPosts('ia-para-advogados')" class="filter-pill">IA para Advogados</button>
+      <button onclick="filterPosts('captacao-clientes')" class="filter-pill">Captação de Clientes</button>
+      <button onclick="filterPosts('automacao-juridica')" class="filter-pill">Automação Jurídica</button>
+      <button onclick="filterPosts('marketing-juridico')" class="filter-pill">Marketing Jurídico</button>
     </div>
-
-    <!-- Posts grid -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="posts-grid"></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;" id="posts-grid"></div>
   </section>
 
-  <!-- NEWSLETTER CTA -->
-  <section id="newsletter" class="relative py-24 overflow-hidden">
-    <div class="orb w-96 h-96 bg-accent/15 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-    <div class="max-w-2xl mx-auto px-6 relative">
-      <div class="gsap-fade text-center mb-12">
-        <span class="font-mono text-xs text-accent tracking-widest uppercase">Newsletter</span>
-        <h2 class="text-3xl md:text-5xl font-black text-ivory mt-3 mb-4">Estratégias direto<br/>no seu e-mail</h2>
-        <p class="text-ivory/50 text-base leading-relaxed">Toda semana: uma tática de captação, um case real, uma ferramenta de IA para advogados. Zero enrolação.</p>
+  <!-- NEWSLETTER -->
+  <section id="newsletter" class="nl-section" style="padding:80px 0;">
+    <div style="max-width:560px;margin:0 auto;padding:0 24px;">
+      <div style="text-align:center;margin-bottom:36px;">
+        <span class="cat-badge" style="margin-bottom:16px;display:inline-block;">Newsletter</span>
+        <h2 class="anim-section" style="font-family:'Lora',serif;font-size:2rem;font-weight:700;color:var(--ink);margin-bottom:12px;line-height:1.25;">Estratégias toda semana, no seu e-mail</h2>
+        <p style="color:var(--ink-mid);font-size:15px;line-height:1.7;">Uma tática de captação, um case real, uma ferramenta de IA para advogados. Zero spam.</p>
       </div>
-
-      <div class="gsap-fade bg-surface border border-white/8 rounded-2xl p-8">
-        <form id="newsletter-form" onsubmit="submitNewsletter(event)">
-          <div class="grid md:grid-cols-2 gap-4 mb-4">
-            <div>
-              <label class="block text-xs text-ivory/50 mb-2 font-mono uppercase tracking-wide">Nome</label>
-              <input type="text" id="nl-nome" name="nome" placeholder="Seu nome" class="nl-input" required />
-            </div>
-            <div>
-              <label class="block text-xs text-ivory/50 mb-2 font-mono uppercase tracking-wide">WhatsApp</label>
-              <input type="tel" id="nl-telefone" name="telefone" placeholder="(71) 99999-9999" class="nl-input" maxlength="15" required />
-            </div>
+      <div style="background:#fff;border:1px solid rgba(255,122,1,.15);border-radius:16px;padding:28px 32px;box-shadow:0 4px 24px rgba(0,0,0,.06);">
+        <form id="nl-form" onsubmit="submitNewsletter(event)">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
+            <div><label style="display:block;font-size:11px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);margin-bottom:6px;">Nome</label><input type="text" id="nl-nome" placeholder="Seu nome" class="nl-input" required/></div>
+            <div><label style="display:block;font-size:11px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);margin-bottom:6px;">WhatsApp</label><input type="tel" id="nl-telefone" placeholder="(71) 99999-9999" class="nl-input" maxlength="15" required/></div>
           </div>
-          <div class="mb-6">
-            <label class="block text-xs text-ivory/50 mb-2 font-mono uppercase tracking-wide">E-mail</label>
-            <input type="email" id="nl-email" name="email" placeholder="seu@email.com" class="nl-input" required />
-          </div>
-          <button type="submit" id="nl-btn" class="w-full bg-accent text-black font-bold py-4 rounded-xl hover:bg-orange-400 transition-all hover:scale-[1.02] text-sm">
-            Quero Receber Estratégias Gratuitas
-          </button>
-          <p class="text-center text-xs text-ivory/30 mt-4">Sem spam. Cancele quando quiser.</p>
+          <div style="margin-bottom:20px;"><label style="display:block;font-size:11px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);margin-bottom:6px;">E-mail</label><input type="email" id="nl-email" placeholder="seu@email.com" class="nl-input" required/></div>
+          <button type="submit" id="nl-btn" style="width:100%;background:var(--accent);color:#fff;font-weight:700;padding:14px;border-radius:10px;border:none;cursor:pointer;font-size:14px;font-family:'Inter',sans-serif;transition:background .2s;" onmouseover="this.style.background='#e86d00'" onmouseout="this.style.background='var(--accent)'">Quero Receber Estratégias Gratuitas</button>
+          <p style="text-align:center;font-size:12px;color:var(--ink-soft);margin-top:12px;">Sem spam. Cancele quando quiser.</p>
         </form>
-        <div id="nl-success" class="hidden text-center py-6">
-          <div class="text-4xl mb-3">🎯</div>
-          <h3 class="text-xl font-bold text-ivory mb-2">Você está dentro!</h3>
-          <p class="text-ivory/50 text-sm">Verifique seu e-mail para confirmar a inscrição.</p>
+        <div id="nl-success" class="hidden" style="text-align:center;padding:28px 0;">
+          <div style="font-size:2.5rem;margin-bottom:12px;">🎯</div>
+          <h3 style="font-family:'Lora',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:8px;">Você está dentro!</h3>
+          <p style="color:var(--ink-mid);font-size:14px;">Verifique seu e-mail. Boas estratégias a caminho.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="border-t border-white/5 bg-surface/30 py-16">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid md:grid-cols-4 gap-10 mb-12">
-        <!-- Brand -->
-        <div class="md:col-span-1">
-          <a href="/">
-            <img src="https://advanx.com.br/wp-content/uploads/2025/06/v3-png-e1750448442622.png" alt="Advanx" class="h-8 mb-4" />
-          </a>
-          <p class="text-xs text-ivory/40 leading-relaxed mb-4">IA e captação de clientes para advogados. 100% ético, 100% OAB.</p>
-          <div class="flex gap-3">
-            <a href="https://instagram.com/advanxtecnologia" target="_blank" class="w-9 h-9 border border-white/10 rounded-lg flex items-center justify-center hover:border-accent/50 transition-colors">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </a>
-            <a href="https://linkedin.com/company/advanx-tecnologia" target="_blank" class="w-9 h-9 border border-white/10 rounded-lg flex items-center justify-center hover:border-accent/50 transition-colors">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
-            <a href="https://youtube.com/@advanxtecnologia" target="_blank" class="w-9 h-9 border border-white/10 rounded-lg flex items-center justify-center hover:border-accent/50 transition-colors">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
-            </a>
-            <a href="https://wa.me/5571982470873" target="_blank" class="w-9 h-9 border border-white/10 rounded-lg flex items-center justify-center hover:border-accent/50 transition-colors">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.549 4.107 1.514 5.835L.046 23.44a.75.75 0 00.914.914l5.605-1.467A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.659-.519-5.17-1.418l-.371-.216-3.837 1.004 1.005-3.836-.228-.382A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-            </a>
-          </div>
+  <footer class="site-footer" style="padding:48px 0;">
+    <div style="max-width:1152px;margin:0 auto;padding:0 24px;">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;">
+        <a href="/"><img src="https://advanx.com.br/wp-content/uploads/2025/06/v3-png-e1750448442622.png" alt="Advanx" style="height:28px;"/></a>
+        <div style="display:flex;gap:24px;flex-wrap:wrap;">
+          <a href="https://instagram.com/advanxtecnologia" target="_blank" style="font-size:13px;color:var(--ink-soft);text-decoration:none;font-family:'JetBrains Mono',monospace;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--ink-soft)'">Instagram</a>
+          <a href="https://linkedin.com/company/advanx-tecnologia" target="_blank" style="font-size:13px;color:var(--ink-soft);text-decoration:none;font-family:'JetBrains Mono',monospace;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--ink-soft)'">LinkedIn</a>
+          <a href="https://youtube.com/@advanxtecnologia" target="_blank" style="font-size:13px;color:var(--ink-soft);text-decoration:none;font-family:'JetBrains Mono',monospace;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--ink-soft)'">YouTube</a>
+          <a href="https://wa.me/5571982470873" target="_blank" style="font-size:13px;color:var(--ink-soft);text-decoration:none;font-family:'JetBrains Mono',monospace;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--ink-soft)'">WhatsApp</a>
         </div>
-
-        <!-- Categorias -->
-        <div>
-          <h4 class="text-xs font-mono text-ivory/30 tracking-widest uppercase mb-4">Categorias</h4>
-          <ul class="space-y-3">
-            <li><a href="#posts" onclick="filterPosts('ia-para-advogados')" class="text-sm text-ivory/60 hover:text-ivory transition-colors">IA para Advogados</a></li>
-            <li><a href="#posts" onclick="filterPosts('captacao-clientes')" class="text-sm text-ivory/60 hover:text-ivory transition-colors">Captação de Clientes</a></li>
-            <li><a href="#posts" onclick="filterPosts('automacao-juridica')" class="text-sm text-ivory/60 hover:text-ivory transition-colors">Automação Jurídica</a></li>
-            <li><a href="#posts" onclick="filterPosts('marketing-juridico')" class="text-sm text-ivory/60 hover:text-ivory transition-colors">Marketing Jurídico</a></li>
-          </ul>
-        </div>
-
-        <!-- Links -->
-        <div>
-          <h4 class="text-xs font-mono text-ivory/30 tracking-widest uppercase mb-4">Links</h4>
-          <ul class="space-y-3">
-            <li><a href="#newsletter" class="text-sm text-ivory/60 hover:text-ivory transition-colors">Newsletter</a></li>
-            <li><a href="https://wa.me/5571982470873" target="_blank" class="text-sm text-ivory/60 hover:text-ivory transition-colors">WhatsApp</a></li>
-            <li><a href="https://advanx.com.br" target="_blank" class="text-sm text-ivory/60 hover:text-ivory transition-colors">Site Advanx</a></li>
-          </ul>
-        </div>
-
-        <!-- Advanx -->
-        <div>
-          <h4 class="text-xs font-mono text-ivory/30 tracking-widest uppercase mb-4">Advanx</h4>
-          <ul class="space-y-3">
-            <li><a href="https://advanx.com.br" target="_blank" class="text-sm text-ivory/60 hover:text-ivory transition-colors">Sobre nós</a></li>
-            <li><a href="https://wa.me/5571982470873" target="_blank" class="text-sm text-ivory/60 hover:text-ivory transition-colors">Falar com Especialista</a></li>
-            <li><a href="https://instagram.com/advanxtecnologia" target="_blank" class="text-sm text-ivory/60 hover:text-ivory transition-colors">Instagram</a></li>
-            <li><a href="https://linkedin.com/company/advanx-tecnologia" target="_blank" class="text-sm text-ivory/60 hover:text-ivory transition-colors">LinkedIn</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p class="text-xs text-ivory/30 font-mono">© 2026 Advanx Tecnologia. Todos os direitos reservados.</p>
-        <p class="text-xs text-ivory/20 font-mono">blog.advanx.com.br</p>
+        <p style="font-size:12px;color:var(--ink-soft);font-family:'JetBrains Mono',monospace;">© 2026 Advanx Tecnologia</p>
       </div>
     </div>
   </footer>
 
   <script>
-    // POSTS DATA
     const POSTS = [
-      { id:1, slug:'como-advogados-captam-clientes-ia-2026', title:'Como Advogados Podem Captar Clientes com IA em 2026', excerpt:'A inteligência artificial está redefinindo o mercado jurídico. Descubra as ferramentas e estratégias que advogados de todo o Brasil já usam para captar mais clientes de forma ética e previsível.', category:'IA para Advogados', categorySlug:'ia-para-advogados', image:'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&auto=format&fit=crop&q=80', readingTime:'8 min', date:'28 fev 2026', dateISO:'2026-02-28' },
-      { id:2, slug:'marketing-juridico-oab-guia-completo', title:'Marketing Jurídico: O que a OAB Permite (Guia 2026)', excerpt:'Entenda o que o Código de Ética da OAB permite em marketing jurídico e como usar essas estratégias para atrair clientes sem risco de sanções.', category:'Marketing Jurídico', categorySlug:'marketing-juridico', image:'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80', readingTime:'10 min', date:'26 fev 2026', dateISO:'2026-02-26' },
-      { id:3, slug:'automacao-escritorio-advocacia-7-processos', title:'7 Processos para Automatizar no Seu Escritório Hoje', excerpt:'Recupere horas de trabalho estratégico automatizando tarefas repetitivas. Veja os 7 processos que escritórios de advocacia já automatizaram com resultados imediatos.', category:'Automação Jurídica', categorySlug:'automacao-juridica', image:'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&auto=format&fit=crop&q=80', readingTime:'9 min', date:'24 fev 2026', dateISO:'2026-02-24' },
-      { id:4, slug:'sistema-captacao-clientes-previsivel', title:'Como Criar um Sistema de Captação Previsível', excerpt:'Chega de depender de indicações e sorte. Aprenda a construir um funil de captação de clientes previsível para seu escritório de advocacia.', category:'Captação de Clientes', categorySlug:'captacao-clientes', image:'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&auto=format&fit=crop&q=80', readingTime:'11 min', date:'22 fev 2026', dateISO:'2026-02-22' },
-      { id:5, slug:'chatbot-para-advogados-qualificar-leads-24h', title:'Chatbot para Advogados: Qualificar Leads 24h com IA', excerpt:'Um chatbot bem configurado qualifica leads jurídicos enquanto você dorme. Veja como implementar no seu escritório com custo acessível.', category:'IA para Advogados', categorySlug:'ia-para-advogados', image:'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&auto=format&fit=crop&q=80', readingTime:'7 min', date:'20 fev 2026', dateISO:'2026-02-20' },
+      {id:1,slug:'como-advogados-captam-clientes-ia-2026',title:'Como Advogados Podem Captar Clientes com IA em 2026',excerpt:'A IA está redefinindo o mercado jurídico. Descubra as ferramentas e estratégias que advogados já usam para captar mais clientes de forma ética e previsível.',category:'IA para Advogados',categorySlug:'ia-para-advogados',image:'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&auto=format&fit=crop&q=80',readingTime:'8 min',date:'28 fev 2026'},
+      {id:2,slug:'marketing-juridico-oab-guia-completo',title:'Marketing Jurídico: O que a OAB Permite (Guia 2026)',excerpt:'Entenda o que o Código de Ética da OAB permite em marketing jurídico e como usar essas estratégias para atrair clientes sem risco de sanções.',category:'Marketing Jurídico',categorySlug:'marketing-juridico',image:'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80',readingTime:'10 min',date:'26 fev 2026'},
+      {id:3,slug:'automacao-escritorio-advocacia-7-processos',title:'7 Processos para Automatizar no Seu Escritório Hoje',excerpt:'Recupere horas de trabalho automatizando tarefas repetitivas. Veja os 7 processos que escritórios de advocacia já automatizaram com resultados imediatos.',category:'Automação Jurídica',categorySlug:'automacao-juridica',image:'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&auto=format&fit=crop&q=80',readingTime:'9 min',date:'24 fev 2026'},
+      {id:4,slug:'sistema-captacao-clientes-previsivel',title:'Como Criar um Sistema de Captação Previsível',excerpt:'Chega de depender de indicações. Aprenda a construir um funil de captação de clientes previsível para seu escritório de advocacia.',category:'Captação de Clientes',categorySlug:'captacao-clientes',image:'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&auto=format&fit=crop&q=80',readingTime:'11 min',date:'22 fev 2026'},
+      {id:5,slug:'chatbot-para-advogados-qualificar-leads-24h',title:'Chatbot para Advogados: Qualificar Leads 24h com IA',excerpt:'Um chatbot bem configurado qualifica leads jurídicos enquanto você dorme. Veja como implementar no seu escritório com custo acessível.',category:'IA para Advogados',categorySlug:'ia-para-advogados',image:'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&auto=format&fit=crop&q=80',readingTime:'7 min',date:'20 fev 2026'},
     ];
-
-    let currentFilter = 'all';
 
     function renderPosts(posts) {
       const grid = document.getElementById('posts-grid');
       grid.innerHTML = '';
       if (posts.length === 0) {
-        grid.innerHTML = '<p class="text-ivory/40 text-sm col-span-3 text-center py-10">Nenhum artigo encontrado nessa categoria.</p>';
+        grid.innerHTML = '<p style="color:var(--ink-soft);font-size:.9rem;text-align:center;padding:40px 0;grid-column:1/-1;">Nenhum artigo encontrado nessa categoria.</p>';
         return;
       }
-      posts.forEach((p, i) => {
-        const card = document.createElement('a');
-        card.href = `posts/${p.slug}.html`;
-        card.className = 'post-card';
-        card.innerHTML = `
-          <div class="overflow-hidden h-48">
-            <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div class="p-5">
-            <span class="cat-badge mb-3 inline-block">${p.category}</span>
-            <h3 class="text-base font-bold text-ivory mb-3 leading-snug hover:text-accent transition-colors">${p.title}</h3>
-            <p class="text-sm text-ivory/50 mb-4 line-clamp-2 leading-relaxed">${p.excerpt}</p>
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-2 text-ivory/30">
-                <span class="font-mono text-xs">${p.date}</span>
-              </div>
-              <span class="font-mono text-xs text-accent">${p.readingTime}</span>
+      posts.forEach(p => {
+        const a = document.createElement('a');
+        a.href = `posts/${p.slug}.html`;
+        a.className = 'post-card';
+        a.innerHTML = `
+          <div style="overflow:hidden;height:196px;"><img src="${p.image}" alt="${p.title}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;"/></div>
+          <div style="padding:20px;">
+            <span class="cat-badge" style="margin-bottom:12px;">${p.category}</span>
+            <h3 style="font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:var(--ink);line-height:1.45;margin-bottom:10px;">${p.title}</h3>
+            <p style="font-size:.875rem;color:var(--ink-soft);line-height:1.65;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">${p.excerpt}</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <span style="font-size:12px;color:var(--ink-soft);font-family:'JetBrains Mono',monospace;">${p.date}</span>
+              <span style="font-size:12px;color:var(--accent);font-family:'JetBrains Mono',monospace;">${p.readingTime}</span>
             </div>
-          </div>
-        `;
-        grid.appendChild(card);
-        gsap.from(card, { opacity: 0, y: 20, duration: 0.4, delay: i * 0.08 });
+          </div>`;
+        grid.appendChild(a);
       });
     }
 
     function filterPosts(category) {
-      currentFilter = category;
-      // Update pills
       document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+      const map = {'all':0,'ia-para-advogados':1,'captacao-clientes':2,'automacao-juridica':3,'marketing-juridico':4};
       const pills = document.querySelectorAll('.filter-pill');
-      const map = { 'all': 0, 'ia-para-advogados': 1, 'captacao-clientes': 2, 'automacao-juridica': 3, 'marketing-juridico': 4 };
       if (map[category] !== undefined) pills[map[category]].classList.add('active');
-
       const filtered = category === 'all' ? POSTS : POSTS.filter(p => p.categorySlug === category);
       renderPosts(filtered);
-
-      if (category !== 'all') document.getElementById('posts').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (category !== 'all') document.getElementById('posts').scrollIntoView({behavior:'smooth',block:'start'});
     }
 
-    // Init
     renderPosts(POSTS);
 
-    // GSAP
     gsap.registerPlugin(ScrollTrigger);
 
-    // Hero
-    const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' }});
-    heroTl.to('#hero-badge', { opacity: 1, y: 0, duration: 0.6 })
-          .to('#hero-title', { opacity: 1, y: 0, duration: 0.8 }, '-=0.3')
-          .to('#hero-sub', { opacity: 1, y: 0, duration: 0.7 }, '-=0.5')
-          .to('#hero-ctas', { opacity: 1, y: 0, duration: 0.6 }, '-=0.4')
-          .to('#hero-stats', { opacity: 1, y: 0, duration: 0.6 }, '-=0.3');
-
-    // Scroll reveals
-    gsap.utils.toArray('.gsap-fade').forEach(el => {
-      if (el.id && el.id.startsWith('hero')) return;
-      gsap.to(el, {
-        opacity: 1, y: 0, duration: 0.7, ease: 'power3.out',
-        scrollTrigger: { trigger: el, start: 'top 88%', once: true }
-      });
-    });
-
-    // Navbar scroll effect
-    window.addEventListener('scroll', () => {
-      const nav = document.querySelector('nav');
-      if (window.scrollY > 50) {
-        nav.style.background = 'rgba(13,13,18,0.95)';
-      } else {
-        nav.style.background = 'rgba(13,13,18,0.7)';
-      }
+    // Navbar scroll
+    window.addEventListener('scroll',()=>{
+      document.querySelector('.navbar').classList.toggle('scrolled',window.scrollY>20);
     });
 
     // Mobile menu
-    function toggleMobileMenu() {
-      const m = document.getElementById('mobile-menu');
-      m.classList.toggle('open');
-    }
+    function toggleMenu(){document.getElementById('mob-menu').classList.toggle('open');}
 
-    // Phone mask
-    document.getElementById('nl-telefone').addEventListener('input', function(e) {
-      let v = e.target.value.replace(/\D/g, '').substring(0, 11);
-      if (v.length >= 7) v = `(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`;
-      else if (v.length >= 3) v = `(${v.slice(0,2)}) ${v.slice(2)}`;
-      else if (v.length >= 1) v = `(${v}`;
-      e.target.value = v;
+    // Hero animation
+    gsap.timeline({defaults:{ease:'power2.out'}})
+      .to('.anim-hero',{opacity:1,y:0,duration:.7,stagger:.1,delay:.1});
+
+    // Section headings only
+    gsap.utils.toArray('h2.anim-section').forEach(el=>{
+      ScrollTrigger.create({trigger:el,start:'top 88%',once:true,onEnter:()=>gsap.to(el,{opacity:1,y:0,duration:.6,ease:'power2.out'})});
     });
 
-    // UTM capture
-    function getUTMs() {
-      const params = new URLSearchParams(window.location.search);
-      return {
-        origem: params.get('utm_source') || 'blog',
-        campanha: params.get('utm_campaign') || '',
-        conjunto: params.get('utm_medium') || '',
-        anuncio: params.get('utm_content') || '',
-        posicionamento: params.get('utm_term') || ''
-      };
+    // Responsive hero grid
+    function setHeroGrid(){
+      const g = document.getElementById('hero-grid');
+      if(window.innerWidth < 768) g.style.gridTemplateColumns = '1fr';
+      else g.style.gridTemplateColumns = '1fr 1fr';
+    }
+    setHeroGrid();
+    window.addEventListener('resize', setHeroGrid);
+
+    // Responsive posts grid
+    function setPostsGrid(){
+      const g = document.getElementById('posts-grid');
+      const r = document.getElementById('recent-grid');
+      if(window.innerWidth < 640){g.style.gridTemplateColumns='1fr';if(r)r.style.gridTemplateColumns='1fr';}
+      else if(window.innerWidth < 1024){g.style.gridTemplateColumns='1fr 1fr';if(r)r.style.gridTemplateColumns='1fr 1fr';}
+      else{g.style.gridTemplateColumns='repeat(3,1fr)';if(r)r.style.gridTemplateColumns='repeat(3,1fr)';}
+    }
+    setPostsGrid();
+    window.addEventListener('resize', setPostsGrid);
+
+    // Phone mask
+    function phoneMask(el){
+      el.addEventListener('input',function(e){
+        let v=e.target.value.replace(/\D/g,'').substring(0,11);
+        if(v.length>=7)v=`(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`;
+        else if(v.length>=3)v=`(${v.slice(0,2)}) ${v.slice(2)}`;
+        else if(v.length>=1)v=`(${v}`;
+        e.target.value=v;
+      });
+    }
+    phoneMask(document.getElementById('nl-telefone'));
+
+    function getUTMs(){
+      const p=new URLSearchParams(window.location.search);
+      return{origem:p.get('utm_source')||'blog',campanha:p.get('utm_campaign')||'',conjunto:p.get('utm_medium')||'',anuncio:p.get('utm_content')||'',posicionamento:p.get('utm_term')||''};
     }
 
-    // Newsletter submit
-    async function submitNewsletter(e) {
+    const SU='https://lhbwfbquxkutcyqazpnw.supabase.co';
+    const SK='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxoYndmYnF1eGt1dGN5cWF6cG53Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA1Mjc5MTksImV4cCI6MjA2NjEwMzkxOX0.Tk6O2kpzTWcce9laIancu-lMFATLYkaTvgLBiRMsa10';
+
+    async function submitNewsletter(e){
       e.preventDefault();
-      const btn = document.getElementById('nl-btn');
-      btn.textContent = 'Enviando...';
-      btn.disabled = true;
-
-      const nome = document.getElementById('nl-nome').value.trim();
-      const telefoneRaw = document.getElementById('nl-telefone').value.replace(/\D/g, '');
-      const email = document.getElementById('nl-email').value.trim();
-      const utms = getUTMs();
-
-      const SUPABASE_URL = 'https://lhbwfbquxkutcyqazpnw.supabase.co';
-      const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxoYndmYnF1eGt1dGN5cWF6cG53Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA1Mjc5MTksImV4cCI6MjA2NjEwMzkxOX0.Tk6O2kpzTWcce9laIancu-lMFATLYkaTvgLBiRMsa10';
-
-      try {
-        const res = await fetch(`${SUPABASE_URL}/rest/v1/dados_cliente`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'apikey': SUPABASE_ANON,
-            'Authorization': `Bearer ${SUPABASE_ANON}`,
-            'Prefer': 'return=minimal'
-          },
-          body: JSON.stringify({
-            nome, telefone: telefoneRaw, email,
-            kanban_stage: 'Novo Lead', pipeline_type: 'inbound',
-            funil_lead: 'Advanx', empresa_fonte: 'Advanx',
-            ...utms
-          })
-        });
-
-        // Track Lead
-        if (typeof fbq !== 'undefined') fbq('track', 'Lead', { content_name: 'Newsletter Blog' });
-        if (typeof gtag !== 'undefined') gtag('event', 'generate_lead', { event_category: 'newsletter' });
-
-        document.getElementById('newsletter-form').classList.add('hidden');
+      const btn=document.getElementById('nl-btn');
+      btn.textContent='Enviando...';btn.disabled=true;
+      try{
+        await fetch(`${SU}/rest/v1/dados_cliente`,{method:'POST',headers:{'Content-Type':'application/json','apikey':SK,'Authorization':`Bearer ${SK}`,'Prefer':'return=minimal'},
+        body:JSON.stringify({nome:document.getElementById('nl-nome').value.trim(),telefone:document.getElementById('nl-telefone').value.replace(/\D/g,''),email:document.getElementById('nl-email').value.trim(),kanban_stage:'Novo Lead',pipeline_type:'inbound',funil_lead:'Advanx',empresa_fonte:'Advanx',...getUTMs()})});
+        if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'Newsletter Blog'});
+        if(typeof gtag!=='undefined')gtag('event','generate_lead',{event_category:'newsletter'});
+        document.getElementById('nl-form').classList.add('hidden');
         document.getElementById('nl-success').classList.remove('hidden');
-      } catch(err) {
-        btn.textContent = 'Quero Receber Estratégias Gratuitas';
-        btn.disabled = false;
-        alert('Erro ao enviar. Tente novamente.');
-      }
+      }catch{btn.textContent='Quero Receber Estratégias Gratuitas';btn.disabled=false;}
     }
 
-    // ViewContent at 50% scroll
-    let viewContentFired = false;
-    window.addEventListener('scroll', () => {
-      if (!viewContentFired && window.scrollY / (document.body.scrollHeight - window.innerHeight) >= 0.5) {
-        viewContentFired = true;
-        if (typeof fbq !== 'undefined') fbq('track', 'ViewContent');
-        if (typeof gtag !== 'undefined') gtag('event', 'scroll', { percent_scrolled: 50 });
+    let vcFired=false;
+    window.addEventListener('scroll',()=>{
+      if(!vcFired&&window.scrollY/(document.body.scrollHeight-window.innerHeight)>=0.5){
+        vcFired=true;
+        if(typeof fbq!=='undefined')fbq('track','ViewContent');
       }
     });
   </script>
