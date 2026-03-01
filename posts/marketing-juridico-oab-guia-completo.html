@@ -314,7 +314,7 @@
     window.addEventListener('scroll',()=>{document.querySelector('.navbar').classList.toggle('scrolled',window.scrollY>20);const h=document.documentElement.scrollHeight-document.documentElement.clientHeight;document.getElementById('rp').style.width=(document.documentElement.scrollTop/h*100)+'%';});
     function toggleMenu(){document.getElementById('mob-menu').classList.toggle('open');}
     gsap.to('.anim-hero',{opacity:1,y:0,duration:.7,stagger:.12,ease:'power2.out',delay:.1});
-    gsap.utils.toArray('.article-body h2').forEach(el=>{ScrollTrigger.create({trigger:el,start:'top 88%',once:true,onEnter:()=>gsap.to(el,{opacity:0,y:0,duration:.6,ease:'power2.out'})});});
+    gsap.utils.toArray('.article-body h2').forEach(el=>{ScrollTrigger.create({trigger:el,start:'top 88%',once:true,onEnter:()=>gsap.to(el,{opacity:1,y:0,duration:.6,ease:'power2.out'})});});
     const tocLinks=document.querySelectorAll('.toc-item');
     window.addEventListener('scroll',()=>{let current='';document.querySelectorAll('.article-body h2[id]').forEach(h=>{if(h.offsetTop-120<=window.scrollY)current=h.id;});tocLinks.forEach(l=>{l.classList.toggle('active',l.getAttribute('href')==='#'+current);});});
     function phoneMask(el){el.addEventListener('input',function(e){let v=e.target.value.replace(/\D/g,'').substring(0,11);if(v.length>=7)v=`(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`;else if(v.length>=3)v=`(${v.slice(0,2)}) ${v.slice(2)}`;else if(v.length>=1)v=`(${v}`;e.target.value=v;});}
