@@ -18,29 +18,47 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Meta Pixel -->
   <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','502759528362336');fbq('track','PageView');</script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=502759528362336&ev=PageView&noscript=1"/></noscript>
+  <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-98EL5GXG5F"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-98EL5GXG5F');</script>
   <style>
     :root{
-      --bg:#FAFAF8;--bg2:#F4F2EE;--surface:#FFFFFF;--ink:#1A1814;--ink-2:#4A4540;--ink-3:#9E9890;--border:#E6E3DE;--accent:#FF7A01;--accent-soft:#FFF4E8;--accent-mid:rgba(255,122,1,0.12);
+      --bg:#FAFAF8;
+      --bg2:#F4F2EE;
+      --surface:#FFFFFF;
+      --ink:#1A1814;
+      --ink-2:#4A4540;
+      --ink-3:#9E9890;
+      --border:#E6E3DE;
+      --accent:#FF7A01;
+      --accent-soft:#FFF4E8;
+      --accent-mid:rgba(255,122,1,0.12);
     }
-    *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
     body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6;}
     ::selection{background:var(--accent);color:#fff;}
     ::-webkit-scrollbar{width:3px;}::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px;}
+
+    /* NAV */
     .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,0.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid transparent;transition:border-color .3s;}
     .nav.scrolled{border-color:var(--border);}
     .nav-inner{max-width:1200px;margin:0 auto;padding:0 32px;height:60px;display:flex;align-items:center;justify-content:space-between;}
-    .nav-logo{height:26px;}.nav-links{display:flex;align-items:center;gap:32px;}
+    .nav-logo{height:26px;}
+    .nav-links{display:flex;align-items:center;gap:32px;}
     .nav-links a{font-size:13.5px;color:var(--ink-2);text-decoration:none;transition:color .2s;letter-spacing:-.01em;}
     .nav-links a:hover{color:var(--ink);}
     .nav-btn{background:var(--accent);color:#fff;font-size:13px;font-weight:600;padding:9px 20px;border-radius:100px;text-decoration:none;transition:opacity .2s,transform .15s;letter-spacing:-.01em;}
     .nav-btn:hover{opacity:.88;transform:translateY(-1px);}
     .ham{display:none;background:none;border:none;cursor:pointer;padding:4px;color:var(--ink-2);}
-    .mob-nav{display:none;border-top:1px solid var(--border);}.mob-nav.open{display:block;}
+    .mob-nav{display:none;border-top:1px solid var(--border);}
+    .mob-nav.open{display:block;}
     @media(max-width:768px){.nav-links{display:none;}.ham{display:flex;}}
+
+    /* HERO */
     .hero{padding:100px 32px 56px;max-width:1200px;margin:0 auto;}
     .hero-kicker{font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:24px;display:block;}
     .hero-headline{font-family:'Lora',serif;font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:700;color:var(--ink);line-height:1.18;letter-spacing:-.02em;max-width:680px;margin-bottom:24px;}
@@ -50,17 +68,21 @@
     .btn-primary:hover{opacity:.88;}
     .btn-ghost{border:1.5px solid var(--border);color:var(--ink-2);font-size:14px;font-weight:500;padding:12px 24px;border-radius:100px;text-decoration:none;transition:all .2s;}
     .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+    /* FEATURED POST */
     .featured{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--surface);border:1px solid var(--border);border-radius:20px;overflow:hidden;text-decoration:none;transition:box-shadow .25s;}
     .featured:hover{box-shadow:0 8px 40px rgba(0,0,0,0.07);}
-    .featured-img{position:relative;overflow:hidden;min-height:360px;}
+    .featured-img{position:relative;overflow:hidden;}
     .featured-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;}
     .featured:hover .featured-img img{transform:scale(1.03);}
     .featured-body{padding:40px 44px;display:flex;flex-direction:column;justify-content:center;}
-    .cat-tag{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);background:var(--accent-soft);padding:4px 10px;border-radius:4px;display:inline-block;}
-    .featured-title{font-family:'Lora',serif;font-size:1.65rem;font-weight:700;color:var(--ink);line-height:1.3;letter-spacing:-.01em;margin:18px 0 14px;}
+    .cat-tag{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);background:var(--accent-soft);padding:4px 10px;border-radius:4px;display:inline-block;margin-bottom:18px;}
+    .featured-title{font-family:'Lora',serif;font-size:1.65rem;font-weight:700;color:var(--ink);line-height:1.3;letter-spacing:-.01em;margin-bottom:14px;}
     .featured-excerpt{font-size:.9rem;color:var(--ink-2);line-height:1.75;margin-bottom:24px;}
     .post-meta{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--ink-3);font-family:'JetBrains Mono',monospace;}
-    .post-meta .dot{color:var(--border);}
+    .post-meta span.dot{color:var(--border);}
+
+    /* ARTICLE GRID */
     .section-title{font-family:'Lora',serif;font-size:1.5rem;font-weight:700;color:var(--ink);letter-spacing:-.01em;}
     .section-label{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin-bottom:8px;display:block;}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
@@ -72,20 +94,49 @@
     .card-body{padding:22px 24px;}
     .card-title{font-family:'Lora',serif;font-size:1rem;font-weight:700;color:var(--ink);line-height:1.45;margin-bottom:10px;letter-spacing:-.01em;}
     .card-excerpt{font-size:.85rem;color:var(--ink-2);line-height:1.7;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+
+    /* EDITORIAL GRID — Últimos Artigos */
+    .editorial-grid{display:grid;grid-template-columns:3fr 2fr;gap:24px;align-items:start;}
+    .ed-main{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;display:block;transition:box-shadow .25s,transform .25s;}
+    .ed-main:hover{box-shadow:0 6px 28px rgba(0,0,0,.06);transform:translateY(-2px);}
+    .ed-main-img{overflow:hidden;height:280px;}
+    .ed-main-img img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease;}
+    .ed-main:hover .ed-main-img img{transform:scale(1.04);}
+    .ed-main-body{padding:26px 28px;}
+    .ed-main-title{font-family:'Lora',serif;font-size:1.2rem;font-weight:700;color:var(--ink);line-height:1.4;margin-bottom:10px;letter-spacing:-.01em;}
+    .ed-main-excerpt{font-size:.875rem;color:var(--ink-2);line-height:1.7;margin-bottom:14px;}
+    .ed-stack{display:flex;flex-direction:column;gap:16px;}
+    .card-sm{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;display:grid;grid-template-columns:110px 1fr;transition:box-shadow .25s,transform .25s;}
+    .card-sm:hover{box-shadow:0 4px 20px rgba(0,0,0,.05);transform:translateY(-1px);}
+    .card-sm-img{overflow:hidden;}
+    .card-sm-img img{width:100%;height:100%;object-fit:cover;min-height:110px;transition:transform .4s ease;}
+    .card-sm:hover .card-sm-img img{transform:scale(1.05);}
+    .card-sm-body{padding:16px 18px;display:flex;flex-direction:column;justify-content:center;}
+    .card-sm-title{font-family:'Lora',serif;font-size:.9rem;font-weight:700;color:var(--ink);line-height:1.42;margin-bottom:8px;letter-spacing:-.01em;}
+    @media(max-width:960px){.editorial-grid{grid-template-columns:1fr;}}
+    @media(max-width:640px){.card-sm{grid-template-columns:1fr;}.card-sm-img img{min-height:150px;}}
+
+    /* FILTER */
+    .filter-bar{display:flex;flex-wrap:wrap;gap:8px;}
     .fpill{cursor:pointer;border-radius:100px;font-size:13px;padding:7px 18px;border:1.5px solid var(--border);color:var(--ink-2);background:transparent;transition:all .2s;font-family:'Inter',sans-serif;}
     .fpill:hover{border-color:var(--accent);color:var(--accent);}
     .fpill.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+
+    /* STATS BAR */
     .stats-bar{display:flex;gap:0;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--surface);}
     .stat{flex:1;padding:20px 24px;text-align:center;border-right:1px solid var(--border);}
     .stat:last-child{border-right:none;}
     .stat-num{font-family:'Lora',serif;font-size:1.75rem;font-weight:700;color:var(--ink);display:block;letter-spacing:-.02em;}
     .stat-label{font-size:11px;color:var(--ink-3);margin-top:4px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em;}
+
+    /* NEWSLETTER */
     .nl-section{background:var(--bg2);border-top:1px solid var(--border);}
     .nl-wrap{max-width:540px;margin:0 auto;padding:80px 32px;text-align:center;}
     .nl-headline{font-family:'Lora',serif;font-size:2rem;font-weight:700;color:var(--ink);margin-bottom:12px;letter-spacing:-.02em;line-height:1.25;}
     .nl-sub{color:var(--ink-2);font-size:.95rem;line-height:1.7;margin-bottom:40px;}
     .nl-card{background:#fff;border:1px solid var(--border);border-radius:18px;padding:32px;}
     .nl-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+    .nl-field{margin-bottom:14px;}
     .nl-label{display:block;font-size:11px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-3);margin-bottom:6px;}
     .nl-input{background:#fff;border:1.5px solid var(--border);border-radius:10px;color:var(--ink);padding:12px 16px;width:100%;font-family:'Inter',sans-serif;font-size:14px;transition:border-color .2s,box-shadow .2s;}
     .nl-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(255,122,1,.08);}
@@ -93,19 +144,26 @@
     .nl-submit{width:100%;background:var(--accent);color:#fff;font-weight:600;padding:14px;border-radius:10px;border:none;cursor:pointer;font-size:14px;font-family:'Inter',sans-serif;transition:opacity .2s;margin-top:6px;}
     .nl-submit:hover{opacity:.88;}
     .nl-note{font-size:12px;color:var(--ink-3);text-align:center;margin-top:10px;}
+
+    /* FOOTER */
     footer{background:var(--surface);border-top:1px solid var(--border);padding:44px 32px;}
     .footer-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;}
     .footer-links{display:flex;gap:24px;}
     .footer-links a{font-size:13px;color:var(--ink-3);text-decoration:none;font-family:'JetBrains Mono',monospace;transition:color .2s;}
     .footer-links a:hover{color:var(--accent);}
     .footer-copy{font-size:12px;color:var(--ink-3);font-family:'JetBrains Mono',monospace;}
+
+    /* DIVIDER */
     .section-divider{height:1px;background:var(--border);margin:0;}
-    .reveal-up{opacity:0;transform:translateY(20px);}
-    @media(max-width:1024px){.featured{grid-template-columns:1fr;}.featured-img{height:280px;min-height:280px;}.grid-3{grid-template-columns:1fr 1fr;}}
-    @media(max-width:640px){.grid-3{grid-template-columns:1fr;}.hero{padding:90px 24px 48px;}.stats-bar{flex-direction:column;}.stat{border-right:none;border-bottom:1px solid var(--border);}.stat:last-child{border-bottom:none;}.nl-row{grid-template-columns:1fr;}.nav-inner{padding:0 20px;}.nl-wrap{padding:64px 24px;}}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){.featured{grid-template-columns:1fr;}.featured-img{height:280px;}.grid-3{grid-template-columns:1fr 1fr;}}
+    @media(max-width:640px){.grid-3{grid-template-columns:1fr;}.hero{padding:90px 24px 48px;}.stats-bar{flex-direction:column;}.stat{border-right:none;border-bottom:1px solid var(--border);}.stat:last-child{border-bottom:none;}.nl-row{grid-template-columns:1fr;}.nav-inner{padding:0 20px;}}
   </style>
 </head>
 <body>
+
+  <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="/"><img src="https://advanx.com.br/wp-content/uploads/2025/06/v3-png-e1750448442622.png" alt="Advanx" class="nav-logo"/></a>
@@ -116,8 +174,10 @@
         <a href="https://advanx.com.br" target="_blank">Advanx.com.br</a>
       </div>
       <div style="display:flex;align-items:center;gap:10px;">
-        <a href="https://wa.me/5571982470873" target="_blank" class="nav-btn">Falar com Especialista</a>
-        <button class="ham" onclick="toggleMob()" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        <a href="https://wa.me/5571982470873" target="_blank" class="nav-btn" id="nav-cta">Falar com Especialista</a>
+        <button class="ham" onclick="toggleMob()" aria-label="Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
       </div>
     </div>
     <div id="mob-nav" class="mob-nav">
@@ -131,6 +191,7 @@
     </div>
   </nav>
 
+  <!-- HERO -->
   <div class="hero">
     <span class="hero-kicker reveal-up">Blog Advanx</span>
     <h1 class="hero-headline reveal-up">Estratégias que transformam escritórios em <em style="color:var(--accent);font-style:italic;">máquinas de captação</em></h1>
@@ -139,63 +200,92 @@
       <a href="#posts" class="btn-primary">Ver Artigos</a>
       <a href="https://wa.me/5571982470873" target="_blank" class="btn-ghost">Falar com Especialista</a>
     </div>
+
+    <!-- Featured post -->
     <div class="reveal-up">
       <a href="posts/como-advogados-captam-clientes-ia-2026.html" class="featured">
-        <div class="featured-img"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&auto=format&fit=crop&q=80" alt="IA para Advogados"/></div>
+        <div class="featured-img" style="min-height:360px;">
+          <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&auto=format&fit=crop&q=80" alt="IA para Advogados"/>
+        </div>
         <div class="featured-body">
           <span class="cat-tag">IA para Advogados</span>
           <h2 class="featured-title">Como Advogados Podem Captar Clientes com IA em 2026</h2>
           <p class="featured-excerpt">A IA está redefinindo o mercado jurídico. Descubra as ferramentas e estratégias que advogados já usam para captar mais clientes de forma ética e previsível.</p>
-          <div class="post-meta"><span>28 fev 2026</span><span class="dot">·</span><span>8 min de leitura</span></div>
-          <div style="margin-top:20px;"><span style="font-size:13px;color:var(--accent);font-weight:600;display:inline-flex;align-items:center;gap:6px;">Ler artigo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>
+          <div class="post-meta">
+            <span>28 fev 2026</span><span class="dot">·</span><span>8 min de leitura</span>
+          </div>
+          <div style="margin-top:20px;">
+            <span style="font-size:13px;color:var(--accent);font-weight:600;display:inline-flex;align-items:center;gap:6px;">Ler artigo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
         </div>
       </a>
     </div>
   </div>
 
+  <!-- STATS -->
   <div style="max-width:1200px;margin:0 auto;padding:0 32px 64px;" class="reveal-up">
     <div class="stats-bar">
       <div class="stat"><span class="stat-num">400+</span><span class="stat-label">Advogados atendidos</span></div>
       <div class="stat"><span class="stat-num">R$5M+</span><span class="stat-label">Em resultados gerados</span></div>
-      <div class="stat"><span class="stat-num">41 dias</span><span class="stat-label">Para primeiros resultados</span></div>
+      <div class="stat"><span class="stat-num">41 dias</span><span class="stat-label">Para os primeiros resultados</span></div>
       <div class="stat"><span class="stat-num">21</span><span class="stat-label">Estados atendidos</span></div>
     </div>
   </div>
 
   <div class="section-divider"></div>
 
+  <!-- RECENT POSTS -->
   <section style="max-width:1200px;margin:0 auto;padding:56px 32px 48px;">
     <div style="margin-bottom:32px;" class="reveal-up">
       <span class="section-label">Recentes</span>
       <h2 class="section-title">Últimos Artigos</h2>
     </div>
-    <div class="grid-3">
-      <a href="posts/marketing-juridico-oab-guia-completo.html" class="card reveal-up">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80" alt="Marketing Jurídico OAB" loading="lazy"/></div>
-        <div class="card-body"><span class="cat-tag" style="margin-bottom:12px;">Marketing Jurídico</span><h3 class="card-title">Marketing Jurídico: O que a OAB Permite (Guia 2026)</h3><p class="card-excerpt">Entenda o que o Código de Ética da OAB permite em marketing jurídico e como atrair clientes sem risco de sanções.</p><div class="post-meta"><span>26 fev 2026</span><span class="dot">·</span><span>10 min</span></div></div>
+    <div class="editorial-grid reveal-up" id="recent-grid">
+      <a href="posts/marketing-juridico-oab-guia-completo.html" class="ed-main">
+        <div class="ed-main-img"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&auto=format&fit=crop&q=80" alt="Marketing Jurídico OAB" loading="lazy"/></div>
+        <div class="ed-main-body">
+          <span class="cat-tag" style="margin-bottom:12px;">Marketing Jurídico</span>
+          <h3 class="ed-main-title">Marketing Jurídico: O que a OAB Permite (Guia 2026)</h3>
+          <p class="ed-main-excerpt">Entenda o que o Código de Ética da OAB permite em marketing jurídico e como atrair clientes sem risco de sanções.</p>
+          <div class="post-meta"><span>26 fev 2026</span><span class="dot">·</span><span>10 min</span></div>
+        </div>
       </a>
-      <a href="posts/automacao-escritorio-advocacia-7-processos.html" class="card reveal-up">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&auto=format&fit=crop&q=80" alt="Automação Escritório" loading="lazy"/></div>
-        <div class="card-body"><span class="cat-tag" style="margin-bottom:12px;">Automação Jurídica</span><h3 class="card-title">7 Processos para Automatizar no Seu Escritório Hoje</h3><p class="card-excerpt">Recupere horas de trabalho automatizando tarefas repetitivas. Veja os 7 processos que mais impactam o resultado.</p><div class="post-meta"><span>24 fev 2026</span><span class="dot">·</span><span>9 min</span></div></div>
-      </a>
-      <a href="posts/sistema-captacao-clientes-previsivel.html" class="card reveal-up">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&auto=format&fit=crop&q=80" alt="Sistema de Captação" loading="lazy"/></div>
-        <div class="card-body"><span class="cat-tag" style="margin-bottom:12px;">Captação de Clientes</span><h3 class="card-title">Como Criar um Sistema de Captação Previsível</h3><p class="card-excerpt">Chega de depender de indicações. Aprenda a construir um funil de captação previsível para seu escritório.</p><div class="post-meta"><span>22 fev 2026</span><span class="dot">·</span><span>11 min</span></div></div>
-      </a>
+      <div class="ed-stack">
+        <a href="posts/automacao-escritorio-advocacia-7-processos.html" class="card-sm reveal-up">
+          <div class="card-sm-img"><img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&auto=format&fit=crop&q=80" alt="Automação Escritório" loading="lazy"/></div>
+          <div class="card-sm-body">
+            <span class="cat-tag" style="margin-bottom:8px;">Automação Jurídica</span>
+            <h3 class="card-sm-title">7 Processos para Automatizar no Seu Escritório Hoje</h3>
+            <div class="post-meta" style="margin-top:6px;"><span>24 fev 2026</span><span class="dot">·</span><span>9 min</span></div>
+          </div>
+        </a>
+        <a href="posts/sistema-captacao-clientes-previsivel.html" class="card-sm reveal-up">
+          <div class="card-sm-img"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&auto=format&fit=crop&q=80" alt="Sistema de Captação" loading="lazy"/></div>
+          <div class="card-sm-body">
+            <span class="cat-tag" style="margin-bottom:8px;">Captação de Clientes</span>
+            <h3 class="card-sm-title">Como Criar um Sistema de Captação Previsível</h3>
+            <div class="post-meta" style="margin-top:6px;"><span>22 fev 2026</span><span class="dot">·</span><span>11 min</span></div>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 
   <div class="section-divider"></div>
 
+  <!-- ALL POSTS -->
   <section id="posts" style="max-width:1200px;margin:0 auto;padding:56px 32px 64px;">
     <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:28px;" class="reveal-up">
-      <div><span class="section-label">Arquivo</span><h2 class="section-title">Todos os Artigos</h2></div>
-      <div style="display:flex;flex-wrap:wrap;gap:8px;" id="filter-bar">
-        <button onclick="filterPosts('all',this)" class="fpill active">Todos</button>
-        <button onclick="filterPosts('ia-para-advogados',this)" class="fpill">IA para Advogados</button>
-        <button onclick="filterPosts('captacao-clientes',this)" class="fpill">Captação de Clientes</button>
-        <button onclick="filterPosts('automacao-juridica',this)" class="fpill">Automação Jurídica</button>
-        <button onclick="filterPosts('marketing-juridico',this)" class="fpill">Marketing Jurídico</button>
+      <div>
+        <span class="section-label">Arquivo</span>
+        <h2 class="section-title">Todos os Artigos</h2>
+      </div>
+      <div class="filter-bar" id="filter-bar">
+        <button onclick="filterPosts('all')" class="fpill active">Todos</button>
+        <button onclick="filterPosts('ia-para-advogados')" class="fpill">IA para Advogados</button>
+        <button onclick="filterPosts('captacao-clientes')" class="fpill">Captação de Clientes</button>
+        <button onclick="filterPosts('automacao-juridica')" class="fpill">Automação Jurídica</button>
+        <button onclick="filterPosts('marketing-juridico')" class="fpill">Marketing Jurídico</button>
       </div>
     </div>
     <div class="grid-3" id="posts-grid"></div>
@@ -203,6 +293,7 @@
 
   <div class="section-divider"></div>
 
+  <!-- NEWSLETTER -->
   <section id="newsletter" class="nl-section">
     <div class="nl-wrap">
       <span class="hero-kicker reveal-up" style="display:block;">Newsletter</span>
@@ -214,7 +305,7 @@
             <div><label class="nl-label">Nome</label><input type="text" id="nl-nome" placeholder="Seu nome" class="nl-input" required/></div>
             <div><label class="nl-label">WhatsApp</label><input type="tel" id="nl-telefone" placeholder="(71) 99999-9999" class="nl-input" maxlength="15" required/></div>
           </div>
-          <div style="margin-bottom:14px;"><label class="nl-label">E-mail</label><input type="email" id="nl-email" placeholder="seu@email.com" class="nl-input" required/></div>
+          <div class="nl-field"><label class="nl-label">E-mail</label><input type="email" id="nl-email" placeholder="seu@email.com" class="nl-input" required/></div>
           <button type="submit" id="nl-btn" class="nl-submit">Quero Receber Estratégias Gratuitas</button>
           <p class="nl-note">Sem spam. Cancele quando quiser.</p>
         </form>
@@ -227,6 +318,7 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
       <a href="/"><img src="https://advanx.com.br/wp-content/uploads/2025/06/v3-png-e1750448442622.png" alt="Advanx" style="height:26px;"/></a>
@@ -248,29 +340,56 @@
       {id:4,slug:'sistema-captacao-clientes-previsivel',title:'Como Criar um Sistema de Captação Previsível',excerpt:'Chega de depender de indicações. Aprenda a construir um funil de captação de clientes previsível para seu escritório de advocacia.',category:'Captação de Clientes',categorySlug:'captacao-clientes',image:'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&auto=format&fit=crop&q=80',readingTime:'11 min',date:'22 fev 2026'},
       {id:5,slug:'chatbot-para-advogados-qualificar-leads-24h',title:'Chatbot para Advogados: Qualificar Leads 24h com IA',excerpt:'Um chatbot bem configurado qualifica leads jurídicos enquanto você dorme. Veja como implementar no seu escritório com custo acessível.',category:'IA para Advogados',categorySlug:'ia-para-advogados',image:'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&auto=format&fit=crop&q=80',readingTime:'7 min',date:'20 fev 2026'},
     ];
+
     function renderPosts(posts){
-      const g=document.getElementById('posts-grid');g.innerHTML='';
+      const g=document.getElementById('posts-grid');
+      g.innerHTML='';
       if(!posts.length){g.innerHTML='<p style="color:var(--ink-3);text-align:center;padding:48px 0;grid-column:1/-1;">Nenhum artigo nessa categoria.</p>';return;}
       posts.forEach(p=>{
-        const a=document.createElement('a');a.href=`posts/${p.slug}.html`;a.className='card';
+        const a=document.createElement('a');
+        a.href=`posts/${p.slug}.html`;
+        a.className='card reveal-up';
         a.innerHTML=`<div class="card-img"><img src="${p.image}" alt="${p.title}" loading="lazy"/></div><div class="card-body"><span class="cat-tag" style="margin-bottom:12px;">${p.category}</span><h3 class="card-title">${p.title}</h3><p class="card-excerpt">${p.excerpt}</p><div class="post-meta"><span>${p.date}</span><span class="dot">·</span><span>${p.readingTime}</span></div></div>`;
         g.appendChild(a);
       });
+      initReveal();
     }
-    function filterPosts(cat,el){
+
+    function filterPosts(cat){
       document.querySelectorAll('.fpill').forEach(p=>p.classList.remove('active'));
-      if(el)el.classList.add('active');
-      renderPosts(cat==='all'?POSTS:POSTS.filter(p=>p.categorySlug===cat));
+      event.target.classList.add('active');
+      const filtered=cat==='all'?POSTS:POSTS.filter(p=>p.categorySlug===cat);
+      renderPosts(filtered);
     }
+
     renderPosts(POSTS);
-    window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',window.scrollY>20));
-    function toggleMob(){document.getElementById('mob-nav').classList.toggle('open');}
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to('.hero .reveal-up',{opacity:1,y:0,duration:.65,stagger:.12,ease:'power2.out',delay:.05});
-    gsap.utils.toArray('.reveal-up').forEach(el=>{
-      if(el.closest('.hero'))return;
-      ScrollTrigger.create({trigger:el,start:'top 90%',once:true,onEnter:()=>gsap.to(el,{opacity:1,y:0,duration:.65,ease:'power2.out'})});
+
+    // Nav scroll
+    window.addEventListener('scroll',()=>{
+      document.getElementById('nav').classList.toggle('scrolled',window.scrollY>20);
     });
+
+    function toggleMob(){document.getElementById('mob-nav').classList.toggle('open');}
+
+    // GSAP Reveal
+    gsap.registerPlugin(ScrollTrigger);
+
+    function initReveal(){
+      gsap.utils.toArray('.reveal-up').forEach(el=>{
+        if(el._gsapReveal)return;
+        el._gsapReveal=true;
+        gsap.fromTo(el,{opacity:0,y:24},{opacity:1,y:0,duration:.7,ease:'power2.out',
+          scrollTrigger:{trigger:el,start:'top 90%',once:true}});
+      });
+    }
+
+    // Hero on load
+    gsap.fromTo('.hero .reveal-up',{opacity:0,y:20},{opacity:1,y:0,duration:.65,stagger:.12,ease:'power2.out',delay:.05});
+
+    window.addEventListener('load',initReveal);
+    initReveal();
+
+    // Phone mask
     document.getElementById('nl-telefone').addEventListener('input',function(e){
       let v=e.target.value.replace(/\D/g,'').substring(0,11);
       if(v.length>=7)v=`(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`;
@@ -278,18 +397,33 @@
       else if(v.length)v=`(${v}`;
       e.target.value=v;
     });
+
     function getUTMs(){const p=new URLSearchParams(window.location.search);return{origem:p.get('utm_source')||'blog',campanha:p.get('utm_campaign')||'',conjunto:p.get('utm_medium')||'',anuncio:p.get('utm_content')||'',posicionamento:p.get('utm_term')||''};}
+
     const SU='https://lhbwfbquxkutcyqazpnw.supabase.co';
     const SK='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxoYndmYnF1eGt1dGN5cWF6cG53Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA1Mjc5MTksImV4cCI6MjA2NjEwMzkxOX0.Tk6O2kpzTWcce9laIancu-lMFATLYkaTvgLBiRMsa10';
+
     async function submitNewsletter(e){
-      e.preventDefault();const btn=document.getElementById('nl-btn');btn.textContent='Enviando...';btn.disabled=true;
-      try{await fetch(`${SU}/rest/v1/dados_cliente`,{method:'POST',headers:{'Content-Type':'application/json','apikey':SK,'Authorization':`Bearer ${SK}`,'Prefer':'return=minimal'},body:JSON.stringify({nome:document.getElementById('nl-nome').value.trim(),telefone:document.getElementById('nl-telefone').value.replace(/\D/g,''),email:document.getElementById('nl-email').value.trim(),kanban_stage:'Novo Lead',pipeline_type:'inbound',funil_lead:'Advanx',empresa_fonte:'Advanx',...getUTMs()})});
-      if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'Newsletter Blog'});
-      if(typeof gtag!=='undefined')gtag('event','generate_lead',{event_category:'newsletter'});
-      document.getElementById('nl-form').style.display='none';document.getElementById('nl-success').style.display='block';
+      e.preventDefault();
+      const btn=document.getElementById('nl-btn');
+      btn.textContent='Enviando...';btn.disabled=true;
+      try{
+        await fetch(`${SU}/rest/v1/dados_cliente`,{method:'POST',headers:{'Content-Type':'application/json','apikey':SK,'Authorization':`Bearer ${SK}`,'Prefer':'return=minimal'},
+          body:JSON.stringify({nome:document.getElementById('nl-nome').value.trim(),telefone:document.getElementById('nl-telefone').value.replace(/\D/g,''),email:document.getElementById('nl-email').value.trim(),kanban_stage:'Novo Lead',pipeline_type:'inbound',funil_lead:'Advanx',empresa_fonte:'Advanx',...getUTMs()})});
+        if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'Newsletter Blog'});
+        if(typeof gtag!=='undefined')gtag('event','generate_lead',{event_category:'newsletter'});
+        document.getElementById('nl-form').style.display='none';
+        document.getElementById('nl-success').style.display='block';
       }catch{btn.textContent='Quero Receber Estratégias Gratuitas';btn.disabled=false;}
     }
-    let vcFired=false;window.addEventListener('scroll',()=>{if(!vcFired&&window.scrollY/(document.body.scrollHeight-window.innerHeight)>=0.5){vcFired=true;if(typeof fbq!=='undefined')fbq('track','ViewContent');}});
+
+    let vcFired=false;
+    window.addEventListener('scroll',()=>{
+      if(!vcFired&&window.scrollY/(document.body.scrollHeight-window.innerHeight)>=0.5){
+        vcFired=true;
+        if(typeof fbq!=='undefined')fbq('track','ViewContent');
+      }
+    });
   </script>
 </body>
 </html>
