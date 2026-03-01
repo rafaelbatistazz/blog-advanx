@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chatbot para Advogados: Como Qualificar Leads 24h por Dia com IA | Blog Advanx</title>
+  <meta name="description" content="Descubra como um chatbot jurídico bem configurado qualifica leads 24 horas por dia, reduz o tempo de atendimento manual e aumenta a conversão do seu escritório."/>
+  <meta name="keywords" content="chatbot para advogados, chatbot jurídico, qualificação de leads advocacia, atendimento automático advogado"/>
+  <link rel="canonical" href="https://blog.advanx.com.br/posts/chatbot-para-advogados-qualificar-leads-24h.html"/>
+  <meta property="og:title" content="Chatbot para Advogados: Como Qualificar Leads 24h por Dia com IA"/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=1200&auto=format&fit=crop&q=80"/>
+  <meta property="og:type" content="article"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Chatbot para Advogados: Como Qualificar Leads 24h por Dia com IA","datePublished":"2026-02-20","author":{"@type":"Organization","name":"Advanx Tecnologia"},"image":"https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=1200&auto=format&fit=crop&q=80"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Um chatbot pode substituir o advogado no atendimento?","acceptedAnswer":{"@type":"Answer","text":"Não, nem deve. O chatbot cuida da triagem e qualificação inicial — coletando informações, identificando se há caso viável e agendando a consulta. O atendimento jurídico real, com análise do caso e orientação legal, é sempre responsabilidade do advogado."}},{"@type":"Question","name":"Chatbot jurídico é permitido pela OAB?","acceptedAnswer":{"@type":"Answer","text":"Sim. Chatbots para triagem de consultas e qualificação de leads são permitidos. O que não é permitido é o chatbot dar orientação jurídica definitiva ou prometer resultados."}},{"@type":"Question","name":"Qual a diferença entre chatbot simples e chatbot com IA?","acceptedAnswer":{"@type":"Answer","text":"Chatbot simples (baseado em regras) segue fluxos pré-definidos e não entende variações de linguagem. Chatbot com IA (como GPT-4 integrado) entende linguagem natural, adapta as perguntas com base no contexto e lida com casos que fogem do script padrão."}},{"@type":"Question","name":"Quanto custa um chatbot jurídico?","acceptedAnswer":{"@type":"Answer","text":"Chatbots básicos para WhatsApp (ManyChat, Typebot) custam entre R$200 e R$500/mês. Soluções com IA generativa customizada para o nicho jurídico, como a IA da Advanx, fazem parte do pacote SIC que inclui toda a estratégia de captação."}},{"@type":"Question","name":"O chatbot funciona no WhatsApp ou apenas no site?","acceptedAnswer":{"@type":"Answer","text":"Depende da ferramenta. Os chatbots mais eficazes para advocacia funcionam no WhatsApp, que é o canal de comunicação preferido do brasileiro. Um chatbot no site captura leads que estão buscando ativamente, enquanto o WhatsApp fecha a jornada de quem veio por anúncio."}}]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,700;1,800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','502759528362336');fbq('track','PageView');</script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=502759528362336&ev=PageView&noscript=1"/></noscript>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98EL5GXG5F"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-98EL5GXG5F');</script>
+  <script>tailwind.config={theme:{extend:{colors:{obsidian:'#0D0D12',surface:'#111118',accent:'#FF7A01',ivory:'#FAF8F5'},fontFamily:{sans:['Inter','sans-serif'],serif:['Playfair Display','serif'],mono:['JetBrains Mono','monospace']}}}}</script>
+  <style>
+    :root{--obsidian:#0D0D12;--surface:#111118;--border:rgba(255,255,255,0.06);--accent:#FF7A01;--ivory:#FAF8F5;--muted:rgba(250,248,245,0.55);}
+    *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+    body{background:var(--obsidian);color:var(--ivory);font-family:'Inter',sans-serif;overflow-x:hidden;}
+    ::selection{background:var(--accent);color:#000;}::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:var(--obsidian);}::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px;}
+    .navbar-pill{background:rgba(13,13,18,0.7);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:100px;}
+    .reading-progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);z-index:1000;}
+    .article-body h2{font-size:1.6rem;font-weight:800;color:var(--ivory);margin:2.5rem 0 1rem;line-height:1.3;}
+    .article-body h3{font-size:1.2rem;font-weight:700;color:var(--ivory);margin:2rem 0 0.75rem;}
+    .article-body p{color:rgba(250,248,245,0.75);line-height:1.85;margin-bottom:1.25rem;font-size:1.05rem;}
+    .article-body ul,.article-body ol{color:rgba(250,248,245,0.75);line-height:1.85;margin:1rem 0 1.5rem 1.5rem;font-size:1.05rem;}
+    .article-body li{margin-bottom:0.5rem;}
+    .article-body blockquote{border-left:3px solid var(--accent);padding:1rem 1.5rem;background:rgba(255,122,1,0.06);border-radius:0 12px 12px 0;margin:2rem 0;}
+    .article-body blockquote p{color:var(--ivory);font-style:italic;margin:0;}
+    .article-body strong{color:var(--ivory);}
+    .toc-item{font-size:0.875rem;color:rgba(250,248,245,0.5);transition:all 0.2s;cursor:pointer;border-left:2px solid transparent;padding-left:12px;}
+    .toc-item:hover,.toc-item.active{color:var(--accent);border-left-color:var(--accent);}
+    .cta-box{background:linear-gradient(135deg,rgba(255,122,1,0.1),rgba(255,122,1,0.03));border:1px solid rgba(255,122,1,0.25);border-radius:16px;padding:2rem;}
+    .nl-input{background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:10px;color:var(--ivory);padding:14px 18px;width:100%;font-family:'Inter',sans-serif;font-size:14px;transition:border-color 0.2s;}
+    .nl-input:focus{outline:none;border-color:var(--accent);}
+    .nl-input::placeholder{color:var(--muted);}
+    .post-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all 0.3s ease;}
+    .post-card:hover{border-color:rgba(255,122,1,0.3);transform:translateY(-4px);}
+    .cat-badge{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;background:rgba(255,122,1,0.15);color:var(--accent);border:1px solid rgba(255,122,1,0.3);border-radius:6px;padding:3px 8px;}
+    .mobile-menu{display:none;}.mobile-menu.open{display:block;}
+    .gsap-fade{opacity:0;transform:translateY(20px);}
+    .featured-overlay{background:linear-gradient(to top,rgba(13,13,18,0.95) 0%,rgba(13,13,18,0.4) 50%,transparent 100%);}
+    .chat-bubble-left{background:var(--surface);border:1px solid var(--border);border-radius:16px 16px 16px 4px;padding:12px 16px;max-width:80%;font-size:0.9rem;color:var(--ivory);}
+    .chat-bubble-right{background:rgba(255,122,1,0.15);border:1px solid rgba(255,122,1,0.2);border-radius:16px 16px 4px 16px;padding:12px 16px;max-width:80%;margin-left:auto;font-size:0.9rem;color:var(--ivory);}
+    .chat-label{font-family:'JetBrains Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px;}
+  </style>
+</head>
+<body>
+  <div class="reading-progress" id="reading-progress" style="width:0%"></div>
+  <header class="fixed top-0 left-0 right-0 z-50 px-4 py-4">
+    <nav class="navbar-pill max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="/"><img src="https://advanx.com.br/wp-content/uploads/2025/06/v3-png-e1750448442622.png" alt="Advanx" class="h-7"/></a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="/" class="text-sm text-ivory/70 hover:text-ivory">Blog</a>
+        <a href="https://advanx.com.br" target="_blank" class="text-sm text-ivory/70 hover:text-ivory">Advanx.com.br</a>
+        <a href="https://wa.me/5571982470873" target="_blank" class="bg-accent text-black text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-orange-400">Falar com Especialista</a>
+      </div>
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden text-ivory/70"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </nav>
+    <div id="mobile-menu" class="mobile-menu md:hidden max-w-5xl mx-auto mt-2"><div class="navbar-pill p-4 flex flex-col gap-2"><a href="/" class="px-4 py-3 rounded-xl hover:bg-white/5 text-sm text-ivory/80">Blog</a><a href="https://wa.me/5571982470873" target="_blank" class="bg-accent text-black text-sm font-semibold px-4 py-3 rounded-xl text-center">Falar com Especialista</a></div></div>
+  </header>
+
+  <section class="relative h-[70vh] min-h-96 overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=1200&auto=format&fit=crop&q=80" alt="Chatbot para Advogados" class="w-full h-full object-cover"/>
+    <div class="featured-overlay absolute inset-0"></div>
+    <div class="absolute inset-0 flex flex-col justify-end pb-16 px-6">
+      <div class="max-w-4xl mx-auto w-full">
+        <nav class="flex items-center gap-2 text-xs text-ivory/40 mb-6 font-mono">
+          <a href="/" class="hover:text-accent">Início</a><span>/</span><span class="text-accent">IA para Advogados</span><span>/</span><span class="truncate max-w-xs">Chatbot para Advogados</span>
+        </nav>
+        <span class="cat-badge mb-4 inline-block gsap-fade">IA para Advogados</span>
+        <h1 class="gsap-fade text-3xl md:text-5xl font-black text-ivory leading-tight mb-6 max-w-3xl">
+          Chatbot para Advogados: Como <span class="font-serif italic text-accent">Qualificar Leads</span> 24h por Dia com IA
+        </h1>
+        <div class="gsap-fade flex flex-wrap items-center gap-4 text-ivory/50">
+          <span class="font-mono text-xs">20 fev 2026</span><span>•</span><span class="text-xs">7 min de leitura</span><span>•</span><span class="text-xs">Por Advanx Tecnologia</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="article-body max-w-3xl">
+        <p>São 23h45 de uma quinta-feira. Uma pessoa acabou de perder o emprego, foi demitida por justa causa de forma questionável, e está desesperada para saber seus direitos. Ela abre o WhatsApp e manda mensagem para o escritório de advocacia que apareceu na busca do Google.</p>
+
+        <p>Se o seu escritório não tem chatbot, essa mensagem vai para uma fila que você vai ver amanhã de manhã. Enquanto isso, ela provavelmente já mandou para mais 3 ou 4 advogados. O que responder primeiro — e melhor — vai fechar o contrato.</p>
+
+        <p>Com um chatbot jurídico bem configurado, a resposta é imediata: o sistema identifica o problema, faz as perguntas certas, avalia se há caso viável e agenda uma consulta — tudo automaticamente. Quando você acorda, tem um lead qualificado esperando pela consulta marcada.</p>
+
+        <h2 id="como-funciona">Como um Chatbot Jurídico Funciona na Prática</h2>
+
+        <p>Um chatbot para advogados não é um robô que responde "Olá! Como posso te ajudar?" e fica esperando. É um sistema de qualificação inteligente que segue um fluxo estruturado para identificar, em minutos, se o potencial cliente tem um caso viável para o seu escritório.</p>
+
+        <p>Veja como funciona um fluxo típico para um escritório trabalhista:</p>
+
+        <!-- Chat mockup -->
+        <div class="my-8 bg-surface border border-white/8 rounded-2xl p-6 space-y-4 gsap-fade">
+          <div class="text-xs font-mono text-ivory/30 mb-4 tracking-wide uppercase">Exemplo de fluxo de atendimento</div>
+          <div>
+            <div class="chat-label text-accent/70">Chatbot</div>
+            <div class="chat-bubble-left">Olá! Sou a assistente virtual do escritório. Para te ajudar da melhor forma, preciso de algumas informações. Qual é o seu problema? Digite o número: 1. Fui demitido | 2. Não recebi meu salário | 3. Acidente de trabalho | 4. Assédio | 5. Outro</div>
+          </div>
+          <div>
+            <div class="chat-label text-right text-ivory/30">Lead</div>
+            <div class="chat-bubble-right">1</div>
+          </div>
+          <div>
+            <div class="chat-label text-accent/70">Chatbot</div>
+            <div class="chat-bubble-left">Entendido. Quando foi a sua demissão? 1. Nos últimos 30 dias | 2. De 1 a 6 meses | 3. Mais de 6 meses</div>
+          </div>
+          <div>
+            <div class="chat-label text-right text-ivory/30">Lead</div>
+            <div class="chat-bubble-right">1</div>
+          </div>
+          <div>
+            <div class="chat-label text-accent/70">Chatbot</div>
+            <div class="chat-bubble-left">Ótimo — você ainda está dentro do prazo para agir. Foi demissão com ou sem justa causa? 1. Sem justa causa | 2. Com justa causa | 3. Fui pressionado a pedir demissão</div>
+          </div>
+          <div class="text-xs text-ivory/30 text-center pt-2">... fluxo continua com mais 3-4 perguntas</div>
+        </div>
+
+        <p>Ao final do fluxo, o sistema classifica o lead como <strong>qualificado</strong> (envia para o advogado com resumo do caso) ou <strong>não qualificado</strong> (caso prescrito, área fora do atendimento, ou problema sem caso jurídico). O advogado só recebe os leads que valem o seu tempo.</p>
+
+        <h2 id="beneficios">Benefícios Concretos para o Escritório</h2>
+
+        <p>Os resultados que escritórios relatam após implementar chatbot jurídico são consistentes:</p>
+
+        <ul>
+          <li><strong>Redução de 60-70% no tempo de triagem:</strong> O que levava 20 minutos por lead passa a levar zero minutos do advogado</li>
+          <li><strong>Atendimento 24/7:</strong> Leads captados às 23h ou de madrugada não ficam sem resposta até o dia seguinte</li>
+          <li><strong>Aumento de 3x na taxa de qualificação:</strong> O chatbot não se emociona, não pula etapas e sempre coleta as informações necessárias</li>
+          <li><strong>Redução de no-shows:</strong> O chatbot confirma a consulta, envia lembretes e reagenda automaticamente se necessário</li>
+          <li><strong>Dados estruturados:</strong> Cada lead chega ao CRM com as informações já organizadas — tipo de caso, urgência, contato</li>
+        </ul>
+
+        <!-- MID CTA -->
+        <div class="cta-box my-10 gsap-fade">
+          <div class="flex flex-col md:flex-row items-start md:items-center gap-4">
+            <div class="flex-1"><h3 class="text-lg font-bold text-ivory mb-1">Quer um chatbot jurídico no seu escritório?</h3><p class="text-ivory/60 text-sm">A Advanx Tecnologia configura chatbots de qualificação para advogados com IA especializada em Direito brasileiro.</p></div>
+            <a href="https://wa.me/5571982470873" target="_blank" class="bg-accent text-black font-bold px-6 py-3 rounded-xl hover:bg-orange-400 transition-colors text-sm whitespace-nowrap">Falar com Especialista →</a>
+          </div>
+        </div>
+
+        <h2 id="tipos">Tipos de Chatbot: Qual é o Certo para Você?</h2>
+
+        <h3>Chatbot Baseado em Regras (Flowbot)</h3>
+
+        <p>É o mais comum e mais acessível. Segue um fluxo de perguntas e respostas pré-definido. Funciona bem para triagens simples com respostas de múltipla escolha. Limitação: não entende linguagem livre ("meu chefe me tratava mal e acabei pedindo as contas" — o bot regra não sabe classificar isso).</p>
+
+        <p>Ferramentas: ManyChat, Typebot, Manychat. Custo: R$200-500/mês.</p>
+
+        <h3>Chatbot com NLP (Processamento de Linguagem Natural)</h3>
+
+        <p>Entende texto livre. O lead pode escrever "fui mandado embora porque engravidei" e o bot identifica: demissão discriminatória, área trabalhista, caso urgente. É mais complexo de configurar e mais caro — mas a experiência do usuário é muito melhor.</p>
+
+        <h3>Chatbot com IA Generativa (GPT/Claude)</h3>
+
+        <p>O mais avançado. Usa modelos de linguagem de grande escala para conduzir conversas naturais, identificar nuances do caso e adaptar as perguntas conforme as respostas. A Advanx desenvolveu a Advanx IA com base nesse modelo — treinada especificamente para o mercado jurídico brasileiro, com conhecimento de todas as áreas do Direito.</p>
+
+        <p>É o que entende perguntas como "fui demitido mas meu contrato dizia que não podia ser demitido por dois anos" e sabe que isso pode ser uma discussão sobre estabilidade contratual — sem precisar de um fluxo específico para esse cenário.</p>
+
+        <h2 id="configurar">Como Configurar um Chatbot Jurídico Eficiente</h2>
+
+        <p>Se você está começando, há 5 elementos essenciais para um chatbot jurídico que converte:</p>
+
+        <ol>
+          <li><strong>Boas-vindas humanizadas:</strong> Apresentação que parece natural, não robótica. "Olá! Sou a assistente do Escritório X. Estou aqui para entender sua situação e ver como podemos ajudar" — não "Bem-vindo ao nosso atendimento automático"</li>
+          <li><strong>Perguntas de qualificação na ordem certa:</strong> Tipo de problema → urgência → localidade → capacidade de contratar. Nessa ordem — não ao contrário</li>
+          <li><strong>Critérios de desqualificação claros:</strong> Defina antecipadamente quais leads não valem seu tempo (prazo prescrito, fora da área de atuação, cidade muito distante) e configure o bot para não encaminhar esses casos</li>
+          <li><strong>Transição natural para o humano:</strong> Quando qualificado, o handoff deve ser suave: "Seu caso tem muita urgência. Vou conectar você com um de nossos advogados agora mesmo"</li>
+          <li><strong>Follow-up automático se não responder:</strong> Se o lead abandonar o fluxo no meio, o bot tenta reengajar após 2 horas com uma mensagem simples</li>
+        </ol>
+
+        <h2 id="oab-chatbot">Chatbot e Ética OAB: O que Você Precisa Saber</h2>
+
+        <p>O chatbot não pode dar orientação jurídica definitiva. Pode explicar direitos gerais ("trabalhadores demitidos sem justa causa têm direito a aviso prévio, FGTS e seguro-desemprego"), mas não pode dizer "no seu caso específico, você vai ganhar" ou "você tem direito a X reais".</p>
+
+        <p>A linha é clara: informação geral (permitida) x parecer jurídico individual (exclusivo do advogado). Um chatbot bem configurado opera 100% dentro dessa linha — e pode até explicitamente deixar isso claro para o usuário.</p>
+
+        <blockquote><p>"O chatbot não substitui o advogado. Ele garante que o advogado só gaste seu tempo com quem realmente precisa — e está pronto para contratar."</p></blockquote>
+
+        <section class="mt-16 gsap-fade">
+          <h2 class="text-2xl font-black text-ivory mb-8">Perguntas Frequentes</h2>
+          <div class="space-y-4">
+            <details class="bg-surface border border-white/8 rounded-xl p-6 cursor-pointer group"><summary class="font-semibold text-ivory list-none flex items-center justify-between">Um chatbot pode substituir o advogado no atendimento?<svg class="w-5 h-5 text-accent transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary><p class="text-ivory/60 text-sm mt-4 leading-relaxed">Não, nem deve. O chatbot cuida da triagem e qualificação inicial. O atendimento jurídico real é sempre responsabilidade do advogado.</p></details>
+            <details class="bg-surface border border-white/8 rounded-xl p-6 cursor-pointer group"><summary class="font-semibold text-ivory list-none flex items-center justify-between">Chatbot jurídico é permitido pela OAB?<svg class="w-5 h-5 text-accent transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary><p class="text-ivory/60 text-sm mt-4 leading-relaxed">Sim. Chatbots para triagem e qualificação de leads são permitidos. O que não é permitido é o chatbot dar orientação jurídica definitiva ou prometer resultados.</p></details>
+            <details class="bg-surface border border-white/8 rounded-xl p-6 cursor-pointer group"><summary class="font-semibold text-ivory list-none flex items-center justify-between">Qual a diferença entre chatbot simples e com IA?<svg class="w-5 h-5 text-accent transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary><p class="text-ivory/60 text-sm mt-4 leading-relaxed">Chatbot simples segue fluxos fixos. Chatbot com IA entende linguagem natural, adapta perguntas com base no contexto e lida com casos que fogem do script padrão.</p></details>
+            <details class="bg-surface border border-white/8 rounded-xl p-6 cursor-pointer group"><summary class="font-semibold text-ivory list-none flex items-center justify-between">Quanto custa um chatbot jurídico?<svg class="w-5 h-5 text-accent transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary><p class="text-ivory/60 text-sm mt-4 leading-relaxed">Chatbots básicos custam entre R$200 e R$500/mês. Soluções com IA generativa customizada fazem parte do pacote SIC da Advanx que inclui toda a estratégia de captação.</p></details>
+            <details class="bg-surface border border-white/8 rounded-xl p-6 cursor-pointer group"><summary class="font-semibold text-ivory list-none flex items-center justify-between">O chatbot funciona no WhatsApp ou só no site?<svg class="w-5 h-5 text-accent transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary><p class="text-ivory/60 text-sm mt-4 leading-relaxed">Depende da ferramenta. Os chatbots mais eficazes para advocacia funcionam no WhatsApp, que é o canal preferido do brasileiro.</p></details>
+          </div>
+        </section>
+
+        <section class="mt-16 gsap-fade">
+          <h2 class="text-xl font-black text-ivory mb-6">Artigos Relacionados</h2>
+          <div class="grid md:grid-cols-3 gap-4">
+            <a href="como-advogados-captam-clientes-ia-2026.html" class="post-card block"><div class="overflow-hidden h-32"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&auto=format&fit=crop&q=80" alt="" class="w-full h-full object-cover" loading="lazy"/></div><div class="p-4"><span class="cat-badge mb-2 inline-block">IA para Advogados</span><h4 class="text-sm font-bold text-ivory leading-snug">Como Captar Clientes com IA em 2026</h4></div></a>
+            <a href="automacao-escritorio-advocacia-7-processos.html" class="post-card block"><div class="overflow-hidden h-32"><img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&auto=format&fit=crop&q=80" alt="" class="w-full h-full object-cover" loading="lazy"/></div><div class="p-4"><span class="cat-badge mb-2 inline-block">Automação</span><h4 class="text-sm font-bold text-ivory leading-snug">7 Processos para Automatizar</h4></div></a>
+            <a href="sistema-captacao-clientes-previsivel.html" class="post-card block"><div class="overflow-hidden h-32"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&auto=format&fit=crop&q=80" alt="" class="w-full h-full object-cover" loading="lazy"/></div><div class="p-4"><span class="cat-badge mb-2 inline-block">Captação</span><h4 class="text-sm font-bold text-ivory leading-snug">Sistema de Captação Previsível</h4></div></a>
+          </div>
+        </section>
+      </article>
+
+      <aside class="hidden lg:block">
+        <div class="sticky top-28 space-y-6">
+          <div class="bg-surface border border-white/8 rounded-xl p-6">
+            <h3 class="font-mono text-xs text-accent tracking-widest uppercase mb-4">Neste Artigo</h3>
+            <nav class="space-y-2">
+              <a href="#como-funciona" class="toc-item block py-1">Como Funciona</a>
+              <a href="#beneficios" class="toc-item block py-1">Benefícios Concretos</a>
+              <a href="#tipos" class="toc-item block py-1">Tipos de Chatbot</a>
+              <a href="#configurar" class="toc-item block py-1">Como Configurar</a>
+              <a href="#oab-chatbot" class="toc-item block py-1">Chatbot e Ética OAB</a>
+            </nav>
+          </div>
+          <div class="bg-gradient-to-br from-accent/15 to-accent/5 border border-accent/20 rounded-xl p-6">
+            <h3 class="font-bold text-ivory text-sm mb-2">Chatbot jurídico para seu escritório</h3>
+            <p class="text-ivory/50 text-xs mb-4 leading-relaxed">A Advanx IA atende, qualifica e agenda consultas automaticamente no WhatsApp.</p>
+            <a href="https://wa.me/5571982470873" target="_blank" class="block bg-accent text-black text-xs font-bold py-3 px-4 rounded-xl text-center hover:bg-orange-400 transition-colors">Falar pelo WhatsApp</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <section id="newsletter" class="relative py-20 border-t border-white/5">
+    <div class="max-w-2xl mx-auto px-6">
+      <div class="text-center mb-10 gsap-fade"><span class="font-mono text-xs text-accent tracking-widest uppercase">Newsletter</span><h2 class="text-3xl font-black text-ivory mt-3 mb-3">Estratégias direto no seu e-mail</h2><p class="text-ivory/50 text-sm">Toda semana: uma tática de captação, um case real, uma ferramenta de IA para advogados.</p></div>
+      <div class="gsap-fade bg-surface border border-white/8 rounded-2xl p-8">
+        <form id="newsletter-form" onsubmit="submitNewsletter(event)">
+          <div class="grid md:grid-cols-2 gap-4 mb-4"><div><label class="block text-xs text-ivory/50 mb-2 font-mono uppercase tracking-wide">Nome</label><input type="text" id="nl-nome" placeholder="Seu nome" class="nl-input" required/></div><div><label class="block text-xs text-ivory/50 mb-2 font-mono uppercase tracking-wide">WhatsApp</label><input type="tel" id="nl-telefone" placeholder="(71) 99999-9999" class="nl-input" maxlength="15" required/></div></div>
+          <div class="mb-6"><label class="block text-xs text-ivory/50 mb-2 font-mono uppercase tracking-wide">E-mail</label><input type="email" id="nl-email" placeholder="seu@email.com" class="nl-input" required/></div>
+          <button type="submit" id="nl-btn" class="w-full bg-accent text-black font-bold py-4 rounded-xl hover:bg-orange-400 transition-all text-sm">Quero Receber Estratégias Gratuitas</button>
+        </form>
+        <div id="nl-success" class="hidden text-center py-6"><div class="text-4xl mb-3">🎯</div><h3 class="text-xl font-bold text-ivory mb-2">Você está dentro!</h3><p class="text-ivory/50 text-sm">Verifique seu e-mail.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/5 bg-surface/30 py-12">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <a href="/"><img src="https://advanx.com.br/wp-content/uploads/2025/06/v3-png-e1750448442622.png" alt="Advanx" class="h-7"/></a>
+      <p class="text-xs text-ivory/30 font-mono">© 2026 Advanx Tecnologia. Todos os direitos reservados.</p>
+      <div class="flex gap-4"><a href="https://instagram.com/advanxtecnologia" target="_blank" class="text-ivory/40 hover:text-accent text-xs font-mono">Instagram</a><a href="https://wa.me/5571982470873" target="_blank" class="text-ivory/40 hover:text-accent text-xs font-mono">WhatsApp</a></div>
+    </div>
+  </footer>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    window.addEventListener('scroll',()=>{const w=document.documentElement.scrollTop;const h=document.documentElement.scrollHeight-document.documentElement.clientHeight;document.getElementById('reading-progress').style.width=(w/h*100)+'%';});
+    gsap.to('.gsap-fade',{opacity:1,y:0,duration:0.8,stagger:0.15,ease:'power3.out',delay:0.2});
+    gsap.utils.toArray('.gsap-fade').forEach(el=>{ScrollTrigger.create({trigger:el,start:'top 90%',once:true,onEnter:()=>gsap.to(el,{opacity:1,y:0,duration:0.6,ease:'power3.out'})});});
+    document.getElementById('nl-telefone').addEventListener('input',function(e){let v=e.target.value.replace(/\D/g,'').substring(0,11);if(v.length>=7)v=`(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`;else if(v.length>=3)v=`(${v.slice(0,2)}) ${v.slice(2)}`;else if(v.length>=1)v=`(${v}`;e.target.value=v;});
+    function getUTMs(){const p=new URLSearchParams(window.location.search);return{origem:p.get('utm_source')||'blog',campanha:p.get('utm_campaign')||'',conjunto:p.get('utm_medium')||'',anuncio:p.get('utm_content')||'',posicionamento:p.get('utm_term')||''};}
+    async function submitNewsletter(e){e.preventDefault();const btn=document.getElementById('nl-btn');btn.textContent='Enviando...';btn.disabled=true;const SU='https://lhbwfbquxkutcyqazpnw.supabase.co';const SK='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxoYndmYnF1eGt1dGN5cWF6cG53Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA1Mjc5MTksImV4cCI6MjA2NjEwMzkxOX0.Tk6O2kpzTWcce9laIancu-lMFATLYkaTvgLBiRMsa10';try{await fetch(`${SU}/rest/v1/dados_cliente`,{method:'POST',headers:{'Content-Type':'application/json','apikey':SK,'Authorization':`Bearer ${SK}`,'Prefer':'return=minimal'},body:JSON.stringify({nome:document.getElementById('nl-nome').value.trim(),telefone:document.getElementById('nl-telefone').value.replace(/\D/g,''),email:document.getElementById('nl-email').value.trim(),kanban_stage:'Novo Lead',pipeline_type:'inbound',funil_lead:'Advanx',empresa_fonte:'Advanx',...getUTMs()})});if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'Newsletter Blog'});if(typeof gtag!=='undefined')gtag('event','generate_lead',{event_category:'newsletter'});document.getElementById('newsletter-form').classList.add('hidden');document.getElementById('nl-success').classList.remove('hidden');}catch{btn.textContent='Quero Receber Estratégias Gratuitas';btn.disabled=false;}}
+    let vcFired=false;window.addEventListener('scroll',()=>{if(!vcFired&&window.scrollY/(document.body.scrollHeight-window.innerHeight)>=0.5){vcFired=true;if(typeof fbq!=='undefined')fbq('track','ViewContent');}});
+  </script>
+</body>
+</html>
