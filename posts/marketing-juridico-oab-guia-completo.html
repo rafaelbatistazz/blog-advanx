@@ -394,5 +394,230 @@
     }
     let vcFired=false;window.addEventListener('scroll',()=>{if(!vcFired&&window.scrollY/(document.body.scrollHeight-window.innerHeight)>=0.5){vcFired=true;if(typeof fbq!=='undefined')fbq('track','ViewContent');}});
 </script>
+<!-- ── Advanx Contact Modal ── -->
+<div id="acm-overlay" aria-modal="true" role="dialog" aria-label="Fale com um Especialista" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(13,13,18,0.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);align-items:center;justify-content:center;padding:16px;overflow-y:auto;">
+  <div id="acm-box" style="background:#fff;border-radius:20px;padding:36px 32px;width:100%;max-width:500px;position:relative;box-shadow:0 30px 80px rgba(0,0,0,0.35);margin:auto;">
+    <button onclick="acmClose()" aria-label="Fechar" style="position:absolute;top:14px;right:16px;background:none;border:none;cursor:pointer;color:#9E9890;font-size:22px;line-height:1;font-family:inherit;">✕</button>
+
+    <!-- Form -->
+    <div id="acm-form-wrap">
+      <div style="margin-bottom:22px;">
+        <div style="display:inline-flex;align-items:center;gap:8px;background:#FFF4E8;border:1px solid rgba(255,122,1,.2);border-radius:20px;padding:4px 12px;font-size:.72rem;font-weight:600;color:#FF7A01;letter-spacing:.04em;text-transform:uppercase;margin-bottom:12px;">🔒 Sem compromisso</div>
+        <h2 style="font-size:1.25rem;font-weight:700;color:#1A1814;margin-bottom:6px;line-height:1.35;">Fale com um Especialista Advanx</h2>
+        <p style="font-size:.84rem;color:#4A4540;line-height:1.55;">Preencha abaixo e nossa equipe entra em contato em minutos pelo WhatsApp.</p>
+      </div>
+      <form id="acm-form" onsubmit="acmSubmit(event)" novalidate>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
+          <div style="grid-column:1/-1;">
+            <label style="display:block;font-size:.78rem;font-weight:600;color:#4A4540;margin-bottom:5px;">Nome completo *</label>
+            <input id="acm-nome" type="text" placeholder="Seu nome" required style="width:100%;padding:10px 13px;border:1.5px solid #E6E3DE;border-radius:10px;font-size:.88rem;font-family:inherit;color:#1A1814;outline:none;transition:border-color .2s;background:#FAFAF8;" onfocus="this.style.borderColor='#FF7A01'" onblur="this.style.borderColor='#E6E3DE'" />
+          </div>
+          <div>
+            <label style="display:block;font-size:.78rem;font-weight:600;color:#4A4540;margin-bottom:5px;">Telefone (WhatsApp) *</label>
+            <input id="acm-telefone" type="tel" placeholder="(71) 99999-9999" required style="width:100%;padding:10px 13px;border:1.5px solid #E6E3DE;border-radius:10px;font-size:.88rem;font-family:inherit;color:#1A1814;outline:none;transition:border-color .2s;background:#FAFAF8;" onfocus="this.style.borderColor='#FF7A01'" onblur="this.style.borderColor='#E6E3DE'" oninput="acmMaskPhone(this)" />
+          </div>
+          <div>
+            <label style="display:block;font-size:.78rem;font-weight:600;color:#4A4540;margin-bottom:5px;">E-mail *</label>
+            <input id="acm-email" type="email" placeholder="seu@email.com" required style="width:100%;padding:10px 13px;border:1.5px solid #E6E3DE;border-radius:10px;font-size:.88rem;font-family:inherit;color:#1A1814;outline:none;transition:border-color .2s;background:#FAFAF8;" onfocus="this.style.borderColor='#FF7A01'" onblur="this.style.borderColor='#E6E3DE'" />
+          </div>
+          <div>
+            <label style="display:block;font-size:.78rem;font-weight:600;color:#4A4540;margin-bottom:5px;">Área de atuação</label>
+            <select id="acm-area" style="width:100%;padding:10px 13px;border:1.5px solid #E6E3DE;border-radius:10px;font-size:.88rem;font-family:inherit;color:#1A1814;outline:none;transition:border-color .2s;background:#FAFAF8;cursor:pointer;" onfocus="this.style.borderColor='#FF7A01'" onblur="this.style.borderColor='#E6E3DE'">
+              <option value="">Selecione...</option>
+              <option>Direito Civil</option>
+              <option>Direito Trabalhista</option>
+              <option>Direito Criminal</option>
+              <option>Direito de Família</option>
+              <option>Direito Tributário</option>
+              <option>Direito Empresarial</option>
+              <option>Direito Previdenciário</option>
+              <option>Direito do Consumidor</option>
+              <option>Direito Imobiliário</option>
+              <option>Outra área</option>
+            </select>
+          </div>
+          <div>
+            <label style="display:block;font-size:.78rem;font-weight:600;color:#4A4540;margin-bottom:5px;">Colaboradores</label>
+            <select id="acm-colaborador" style="width:100%;padding:10px 13px;border:1.5px solid #E6E3DE;border-radius:10px;font-size:.88rem;font-family:inherit;color:#1A1814;outline:none;transition:border-color .2s;background:#FAFAF8;cursor:pointer;" onfocus="this.style.borderColor='#FF7A01'" onblur="this.style.borderColor='#E6E3DE'">
+              <option value="">Selecione...</option>
+              <option>Só eu</option>
+              <option>2 a 5 pessoas</option>
+              <option>6 a 15 pessoas</option>
+              <option>16 a 30 pessoas</option>
+              <option>Mais de 30</option>
+            </select>
+          </div>
+          <div>
+            <label style="display:block;font-size:.78rem;font-weight:600;color:#4A4540;margin-bottom:5px;">Faturamento médio/mês</label>
+            <select id="acm-faturamento" style="width:100%;padding:10px 13px;border:1.5px solid #E6E3DE;border-radius:10px;font-size:.88rem;font-family:inherit;color:#1A1814;outline:none;transition:border-color .2s;background:#FAFAF8;cursor:pointer;" onfocus="this.style.borderColor='#FF7A01'" onblur="this.style.borderColor='#E6E3DE'">
+              <option value="">Selecione...</option>
+              <option>Até R$ 5.000</option>
+              <option>R$ 5.000 – R$ 10.000</option>
+              <option>R$ 10.000 – R$ 20.000</option>
+              <option>R$ 20.000 – R$ 50.000</option>
+              <option>Acima de R$ 50.000</option>
+            </select>
+          </div>
+          <div style="grid-column:1/-1;">
+            <label style="display:block;font-size:.78rem;font-weight:600;color:#4A4540;margin-bottom:5px;">Quando pretende resolver isso?</label>
+            <select id="acm-prazo" style="width:100%;padding:10px 13px;border:1.5px solid #E6E3DE;border-radius:10px;font-size:.88rem;font-family:inherit;color:#1A1814;outline:none;transition:border-color .2s;background:#FAFAF8;cursor:pointer;" onfocus="this.style.borderColor='#FF7A01'" onblur="this.style.borderColor='#E6E3DE'">
+              <option value="">Selecione...</option>
+              <option>Urgente — quero resolver esta semana</option>
+              <option>Em breve — este mês</option>
+              <option>Nos próximos 3 meses</option>
+              <option>Só estou pesquisando por enquanto</option>
+            </select>
+          </div>
+        </div>
+        <div id="acm-error" style="display:none;background:#FEF2F2;border:1px solid #FCA5A5;border-radius:8px;padding:10px 14px;font-size:.82rem;color:#DC2626;margin-bottom:12px;"></div>
+        <button type="submit" id="acm-submit" style="width:100%;padding:14px;background:#FF7A01;color:#fff;border:none;border-radius:12px;font-size:.95rem;font-weight:700;font-family:inherit;cursor:pointer;transition:background .2s;letter-spacing:.01em;">
+          Quero ser atendido →
+        </button>
+        <p style="text-align:center;font-size:.74rem;color:#9E9890;margin-top:10px;">Seus dados são tratados com sigilo. Nada de spam.</p>
+      </form>
+    </div>
+
+    <!-- Success / Countdown -->
+    <div id="acm-success" style="display:none;text-align:center;padding:16px 0 8px;">
+      <div style="width:60px;height:60px;background:#FFF4E8;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:26px;">✅</div>
+      <h3 style="font-size:1.1rem;font-weight:700;color:#1A1814;margin-bottom:8px;">Dados recebidos!</h3>
+      <p style="font-size:.88rem;color:#4A4540;margin-bottom:20px;line-height:1.55;">Redirecionando para o WhatsApp em</p>
+      <div id="acm-count" style="font-size:3rem;font-weight:800;color:#FF7A01;line-height:1;">3</div>
+      <p style="font-size:.78rem;color:#9E9890;margin-top:8px;">segundos...</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  // ── Helpers ──
+  function acmShow(el){el.style.display='flex';}
+  function acmHide(el){el.style.display='none';}
+
+  window.acmClose = function(){
+    var o=document.getElementById('acm-overlay');
+    acmHide(o);
+    document.body.style.overflow='';
+  };
+
+  window.acmMaskPhone = function(el){
+    var v=el.value.replace(/\D/g,'');
+    if(v.length<=2) v=v;
+    else if(v.length<=7) v='('+v.slice(0,2)+') '+v.slice(2);
+    else if(v.length<=11) v='('+v.slice(0,2)+') '+v.slice(2,7)+'-'+v.slice(7);
+    else v='('+v.slice(0,2)+') '+v.slice(2,7)+'-'+v.slice(7,11);
+    el.value=v;
+  };
+
+  window.acmOpen = function(e){
+    if(e) e.preventDefault();
+    var o=document.getElementById('acm-overlay');
+    var fw=document.getElementById('acm-form-wrap');
+    var sc=document.getElementById('acm-success');
+    var err=document.getElementById('acm-error');
+    var btn=document.getElementById('acm-submit');
+    fw.style.display='';
+    sc.style.display='none';
+    acmHide(err);
+    btn.disabled=false;
+    btn.textContent='Quero ser atendido →';
+    acmShow(o);
+    document.body.style.overflow='hidden';
+  };
+
+  window.acmSubmit = async function(e){
+    e.preventDefault();
+    var nome=document.getElementById('acm-nome').value.trim();
+    var tel=document.getElementById('acm-telefone').value.trim();
+    var email=document.getElementById('acm-email').value.trim();
+    var area=document.getElementById('acm-area').value;
+    var colab=document.getElementById('acm-colaborador').value;
+    var fat=document.getElementById('acm-faturamento').value;
+    var prazo=document.getElementById('acm-prazo').value;
+    var err=document.getElementById('acm-error');
+
+    if(!nome||!tel||!email){
+      err.textContent='Por favor, preencha nome, telefone e e-mail.';
+      err.style.display='block';
+      return;
+    }
+    if(!email.includes('@')){
+      err.textContent='Informe um e-mail válido.';
+      err.style.display='block';
+      return;
+    }
+    acmHide(err);
+
+    var btn=document.getElementById('acm-submit');
+    btn.disabled=true;
+    btn.textContent='Enviando...';
+
+    var payload={
+      nome:nome,telefone:tel,email:email,
+      area:area||undefined,colaborador:colab||undefined,
+      faturamento:fat||undefined,prazo_implementacao:prazo||undefined,
+      origem:window.location.href
+    };
+    Object.keys(payload).forEach(function(k){if(payload[k]===undefined)delete payload[k];});
+
+    try{
+      await fetch('https://chat.advanx.com.br/api/register-lead',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(payload)
+      });
+    }catch(ex){/* continua mesmo se falhar */}
+
+    // Sucesso → countdown
+    document.getElementById('acm-form-wrap').style.display='none';
+    var sc=document.getElementById('acm-success');
+    sc.style.display='block';
+
+    // Monta mensagem WhatsApp
+    var msg='Olá! Tenho interesse no SIC da Advanx.%0A%0A'
+      +'*Nome:* '+encodeURIComponent(nome)+'%0A'
+      +'*Telefone:* '+encodeURIComponent(tel)+'%0A'
+      +'*E-mail:* '+encodeURIComponent(email);
+    if(area) msg+='%0A*Área:* '+encodeURIComponent(area);
+    if(colab) msg+='%0A*Colaboradores:* '+encodeURIComponent(colab);
+    if(fat) msg+='%0A*Faturamento:* '+encodeURIComponent(fat);
+    if(prazo) msg+='%0A*Prazo:* '+encodeURIComponent(prazo);
+
+    var waUrl='https://wa.me/5571982470873?text='+msg;
+
+    var n=3;
+    var el=document.getElementById('acm-count');
+    var iv=setInterval(function(){
+      n--;
+      el.textContent=n;
+      if(n<=0){
+        clearInterval(iv);
+        window.open(waUrl,'_blank');
+        acmClose();
+      }
+    },1000);
+  };
+
+  // ── Interceptar todos links wa.me ──
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a');
+    if(a&&a.href&&a.href.includes('wa.me')){
+      e.preventDefault();
+      acmOpen();
+    }
+  });
+
+  // Fechar ao clicar fora
+  document.getElementById('acm-overlay').addEventListener('click',function(e){
+    if(e.target===this) acmClose();
+  });
+
+  // Fechar com ESC
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') acmClose();
+  });
+})();
+</script>
+
 </body>
 </html>
