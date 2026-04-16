@@ -241,35 +241,7 @@
       <span class="section-label">Recentes</span>
       <h2 class="section-title">Últimos Artigos</h2>
     </div>
-    <div class="editorial-grid reveal-up" id="recent-grid">
-      <a href="posts/marketing-juridico-oab-guia-completo.html" class="ed-main">
-        <div class="ed-main-img"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&auto=format&fit=crop&q=80" alt="Marketing Jurídico OAB" loading="lazy"/></div>
-        <div class="ed-main-body">
-          <span class="cat-tag" style="margin-bottom:12px;">Marketing Jurídico</span>
-          <h3 class="ed-main-title">Marketing Jurídico: O que a OAB Permite (Guia 2026)</h3>
-          <p class="ed-main-excerpt">Entenda o que o Código de Ética da OAB permite em marketing jurídico e como atrair clientes sem risco de sanções.</p>
-          <div class="post-meta"><span>26 fev 2026</span><span class="dot">·</span><span>10 min</span></div>
-        </div>
-      </a>
-      <div class="ed-stack">
-        <a href="posts/automacao-escritorio-advocacia-7-processos.html" class="card-sm reveal-up">
-          <div class="card-sm-img"><img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&auto=format&fit=crop&q=80" alt="Automação Escritório" loading="lazy"/></div>
-          <div class="card-sm-body">
-            <span class="cat-tag" style="margin-bottom:8px;">Automação Jurídica</span>
-            <h3 class="card-sm-title">7 Processos para Automatizar no Seu Escritório Hoje</h3>
-            <div class="post-meta" style="margin-top:6px;"><span>24 fev 2026</span><span class="dot">·</span><span>9 min</span></div>
-          </div>
-        </a>
-        <a href="posts/sistema-captacao-clientes-previsivel.html" class="card-sm reveal-up">
-          <div class="card-sm-img"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&auto=format&fit=crop&q=80" alt="Sistema de Captação" loading="lazy"/></div>
-          <div class="card-sm-body">
-            <span class="cat-tag" style="margin-bottom:8px;">Captação de Clientes</span>
-            <h3 class="card-sm-title">Como Criar um Sistema de Captação Previsível</h3>
-            <div class="post-meta" style="margin-top:6px;"><span>22 fev 2026</span><span class="dot">·</span><span>11 min</span></div>
-          </div>
-        </a>
-      </div>
-    </div>
+    <div class="editorial-grid reveal-up" id="recent-grid"></div>
   </section>
 
   <div class="section-divider"></div>
@@ -383,6 +355,38 @@
       renderPosts(filtered);
     }
 
+    // Renderiza "Últimos Artigos" — os 3 mais recentes (topo do array)
+    function renderRecent(){
+      const g=document.getElementById('recent-grid');
+      const recent=POSTS.slice(0,3);
+      if(!recent.length) return;
+      const main=recent[0];
+      let html=`<a href="posts/${main.slug}.html" class="ed-main">
+        <div class="ed-main-img"><img src="${main.image}" alt="${main.title}" loading="lazy"/></div>
+        <div class="ed-main-body">
+          <span class="cat-tag" style="margin-bottom:12px;">${main.category}</span>
+          <h3 class="ed-main-title">${main.title}</h3>
+          <p class="ed-main-excerpt">${main.excerpt}</p>
+          <div class="post-meta"><span>${main.date}</span><span class="dot">·</span><span>${main.readingTime}</span></div>
+        </div>
+      </a>`;
+      if(recent.length>1){
+        html+=`<div class="ed-stack">`;
+        recent.slice(1).forEach(p=>{
+          html+=`<a href="posts/${p.slug}.html" class="card-sm reveal-up">
+            <div class="card-sm-img"><img src="${p.image}" alt="${p.title}" loading="lazy"/></div>
+            <div class="card-sm-body">
+              <span class="cat-tag" style="margin-bottom:8px;">${p.category}</span>
+              <h3 class="card-sm-title">${p.title}</h3>
+              <div class="post-meta" style="margin-top:6px;"><span>${p.date}</span><span class="dot">·</span><span>${p.readingTime}</span></div>
+            </div>
+          </a>`;
+        });
+        html+=`</div>`;
+      }
+      g.innerHTML=html;
+    }
+    renderRecent();
     renderPosts(POSTS);
 
     // Nav scroll
