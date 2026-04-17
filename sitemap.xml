@@ -2,18 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://blog.advanx.com.br/</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://blog.advanx.com.br/posts/claude-para-advogados-12.html</loc>
+    <loc>https://blog.advanx.com.br/posts/whatsapp-ia-para-advogados.html</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://blog.advanx.com.br/posts/whatsapp-ia-para-advogados.html</loc>
+    <loc>https://blog.advanx.com.br/posts/claude-para-advogados-12.html</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -33,30 +33,6 @@
   <url>
     <loc>https://blog.advanx.com.br/posts/captacao-clientes-advocacia-trabalhista.html</loc>
     <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://blog.advanx.com.br/posts/captacao-clientes-advocacia-previdenciaria.html</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://blog.advanx.com.br/posts/como-aumentar-faturamento-escritorio-advocacia.html</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://blog.advanx.com.br/posts/whatsapp-para-advogados-atendimento-e-captacao.html</loc>
-    <lastmod>2026-03-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://blog.advanx.com.br/posts/landing-page-para-advogados-converter-leads.html</loc>
-    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
