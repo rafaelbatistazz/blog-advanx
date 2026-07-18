@@ -1,8 +1,11 @@
 /* Blog Advanx — config dinâmica (WhatsApp, redes sociais, pixels) + painel oculto.
-   Painel: 3 cliques na logo do topo -> senha -> editar.
+   Painel: 3 cliques no rodapé ("Advanx Tecnologia") -> senha -> editar.
    ponytail: senha fixa client-side é só um gate de UI (qualquer um vê no código-fonte),
    não é autenticação real. Aceitável aqui porque nada salvo neste arquivo é secreto
-   (WhatsApp/redes/IDs de pixel são todos públicos por natureza). */
+   (WhatsApp/redes/IDs de pixel são todos públicos por natureza).
+   ponytail: gatilho era a logo (<a href="/"><img>), mas preventDefault só rodava no
+   3º clique — cliques 1/2 navegavam pra "/" antes do contador fechar. .footer-copy
+   é um <p> sem href, não tem default a disputar. */
 (function () {
   var SU = 'https://lhbwfbquxkutcyqazpnw.supabase.co';
   var SK = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxoYndmYnF1eGt1dGN5cWF6cG53Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA1Mjc5MTksImV4cCI6MjA2NjEwMzkxOX0.Tk6O2kpzTWcce9laIancu-lMFATLYkaTvgLBiRMsa10';
@@ -162,16 +165,15 @@
   }
 
   function setupTripleTap() {
-    var logo = document.querySelector('.nav-logo');
-    if (!logo) return;
+    var trigger = document.querySelector('.footer-copy');
+    if (!trigger) return;
     var clicks = 0, timer = null;
-    logo.addEventListener('click', function (e) {
+    trigger.addEventListener('click', function () {
       clicks++;
       if (timer) clearTimeout(timer);
       timer = setTimeout(function () { clicks = 0; }, 600);
       if (clicks >= 3) {
         clicks = 0;
-        e.preventDefault();
         var pw = prompt('Senha:');
         if (pw !== PASSWORD) return;
         fetchConfig().then(openPanel);
