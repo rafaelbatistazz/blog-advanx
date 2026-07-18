@@ -486,38 +486,49 @@
     btn.disabled=true;
     btn.textContent='Enviando...';
 
+    var telDigits=tel.replace(/\D/g,'');
     var payload={
-      nome:nome,telefone:tel,email:email,
-      area:area||undefined,colaborador:colab||undefined,
+      nome:nome,telefone:telDigits,email:email,
+      area:area||undefined,
       faturamento:fat||undefined,prazo_implementacao:prazo||undefined,
-      origem:window.location.href
+      comentario:colab?('Colaboradores: '+colab):undefined,
+      kanban_stage:'Novo Lead',pipeline_type:'inbound',funil_lead:'Advanx - Fale com Especialista',empresa_fonte:'Advanx',
+      ...getUTMs()
     };
     Object.keys(payload).forEach(function(k){if(payload[k]===undefined)delete payload[k];});
 
     try{
-      await fetch('https://chat.advanx.com.br/api/register-lead',{
+      await fetch(`${SU}/rest/v1/dados_cliente`,{
         method:'POST',
-        headers:{'Content-Type':'application/json'},
+        headers:{'Content-Type':'application/json','apikey':SK,'Authorization':`Bearer ${SK}`,'Prefer':'return=minimal'},
         body:JSON.stringify(payload)
       });
-    }catch(ex){/* continua mesmo se falhar */}
+      if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'Fale com Especialista'});
+      if(typeof gtag!=='undefined')gtag('event','generate_lead',{event_category:'acm_form'});
+    }catch(ex){/* segue pro WhatsApp mesmo se o insert falhar */}
+
+    // Monta mensagem WhatsApp (usada no redirect do lead e no aviso do grupo)
+    var waMsgPlain='Olá! Tenho interesse no SIC da Advanx.\n\n'
+      +'*Nome:* '+nome+'\n'
+      +'*Telefone:* '+tel+'\n'
+      +'*E-mail:* '+email;
+    if(area) waMsgPlain+='\n*Área:* '+area;
+    if(colab) waMsgPlain+='\n*Colaboradores:* '+colab;
+    if(fat) waMsgPlain+='\n*Faturamento:* '+fat;
+    if(prazo) waMsgPlain+='\n*Prazo:* '+prazo;
+    waMsgPlain+='\n*Página:* '+window.location.href;
+
+    fetch('https://n8n.advfunnel.com.br/webhook/lead-funil-41d-comercial-efc4f106bbae40dcb0f4a2fc7bebe72c',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({mensagem_formatada:waMsgPlain})
+    }).catch(function(){/* aviso do grupo é best-effort */});
 
     // Sucesso → countdown
     document.getElementById('acm-form-wrap').style.display='none';
     var sc=document.getElementById('acm-success');
     sc.style.display='block';
 
-    // Monta mensagem WhatsApp
-    var msg='Olá! Tenho interesse no SIC da Advanx.%0A%0A'
-      +'*Nome:* '+encodeURIComponent(nome)+'%0A'
-      +'*Telefone:* '+encodeURIComponent(tel)+'%0A'
-      +'*E-mail:* '+encodeURIComponent(email);
-    if(area) msg+='%0A*Área:* '+encodeURIComponent(area);
-    if(colab) msg+='%0A*Colaboradores:* '+encodeURIComponent(colab);
-    if(fat) msg+='%0A*Faturamento:* '+encodeURIComponent(fat);
-    if(prazo) msg+='%0A*Prazo:* '+encodeURIComponent(prazo);
-
-    var waUrl='https://wa.me/5571982470873?text='+msg;
+    var waUrl='https://wa.me/5571982470873?text='+encodeURIComponent(waMsgPlain);
 
     var n=3;
     var el=document.getElementById('acm-count');
