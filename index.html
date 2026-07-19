@@ -16,9 +16,11 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Blog Advanx","url":"https://blog.advanx.com.br","description":"Estratégias de IA, captação de clientes e automação jurídica para advogados.","publisher":{"@type":"Organization","name":"Advanx Tecnologia","url":"https://advanx.com.br","logo":{"@type":"ImageObject","url":"https://lhbwfbquxkutcyqazpnw.supabase.co/storage/v1/object/public/images/logo/logoadvanxofc.webp"}}}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500&display=swap"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/></noscript>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <!-- Meta Pixel -->
   <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','502759528362336');fbq('track','PageView');</script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=502759528362336&ev=PageView&noscript=1"/></noscript>
@@ -32,11 +34,11 @@
       --surface:#FFFFFF;
       --ink:#111111;
       --ink-2:#5B5B5B;
-      --ink-3:#8C8C8C;
+      --ink-3:#6B6B6B;
       --border:#D3CEC6;
-      --accent:#B56A32;
+      --accent:#96502A;
       --accent-soft:#EFE6D8;
-      --accent-mid:rgba(181,106,50,0.12);
+      --accent-mid:rgba(150,80,42,0.12);
     }
     *{margin:0;padding:0;box-sizing:border-box;}
     html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
@@ -167,7 +169,7 @@
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
-      <a href="/"><img src="https://res.cloudinary.com/dmf4bqbdd/image/upload/v1784400742/Logo_Advanx_IA_Transparante_v3_kgirrz.png" alt="Advanx" class="nav-logo"/></a>
+      <a href="/"><img src="https://res.cloudinary.com/dmf4bqbdd/image/upload/w_60,h_60,c_fill,q_auto,f_auto/v1784400742/Logo_Advanx_IA_Transparante_v3_kgirrz.png" alt="Advanx" class="nav-logo" width="26" height="26"/></a>
       <div class="nav-links">
         <a href="/">Blog</a>
         <a href="#posts">Artigos</a>
@@ -192,6 +194,7 @@
     </div>
   </nav>
 
+  <main>
   <!-- HERO -->
   <div class="hero">
     <span class="hero-kicker reveal-up">Blog Advanx</span>
@@ -206,7 +209,7 @@
     <div class="reveal-up">
       <a href="posts/como-advogados-captam-clientes-ia-2026.html" class="featured">
         <div class="featured-img" style="min-height:360px;">
-          <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&auto=format&fit=crop&q=80" alt="IA para Advogados"/>
+          <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&auto=format&fit=crop&q=80" alt="IA para Advogados" fetchpriority="high"/>
         </div>
         <div class="featured-body">
           <span class="cat-tag">IA para Advogados</span>
@@ -291,10 +294,12 @@
     </div>
   </section>
 
+  </main>
+
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
-      <a href="/"><img src="https://res.cloudinary.com/dmf4bqbdd/image/upload/v1784400742/Logo_Advanx_IA_Transparante_v3_kgirrz.png" alt="Advanx" style="height:26px;"/></a>
+      <a href="/"><img src="https://res.cloudinary.com/dmf4bqbdd/image/upload/w_60,h_60,c_fill,q_auto,f_auto/v1784400742/Logo_Advanx_IA_Transparante_v3_kgirrz.png" alt="Advanx" style="height:26px;" width="26" height="26"/></a>
       <div class="footer-links">
         <a href="https://instagram.com/advanxtecnologia" target="_blank">Instagram</a>
         <a href="https://linkedin.com/company/advanx-tecnologia" target="_blank">LinkedIn</a>
@@ -305,14 +310,14 @@
     </div>
   </footer>
 
-  <script>
+  <script defer>
     const POSTS=[
       {id:8904,slug:"captacao-de-clientes-para-advogados",title:"Capta\u00e7\u00e3o de clientes para advogados: como atrair oportunidades dentro das regras da OAB",excerpt:"Um guia pr\u00e1tico para advogados que querem gerar oportunidades com conte\u00fado, presen\u00e7a digital e atendimento organizado, sem apelos indevidos.",category:"Marketing Jur\u00eddico",categorySlug:"marketing-juridico",image:"https://blog.advanx.com.br/assets/blog-images/captacao-de-clientes-para-advogados.webp",readingTime:"10 min",date:"18 Jul 2026"},
       {id:8903,slug:"trafego-pago-para-advogados",title:"Tr\u00e1fego pago para advogados: como anunciar dentro das regras da OAB",excerpt:"Veja como planejar tr\u00e1fego pago para advogados, escolher canais, controlar custos e captar contatos sem infringir as regras da OAB.",category:"Marketing Jur\u00eddico",categorySlug:"marketing-juridico",image:"https://blog.advanx.com.br/assets/blog-images/trafego-pago-para-advogados.webp",readingTime:"10 min",date:"18 Jul 2026"},
-      {id:8897,slug:'claude-para-advogados-12',title:'Claude para Advogados: O Guia Definitivo de IA no Direito',excerpt:'Transforme seu escritório em 2025. Aprenda a usar o Claude para advogados na triagem de clientes, automação de rotinas e ganho de eficiência operacional.',category:'IA para Advogados',categorySlug:'ia-para-advogados',image:'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&auto=format&fit=crop&q=80',readingTime:'7 min',date:'16 abr 2026'},
-      {id:8896,slug:'whatsapp-ia-para-advogados',title:'WhatsApp IA para Advogados: Revolucione a Captação e Atendimento',excerpt:'Aprenda como a inteligência artificial no WhatsApp pode acabar com a sobrecarga operacional do seu escritório e qualificar leads 24 horas por dia.',category:'IA para Advogados',categorySlug:'ia-para-advogados',image:'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&auto=format&fit=crop&q=80',readingTime:'8 min',date:'16 abr 2026'},
-      {id:8895,slug:'claude-para-advogados',title:'Inteligência Artificial: O Guia do Claude para Advogados em 2025',excerpt:'Seu escritório está perdendo clientes por lentidão no atendimento? Aprenda como o Claude para advogados pode automatizar processos e escalar seus lucros.',category:'IA para Advogados',categorySlug:'ia-para-advogados',image:'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&auto=format&fit=crop&q=80',readingTime:'8 min',date:'15 abr 2026'},
-      {id:8894,slug:'ia-de-atendimento-para-advogados-no-whatsapp',title:'Inteligência Artificial na Advocacia: O Guia Definitivo 2025',excerpt:'Descubra como a IA pode automatizar o atendimento no WhatsApp, qualificando leads em minutos e escalando os resultados do seu escritório jurídico.',category:'IA para Advogados',categorySlug:'ia-para-advogados',image:'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&auto=format&fit=crop&q=80',readingTime:'8 min',date:'15 abr 2026'},
+      {id:8897,slug:'claude-para-advogados-12',title:'Claude para Advogados: O Guia Definitivo de IA no Direito',excerpt:'Transforme seu escritório em 2025. Aprenda a usar o Claude para advogados na triagem de clientes, automação de rotinas e ganho de eficiência operacional.',category:'IA para Advogados',categorySlug:'ia-para-advogados',image:'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&auto=format&fit=crop&q=60',readingTime:'7 min',date:'16 abr 2026'},
+      {id:8896,slug:'whatsapp-ia-para-advogados',title:'WhatsApp IA para Advogados: Revolucione a Captação e Atendimento',excerpt:'Aprenda como a inteligência artificial no WhatsApp pode acabar com a sobrecarga operacional do seu escritório e qualificar leads 24 horas por dia.',category:'IA para Advogados',categorySlug:'ia-para-advogados',image:'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&auto=format&fit=crop&q=60',readingTime:'8 min',date:'16 abr 2026'},
+      {id:8895,slug:'claude-para-advogados',title:'Inteligência Artificial: O Guia do Claude para Advogados em 2025',excerpt:'Seu escritório está perdendo clientes por lentidão no atendimento? Aprenda como o Claude para advogados pode automatizar processos e escalar seus lucros.',category:'IA para Advogados',categorySlug:'ia-para-advogados',image:'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&auto=format&fit=crop&q=60',readingTime:'8 min',date:'15 abr 2026'},
+      {id:8894,slug:'ia-de-atendimento-para-advogados-no-whatsapp',title:'Inteligência Artificial na Advocacia: O Guia Definitivo 2025',excerpt:'Descubra como a IA pode automatizar o atendimento no WhatsApp, qualificando leads em minutos e escalando os resultados do seu escritório jurídico.',category:'IA para Advogados',categorySlug:'ia-para-advogados',image:'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&auto=format&fit=crop&q=60',readingTime:'8 min',date:'15 abr 2026'},
       {id:5046,slug:'landing-page-para-advogados-converter-leads',title:'Landing Page para Advogados: Como Criar Páginas que Convertem Visitas em Leads',excerpt:'Como criar uma landing page jurídica que converte visitantes em leads qualificados respeitando as normas da OAB.',category:'Marketing Jurídico',categorySlug:'marketing-juridico',image:'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1400&auto=format&fit=crop&q=80',readingTime:'8 min',date:'23 mar 2026'},
       {id:5863,slug:'whatsapp-para-advogados-atendimento-e-captacao',title:'WhatsApp para Advogados: Como Usar para Atendimento e Captação de Clientes',excerpt:'Como estruturar o atendimento jurídico pelo WhatsApp para qualificar leads, agendar consultas e fechar contratos.',category:'Automação Jurídica',categorySlug:'automacao-juridica',image:'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1400&auto=format&fit=crop&q=80',readingTime:'8 min',date:'22 mar 2026'},
       {id:7969,slug:'como-aumentar-faturamento-escritorio-advocacia',title:'Como Aumentar o Faturamento do Seu Escritório de Advocacia em 2026',excerpt:'Estratégias práticas para advogados aumentarem o faturamento do escritório sem precisar trabalhar mais horas.',category:'Captação de Clientes',categorySlug:'captacao-clientes',image:'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1400&auto=format&fit=crop&q=80',readingTime:'8 min',date:'21 mar 2026'},
